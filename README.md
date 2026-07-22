@@ -36,7 +36,7 @@
 
 ```mermaid
 graph TB
-    subgraph "Orchestrator (LangGraph StateGraph)"
+    subgraph Orchestrator[Orchestrator (LangGraph StateGraph)]
         O[ApplicationState<br/>{docs, rag_ctx, audit, reports, htl}]
     end
     
