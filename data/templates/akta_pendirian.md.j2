@@ -1,0 +1,112 @@
+# AKTA PENDIRIAN KOPERASI - {{ nama_koperasi }}
+**Nomor Akta:** {{ nomor_akta }}
+**Tanggal:** {{ tanggal_akta | strftime("%d %B %Y") }}
+**Notaris:** {{ notaris_nama }} ({{ notaris_gelar }})
+**Kantor Notaris:** {{ notaris_kantor }}
+
+---
+
+## 1. IDENTITAS KOPERASI
+
+| Atribut | Keterangan |
+|---------|------------|
+| **Nama Koperasi** | {{ nama_koperasi }} |
+| **Jenis Koperasi** | {{ jenis_koperasi }} (Koperasi Simpan Pinjam / Koperasi Produsen / dll) |
+| **Alamat Kedudukan** | {{ alamat_kedudukan }} |
+| **RT/RW** | {{ rt_rw }} |
+| **Kelurahan/Desa** | {{ kelurahan }} |
+| **Kecamatan** | {{ kecamatan }} |
+| **Kabupaten/Kota** | {{ kabupaten_kota }} |
+| **Provinsi** | {{ provinsi }} |
+| **Kode Pos** | {{ kode_pos }} |
+| **Telepon** | {{ telepon }} |
+| **Email** | {{ email }} |
+| **Website** | {{ website }} |
+
+## 2. ANGGARAN DASAR (RINGKASAN)
+
+**Pasal 1: Nama, Kedudukan, dan Jangka Waktu**
+- Nama: {{ nama_koperasi }}
+- Berkedudukan di: {{ kabupaten_kota }}, {{ provinsi }}
+- Jangka waktu: Tidak terbatas
+
+**Pasal 2: Maksud dan Tujuan**
+{{ maksud_tujuan }}
+
+**Pasal 3: Kegiatan Usaha**
+{{ kegiatan_usaha }}
+
+**Pasal 4: Anggota**
+- Anggota utama: Warga Negara Indonesia yang memenuhi syarat
+- Anggota anak: (jika ada)
+- Cara menjadi anggota: Mengajukan permintaan tertulis, disetujui Rapat Anggota
+
+**Pasal 5: Modal**
+- Modal dasar: Rp {{ modal_dasar | format_currency }}
+- Modal wajib per orang: Rp {{ modal_wajib | format_currency }}
+- Modal sukarela: Rp {{ modal_sukarela | format_currency }}
+
+## 3. PENGURUS KOPERASI (MASA JABATAN: {{ masa_jabatan }})
+
+| Jabatan | Nama | NIK | Alamat | Tanda Tangan |
+|---------|------|-----|--------|--------------|
+{% for pengurus in pengurus_list %}
+| {{ pengurus.jabatan }} | {{ pengurus.nama }} | {{ pengurus.nik }} | {{ pengurus.alamat }} | |
+{% endfor %}
+
+## 4. PENGAWAS KOPERASI
+
+| Jabatan | Nama | NIK | Alamat |
+|---------|------|-----|--------|
+{% for pengawas in pengawas_list %}
+| {{ pengawas.jabatan }} | {{ pengawas.nama }} | {{ pengawas.nik }} | {{ pengawas.alamat }} |
+{% endfor %}
+
+## 5. RAPAT ANGGOTA WARTA (RAKERTA)
+
+- Rapat Anggota Tahunan: Setiap tahun sekali
+- Rapat Anggota Khusus: Sewaktu-waktu jika diperlukan
+- Kuorum: > 50% anggota berhak suara
+- Keputusan: Musyawarah mufakat, jika tidak tercapai > 50% + 1 suara
+
+## 6. PEMBAGIAN SHU (SISA HASIL USAHA)
+
+- Cadangan wajib: Minimal 10% SHU
+- Cadangan sukarela: Maksimal 20% SHU
+- Bonus jasa: Maksimal 10% SHU
+- SHU bagi anggota: Sisa setelah pengurangan di atas, proporsional dengan jasa usaha
+
+## 7. PEMBUBARAN
+
+Koperasi dibubarkan jika:
+- Keputusan Rapat Anggota Khusus dengan kuorum 3/4 anggota
+- Keputusan Pengadilan
+- Terlibat tindak pidana keuangan
+
+---
+
+**DIBUAT DI:** {{ tempat_akta }}
+**PADA TANGGAL:** {{ tanggal_akta | strftime("%d %B %Y") }}
+
+**NOTARIS,**
+
+__________________________
+**{{ notaris_nama }}**
+{{ notaris_gelar }}
+
+**SAKSI-SAKSI:**
+
+1. __________________________  2. __________________________
+   **{{ saksi1_nama }}**         **{{ saksi2_nama }}**
+   NIK: {{ saksi1_nik }}          NIK: {{ saksi2_nik }}
+
+---
+
+**PENDAFTARAN:**
+- **Nomor Pendaftaran:** {{ nomor_pendaftaran }}
+- **Tanggal Pendaftaran:** {{ tanggal_pendaftaran | strftime("%d %B %Y") }}
+- **Instansi:** {{ instansi_pendaftaran }}
+
+---
+
+*Catatan: Template ini untuk keperluan simulasi data sintetis UAS Proyek Data Mining. Akta asli harus sesuai format Notaris setempat.*

@@ -1,0 +1,178 @@
+PANDUAN AUDIT LPH (LEMBAGA PEMERIKSA HALAL)
+BERDASARKAN PERATURAN BPJPH NO. 2/2023 DAN SNI 99001:2023
+
+===================================================================
+
+BAB I: PERSIAPAN AUDIT
+
+1.1 Pemilihan LPH
+- Pelaku usaha bebas memilih LPH terdaftar di BPJPH
+- LPH harus memiliki auditor minimal 2 orang bersertifikat
+- LPH tidak boleh memiliki konflik kepentingan dengan pelaku usaha
+
+1.2 Persiapan Dokumen (Minimal 14 hari sebelum audit)
+Dokumen WAJIB disiapkan:
+1. Akta Pendirian & Anggaran Dasar
+2. NIB (Nomor Induk Berusaha) - aktif
+3. NPWP - aktif
+4. Izin Usaha / SIUP - valid
+5. SOP Produksi (versi terkini, ditandatangani)
+6. Rute Produksi (flowchart + deskripsi)
+7. Layout Fasilitas (gambar teknis + legenda)
+8. Daftar Bahan Baku Lengkap (kode, nama, supplier, sertifikat halal)
+9. Sertifikat Halal Bahan Baku (untuk bahan kritis)
+10. Organogram HAS (Ketua + Anggota + Jabatan)
+11. Bukti Pelatihan HAS (sertifikat Ketua HAS WAJIB)
+12. Rekaman Audit Internal (min 1x/tahun)
+13. Rekaman Management Review (min 1x/tahun)
+14. Rekaman CCP Monitoring (min 3 bulan terakhir)
+15. Rekaman Non-Conformance & Perbaikan
+16. Surat Pernyataan Kesediaan Audit
+
+1.3 Klasifikasi Usaha (untuk biaya audit)
+- Mikro: Aset ≤ 500 juta / Omzet ≤ 300 juta
+- Kecil: Aset 500 juta - 5 miliar / Omzet 300 juta - 2,5 miliar
+- Menengah: Aset 5 miliar - 10 miliar / Omzet 2,5 miliar - 50 miliar
+- Besar: > Menengah
+
+BAB II: CHECKLIST AUDIT LENGKAP (81 ITEM)
+
+KATEGORI A: ADMINISTRASI (10 item)
+A01  Akta Pendirian sah & tercatat Kemenkumham
+A02  Anggaran Dasar mencakup usaha halal
+A03  NIB aktif & sesuai KBLI
+A04  NPWP aktif & sesuai identitas
+A05  Izin Usaha valid & sesuai lokasi
+A06  SKTU / Sertifikat Koperasi berlaku
+A07  Daftar Anggota & Pengurus lengkap
+A08  Surat Kuasa Pengurus untuk sertifikasi
+A09  Surat Pernyataan Komitmen Halal
+A10  Profil Usaha & Produk lengkap di SEHATI
+
+KATEGORI B: HALAL ASSURANCE SYSTEM / HAS (12 item)
+B01  Kebijakan Halal tertulis & disosialisasikan
+B02  Struktur HAS lengkap (Ketua, Sekretaris, Audit Internal, Koordinator Produksi, Koordinator Gudang, Koordinator Pemeliharaan)
+B03  Ketua HAS BERSERTIFIKAT pelatihan HAS (WAJIB)
+B04  Anggota HAS minimal 3 orang, terpelatihan
+B05  Manual HAS (MHAS) versi terkini
+B06  SOP HAS lengkap (min 8 prosedur)
+B07  Tim Verifikasi Internal ada & aktif
+B08  Audit Internal min 1x/tahun (rekaman lengkap)
+B09  Management Review min 1x/tahun (rekaman lengkap)
+B10  Prosedur Perubahan (Management of Change)
+B11  Prosedur Non-Conformance & Koreksi
+B11  Pencatatan & Dokumentasi HAS lengkap (retensi 3 tahun)
+
+KATEGORI C: BAHAN BAKU & BAHAN PENOLONG (14 item)
+C01  Daftar Bahan Baku lengkap (kode, nama, supplier, kategori)
+C02  Sertifikat Halal Bahan Baku KRITIS (wajib untuk: gelatin, enzim, emulsifier, flavor, pewarna, bahan pengawet, mikroba, bahan hewani)
+C03  Sertifikat Halal Bahan Baku TIDAK EXPIRED
+C04  Supplier Bahan Baku terverifikasi (LPH/BPJPH terdaftar)
+C05  Bahan Penolong Produksi (enzim, mikroba, filter aid) BERSERTIFIKAT HALAL
+C06  Segregasi Gudang: Bahan Halal vs Non-Halal (fisik/waktu)
+C07  Penerimaan Bahan Baku: verifikasi sertifikat halal
+C08  Identifikasi & Traceability tiap batch bahan baku
+C09  Kontrol Bahan Non-Halal (jika ada): area terpisah, label jelas
+C10  Bahan Hewani: sertifikat halal + rantai pasokan (slaughterhouse halal)
+C11  Bahan Minuman: bebas alkohol/khamer (COA lab)
+C12  Bahan Kimia/Aditif: food grade + halal certified
+C13  Kontrak/Jaminan Halal dari Supplier (surat pernyataan)
+C14  Evaluasi Supplier berkala (min 1x/tahun)
+
+KATEGORI D: PROSES PRODUKSI (15 item)
+D01  SOP Produksi versi terkini & ditandatangani
+D02  Identifikasi CCP (Critical Control Points) per HACCP
+D03  Batas Kritis (Critical Limits) tiap CCP terdefinisi & terukur
+D04  Sistem Pemantauan CCP real-time/terjadwal
+D05  Tindakan Koreksi CCP terdefinisi & teruji
+D06  Verifikasi CCP berkala (kalibrasi alat, review rekaman)
+D07  Dokumentasi CCP lengkap (rekaman min 3 bulan)
+D08  Segregasi Proses Halal vs Non-Halal (fisik/waktu)
+D09  Prosedur Pembersihan Antara Produk (validasi kebersihan)
+D10  Penggunaan Air & Utilitas: bebas kontaminan non-halal
+D11  Kontrol Kontaminasi Silang (cross-contamination prevention)
+D12  Manajemen Limbah: tidak mencemari produk halal
+D13  Kalibrasi Alat Ukur CCP berkala (rekaman)
+D14  Pelatihan Operator CCP (kompetensi & rekaman)
+D15  Validasi Proses Produksi (awal & berkala)
+
+KATEGORI E: FASILITAS & PERALATAN (10 item)
+E01  Layout Fasilitas: gambar teknis + legenda + skala
+E02  Zonasi Area: Halal / Non-Halal / Bersama (jelas)
+E03  Fasilitas Pencucian & Sanitasi: cukup & terpisah
+E04  Peralatan Khusus Halal (dedicated/tanda jelas)
+E05  Identifikasi Peralatan: label warna/kode halal
+E06  Kebersihan Fasilitas: memenuhi GMP
+E07  Pengendalian Hama (Pest Control): program & rekaman
+E08  Manajemen Air Bersih & Limbah: terpisah, aman
+E09  Ventilasi & Pencahayaan: memenuhi kebutuhan
+E10  Maintenance Preventif: jadwal & rekaman
+
+KATEGORI F: KEMASAN & PELABELAN (8 item)
+F01  Logo Halal Indonesia pada kemasan primer (Kominfo 9/2023)
+F02  Ukuran, warna, posisi logo sesuai ketentuan
+F03  Nomor Sertifikat Halal tercantum di label
+F04  Informasi Wajib Label: nama, bahan, netto, expired, produsen
+F05  Kemasan Primer: material halal certified (bebas kontaminan)
+F06  Kemasan Sekunder/Tersier: segregasi halal/non-halal
+F07  Label Digital (QR Code) untuk e-commerce (Kominfo 9/2023)
+F08  Verifikasi Label Sebelum Cetak (approval proses)
+
+KATEGORI G: PENANGANAN NON-HALAL (6 item)
+G01  Identifikasi Produk/Jalur Non-Halal (jika ada)
+G02  Segregasi Fisik Total: area, peralatan, gudang, personel
+G03  Prosedur Pembersihan Validasi Pasca Non-Halal
+G04  Pencatatan Produk Non-Halal Terpisah
+G05  Pelatihan Personel Non-Halal (risiko kontaminasi)
+G06  Audit Internal Non-Halal berkala
+
+KATEGORI H: DOKUMEN & PENCATATAN (5 item)
+H01  Master List Dokumen HAS (versi terkini)
+H02  Kontrol Dokumen: review, approval, distribusi
+H03  Rekaman HAS Lengkap & Traceable (retensi 3 tahun)
+H04  Kebijakan Retensi Dokumen (min 3 tahun)
+H05  Akses & Keamanan Dokumen (kontrol akses)
+
+BAB III: PENILAIAN & KATEGORI TEMUAN
+
+C (Conformity): 100% sesuai, bukti lengkap, efektif
+MNC (Minor NC): Tidak kritis, perbaikan 30 hari, verifikasi dokumen
+MJNC (Major NC): KRITIS, berdampak kehalalan, perbaikan 14 hari + RE-AUDIT WAJIB
+
+ITEM WAJIB TIDAK ADA MJNC:
+- B03: Ketua HAS bersertifikat
+- C02: Sertifikat halal bahan baku kritis
+- C03: Sertifikat tidak expired
+- D08: Segregasi proses halal/non-halal
+- F01: Logo halal pada kemasan
+- H03: Rekaman HAS lengkap
+
+MNC MAKSIMAL 5 UNTUK LULUS SERTIFIKASI
+
+BAB IV: BIAYA AUDIT (REFERENSI)
+
+Klasifikasi | Biaya Audit Dokumen | Biaya Audit Lapangan | Biaya Sertifikat
+Mikro       | Rp   500.000       | Rp 1.500.000         | Rp   300.000
+Kecil       | Rp 1.000.000       | Rp 3.000.000         | Rp   500.000
+Menengah    | Rp 2.000.000       | Rp 5.000.000         | Rp 1.000.000
+Besar       | Rp 3.000.000       | Rp 8.000.000         | Rp 2.000.000
+
+*Subsidi pemerintah untuk Koperasi/UMKM: 50-100% biaya audit
+
+BAB V: JADWAL & ALUR WAKTU
+
+Tahap                    | Maksimal Waktu
+-------------------------|----------------
+Pengajuan via SEHATI     | Hari 0
+Verifikasi Kelengkapan   | Hari 7
+Audit Dokumen            | Hari 14
+Audit Lapangan           | Hari 44 (30 hari kerja)
+Laporan Audit ke BPJPH   | Hari 51 (7 hari kerja)
+Penerbitan Sertifikat    | Hari 58 (7 hari kerja)
+TOTAL                    | ~58 hari kerja (~3 bulan)
+
+Audit Surveillance: Tahunan (tepat 12 bulan setelah sertifikat)
+Perpanjangan: Diajukan 6 bulan sebelum habis
+
+Jakarta, 2024
+TIM LPH PANDUAN AUDIT HALAL

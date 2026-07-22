@@ -1,0 +1,54 @@
+# NOMOR POKOK WAJIB PAJAK (NPWP) - {{ nama_koperasi }}
+**Nomor NPWP:** {{ npwp_number }}
+**KPP:** {{ kpp }}
+**Status WP:** {{ status_wp }}
+
+---
+
+## 1. IDENTITAS WAJIB PAJAK
+
+| Atribut | Keterangan |
+|---------|------------|
+| **Nama WP** | {{ nama_wp }} |
+| **Jenis WP** | {{ jenis_wp }} (OP / BADAN) |
+| **Alamat WP** | {{ alamat_wp }} |
+| **RT/RW** | {{ rt_rw_wp }} |
+| **Kelurahan/Desa** | {{ kelurahan_wp }} |
+| **Kecamatan** | {{ kecamatan_wp }} |
+| **Kabupaten/Kota** | {{ kabupaten_kota_wp }} |
+| **Provinsi** | {{ provinsi_wp }} |
+| **Kode Pos** | {{ kode_pos_wp }} |
+| **Telepon** | {{ telepon_wp }} |
+| **Email** | {{ email_wp }} |
+
+## 2. PENDAFTARAN
+
+| Atribut | Keterangan |
+|---------|------------|
+| **Tanggal Daftar** | {{ tanggal_daftar | strftime("%d %B %Y") }} |
+| **Tanggal Terbit Kartu NPWP** | {{ tanggal_terbit_kartu | strftime("%d %B %Y") }} |
+| **Cara Daftar** | {{ cara_daftar }} (Online / Kantor Pelayanan Pajak) |
+| **Dasar Hukum** | UU No. 28 Tahun 2007 jo. UU No. 11 Tahun 2020 |
+
+## 3. KETERANGAN TAMBAHAN
+
+- **NPWP Pusat:** {{ npwp_pusat if npwp_pusat else 'Tidak ada (WP Tunggal)' }}
+- **NPWP Cabang:** {{ npwp_cabang | join(', ') if npwp_cabang else 'Tidak ada' }}
+- **KLU (Klasifikasi Lapangan Usaha):** {{ klu_list | join(', ') }}
+- **Fasilitas Perpajakan:** {{ fasilitas_perpajakan if fasilitas_perpajakan else 'Tidak ada' }}
+
+## 4. KEWAJIBAN PAJAK
+
+1. Mencatatkan NPWP pada setiap dokumen perpajakan
+2. Menyetorkan pajak yang terutang tepat waktu
+3. Melaporkan SPT Tahunan Badan (form 1771) paling lambat 4 bulan setelah tahun buku berakhir
+4. Menerbitkan Faktur Pajak untuk penyerahan BKP/JKP (jika PKP)
+5. Memotong/mengutip PPh Pasal 21/23/26/4(2) sesuai ketentuan
+
+---
+
+**Dicetak oleh:** Sistem Informasi Administrasi Pajak (DJP Online)
+**Tanggal Cetak:** {{ tanggal_cetak | strftime("%d %B %Y") }}
+**Kode Verifikasi:** {{ kode_verifikasi }}
+
+> **Catatan:** Dokumen ini adalah representasi data NPWP untuk keperluan simulasi UAS Proyek Data Mining. NPWP asli terdaftar di DJP.

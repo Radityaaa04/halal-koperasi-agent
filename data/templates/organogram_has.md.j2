@@ -1,0 +1,107 @@
+# ORGANOGRAM HAS (HALAL ASSURANCE SYSTEM) - {{ nama_koperasi }}
+# ORGANOGRAM HAS (HALAL ASSURANCE SYSTEM) - {{ nama_koperasi | default("Koperasi") }}
+**Nomor Dokumen:** OH-{{ versi | default("01/Rev-0") }}
+**Tanggal Berlaku:** {{ tanggal_berlaku | default(today) | strftime("%d %B %Y") }}
+
+---
+
+## 1. STRUKTUR ORGANISASI HAS
+
+```
+                    KETUA KOPERASI
+                         │
+                    MANAJEMEN PUSAT
+                         │
+              ┌──────────┴──────────┐
+              ▼                     ▼
+        KETUA HAS           SEKRETARIS HAS
+         (Ketua)            (Koordinator)
+              │                     │
+       ┌──────┼──────┐      ┌────────┼────────┐
+       ▼      ▼      ▼      ▼        ▼        ▼
+   KOORD.  KOORD.  KOORD.  KOORD.  ANGGOTA  ANGGOTA
+  PRODUKSI GUDANG   QC     UMUM   HAS      HAS
+```
+
+## 2. SUSUNAN PERSONEL HAS
+
+### Ketua HAS
+| Atribut | Detail |
+|---------|--------|
+| **Nama** | {{ ketua_has.nama | default("Ketua HAS") }} |
+| **NIK** | {{ ketua_has.nik | default("0000000000000000") }} |
+| **Jabatan Koperasi** | {{ ketua_has.jabatan | default("Koordinator HAS") }} |
+| **Jabatan HAS** | Ketua HAS |
+| **Pelatihan HAS Terakhir** | {{ ketua_has.pelatihan_has_terakhir | default("Belum ada") | strftime("%d %B %Y") if ketua_has.pelatihan_has_terakhir is not string else ketua_has.pelatihan_has_terakhir }} |
+| **Nomor Sertifikat Pelatihan** | {{ ketua_has.sertifikat_pelatihan_nomor | default("Belum ada") }} |
+| **Penerbit Sertifikat** | {{ ketua_has.sertifikat_pelatihan_penerbit | default("-") }} |
+| **Masa Berlaku Pelatihan** | {{ ketua_has.masa_berlaku_pelatihan | default("Belum ada") | strftime("%d %B %Y") if ketua_has.masa_berlaku_pelatihan is not string else ketua_has.masa_berlaku_pelatihan }} |
+| **Tugas & Tanggung Jawab** |
+{% for tugas in ketua_has.tugas_tanggung_jawab | default(["Mengkoordinasikan seluruh sistem HAS", "Melakukan internal audit semesteran", "Mengajukan perbaikan sistem HAS ke manajemen"]) %}
+  - {{ tugas }}
+{% endfor %}
+
+### Anggota HAS
+{% for anggota in anggota_has | default([{"nama": "Koordinator Produksi", "nik": "0000000000000001", "jabatan": "Koordinator Produksi", "jabatan_has": "Koordinator Produksi", "pelatihan_has_terakhir": "2024-02-01", "sertifikat_pelatihan_nomor": "HAS-INT-001", "sertifikat_pelatihan_penerbit": "Internal", "masa_berlaku_pelatihan": "2027-02-01", "tugas_tanggung_jawab": ["Memastikan produksi sesuai SOP HAS", "Monitoring CCP harian"]}]) %}
+#### {{ anggota.jabatan_has }}: {{ anggota.nama }}
+| Atribut | Detail |
+|---------|--------|
+| **NIK** | {{ anggota.nik | default("0000000000000000") }} |
+| **Jabatan Koperasi** | {{ anggota.jabatan | default(anggota.jabatan_has) }} |
+| **Pelatihan HAS Terakhir** | {{ anggota.pelatihan_has_terakhir | default("Belum ada") | strftime("%d %B %Y") if anggota.pelatihan_has_terakhir is not string else anggota.pelatihan_has_terakhir }} |
+| **Nomor Sertifikat** | {{ anggota.sertifikat_pelatihan_nomor | default("Belum ada") }} |
+| **Penerbit** | {{ anggota.sertifikat_pelatihan_penerbit | default("-") }} |
+| **Masa Berlaku** | {{ anggota.masa_berlaku_pelatihan | default("Belum ada") | strftime("%d %B %Y") if anggota.masa_berlaku_pelatihan is not string else anggota.masa_berlaku_pelatihan }} |
+| **Tugas & Tanggung Jawab** |
+{% for tugas in anggota.tugas_tanggung_jawab | default(["Tugas standar HAS"]) %}
+  - {{ tugas }}
+{% endfor %}
+---
+{% endfor %}
+
+## 3. MATRIKS KOMPETENSI HAS
+
+| Nama | Jabatan HAS | Pelatihan Dasar HAS | Pelatihan Auditor Internal | Pelatihan HACCP | Sertifikat Valid? | Butuh Pelatihan Ulang? |
+|------|-------------|---------------------|----------------------------|-----------------|-------------------|------------------------|
+{% for person in [ketua_has] + anggota_has %}
+| {{ person.nama }} | {{ person.jabatan_has }} | {{ '✅' if person.pelatihan_has_terakhir else '❌' }} | {{ '✅' if 'Auditor Internal' in (person.tugas_tanggung_jawab | join(', ')) else 'N/A' }} | {{ '✅' if 'HACCP' in (person.tugas_tanggung_jawab | join(', ')) else 'N/A' }} | {{ '✅' if person.masa_berlaku_pelatihan and person.masa_berlaku_pelatihan > today else '❌' }} | {{ '✅' if person.masa_berlaku_pelatihan and person.masa_berlaku_pelatihan < today + timedelta(days=90) else '❌' }} |
+{% endfor %}
+
+## 4. RENCANA PELATIHAN HAS (TAHUNAN)
+
+| Kuartal | Topik Pelatihan | Peserta | Penyelenggara | Estimasi Biaya | Status |
+|---------|-----------------|---------|---------------|----------------|--------|
+{% for plan in training_plan | default([{"nama_pelatihan": "Pelatihan Dasar HAS (untuk anggota baru)", "target_peserta": "Anggota baru", "target_tanggal": "2025-03-01", "penyelenggara": "LPH Terakreditasi / BPJPH", "estimasi_biaya": "Rp 5.000.000", "pic": "Ketua HAS"}]) %}
+| {{ loop.index }} | {{ plan.nama_pelatihan }} | {{ plan.target_peserta }} | {{ plan.penyelenggara }} | {{ plan.estimasi_biaya }} | {{ plan.status | default("Direncanakan") }} |
+{% endfor %}
+
+## 5. PROSEDUR PENGANGKATAN & PEMBERHENTIAN ANGGOTA HAS
+
+### Pengangkatan
+1. Diusulkan oleh Koordinator terkait / Ketua Koperasi
+2. Disetujui oleh Ketua HAS dan Ketua Koperasi
+3. Ditetapkan dengan **Surat Keputusan (SK) Ketua Koperasi**
+4. Wajib mengikuti pelatihan dasar HAS dalam 30 hari kerja
+5. Dicatat dalam **Daftar Personel HAS (DPH-{{ versi }})**
+
+### Pemberhentian
+1. Pengunduran diri tertulis
+2. Mutasi jabatan / keluar dari koperasi
+3. Tidak memenuhi kompentensi (gagal pelatihan 2x)
+4. Pelanggaran berat SOP HAS
+5. Ditetapkan dengan **SK Ketua Koperasi**
+
+---
+
+**Disetujui,**
+
+__________________________
+**Ketua HAS**
+{{ ketua_has.nama | default("Ketua HAS") }}
+Tanggal: {{ tanggal_berlaku | default(today) | strftime("%d %B %Y") }}
+
+__________________________
+**Ketua Koperasi**
+{{ nama_pimpinan | default("Ketua Koperasi") }}
+Tanggal: {{ tanggal_berlaku | default(today) | strftime("%d %B %Y") }}
+Tanggal: {{ tanggal_berlaku | strftime("%d %B %Y") }}

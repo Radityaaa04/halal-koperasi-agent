@@ -1,0 +1,176 @@
+UNDANG-UNDANG REPUBLIK INDONESIA
+NOMOR 33 TAHUN 2014
+TENTANG JAMINAN PRODUK HALAL
+
+===================================================================
+
+BAB I: KETENTUAN UMUM
+
+Pasal 1
+Dalam Undang-Undang ini yang dimaksud dengan:
+1. Produk Halal adalah produk yang telah disertifikasi halal oleh BPJPH.
+2. Jaminan Produk Halal adalah serangkaian kegiatan untuk memberikan kepastian kehalalan produk.
+3. BPJPH adalah Badan Penyelenggara Jaminan Produk Halal.
+4. LPH adalah Lembaga Pemeriksa Halal.
+5. MUI adalah Majelis Ulama Indonesia.
+6. Fatwa Halal adalah keputusan MUI tentang kehalalan produk.
+7. Sertifikat Halal adalah bukti tertulis kehalalan produk yang diterbitkan BPJPH.
+9. SJH (Sistem Jaminan Halal) adalah sistem manajemen kehalalan.
+10. HAS (Halal Assurance System) adalah tim jaminan halal di pelaku usaha.
+11. Auditor Halal adalah orang yang kompeten dan disahkan LPH.
+12. Kontaminan adalah zat najis atau haram yang mencemar produk halal.
+13. Segregasi adalah pemisahan fisik/waktu halal dan non-halal.
+14. Koperasi adalah badan usaha koperasi per UU Koperasi.
+15. UMKM adalah Usaha Mikro, Kecil, dan Menengah.
+16. SEHATI adalah Sistem Elektronik Halal.
+17. Wajib Halal adalah kewajiban sertifikasi halal untuk produk yang diedarkan.
+
+BAB II: KEWENANGAN
+
+Pasal 2
+(1) BPJPH bertugas melaksanakan jaminan produk halal.
+(2) Kewenangan BPJPH:
+a. Menerbitkan, memperpanjang, mencabut sertifikat halal;
+b. Menetapkan standar halal;
+c. Mendaftarkan dan mengawasi LPH;
+d. Mengelola SEHATI;
+e. Koordinasi dengan MUI untuk fatwa halal;
+f. Pengawasan pasca sertifikat;
+g. Sanksi administratif.
+
+Pasal 3
+(1) MUI berwenang menetapkan fatwa halal.
+(2) Fatwa halal menjadi dasar penerbitan sertifikat halal.
+(3) MUI fasilitasi pelatihan auditor halal.
+
+Pasal 4
+(1) LPH berwenang melakukan audit halal.
+(2) LPH wajib terdaftar di BPJPH.
+(3) LPH wajib memiliki auditor halal tersertifikasi.
+
+BAB III: SERTIFIKASI HALAL
+
+Bagian Pertama: Kewajiban Sertifikasi
+
+Pasal 5
+(1) Produk yang diedarkan di Indonesia wajib bersertifikat halal.
+(2) Kecuali produk yang dilarang diundang-undang (minuman keras, dll).
+
+Pasal 6
+(1) Pelaku usaha wajib mengajukan sertifikat halal.
+(2) Pengajuan melalui SEHATI.
+
+Bagian Kedua: Prosedur Pengajuan
+
+Pasal 7
+(1) Dokumen pengajuan:
+a. Akta pendirian dan anggaran dasar;
+b. NIB dan NPWP;
+c. Izin usaha;
+d. Daftar produk dan bahan baku;
+e. SOP, rute produksi, layout fasilitas;
+f. Organogram HAS dan bukti pelatihan;
+g. Sertifikat halal bahan baku (jika ada);
+h. Surat pernyataan kesediaan audit.
+(2) Koperasi/UMKM: dokumen disederhanakan.
+
+Pasal 8
+(1) BPJPH verifikasi kelengkapan 7 hari kerja.
+(2) Hasil: LENGKAP atau TIDAK LENGKAP.
+(3) Jika TIDAK LENGKAP, tenggang waktu 14 hari.
+
+Bagian Ketiga: Audit dan Penerbitan
+
+Pasal 9
+(1) LPH audit maksimal 30 hari kerja.
+(2) Audit: dokumen, fasilitas, proses, bahan baku, kemasan, SJH, personel, dokumentasi.
+
+Pasal 10
+Temuan: Conformity (C), Minor NC (MNC), Major NC (MJNC).
+- MNC: perbaikan 30 hari.
+- MJNC: perbaikan 14 hari + re-audit.
+
+Pasal 11
+(1) LPH lapor ke BPJPH maksimal 7 hari kerja.
+(2) BPJPH terbitkan sertifikat 7 hari kerja setelah laporan lengkap.
+
+Pasal 12
+Sertifikat halal berlaku 4 tahun.
+
+Bagian Keempat: Perpanjangan dan Perubahan
+
+Pasal 13
+Perpanjangan diajukan 6 bulan sebelum habis.
+
+Pasal 14
+Perubahan produk/proses/fasilitas wajib dilaporkan.
+
+BAB IV: SISTEM JAMINAN HALAL (SJH)
+
+Pasal 15
+Pelaku usaha wajib menerapkan SJH meliputi:
+a. Kebijakan halal;
+b. Struktur HAS dengan Ketua HAS bersertifikat;
+c. SOP;
+d. Identifikasi CCP;
+e. Prosedur non-conformance;
+f. Audit internal 1x/tahun;
+g. Management review 1x/tahun;
+h. Dokumentasi lengkap.
+
+Pasal 16
+Ketua HAS wajib bersertifikat pelatihan HAS dari LPH/BPJPH.
+
+BAB V: KOPERASI DAN UMKM
+
+Pasal 17
+Koperasi/UMKM mendapat kemudahan:
+a. Subsidi biaya audit;
+b. Pelatihan HAS gratis;
+c. Bantuan dokumentasi;
+d. Prioritas jadwal;
+e. Tenggang waktu.
+
+Pasal 18
+Klasifikasi: Mikro, Kecil, Menengah per UU UMKM.
+
+Pasal 19
+Tenggang waktu Wajib Halal:
+- Mikro: 7 tahun (Okt 2028);
+- Kecil: 5 tahun (Okt 2026);
+- Menengah: 3 tahun (Okt 2024).
+
+BAB VI: PENGAWASAN DAN SANKSI
+
+Pasal 20
+Pengawasan: BPJPH, kementerian terkait, masyarakat.
+
+Pasal 21
+Sanksi administratif:
+a. Peringatan tertulis;
+b. Denda administratif;
+c. Pencabutan sertifikat;
+d. Penghentian produksi.
+
+Pasal 22
+Denda maksimal:
+- Tidak bersertifikat: Rp 2.000.000.000;
+- Sertifikat palsu: Rp 2.000.000.000;
+- Laporan audit palsu: Rp 500.000.000;
+- Tidak mematuhi ketentuan: Rp 1.000.000.000.
+
+BAB VII: KETENTUAN PERALIHAN
+
+Pasal 23
+Peraturan pelaksanaan: PP 39/2021, Peraturan BPJPH, Peraturan MUI.
+
+Pasal 24
+Wajib Halal berlaku efektif 17 Oktober 2026.
+
+Pasal 25
+Undang-Undang ini mulai berlaku pada tanggal diundangkan.
+
+Disahkan di Jakarta
+pada tanggal 17 Oktober 2014
+PRESIDEN REPUBLIK INDONESIA
+ttd. SUSILO BAMBANG YUDHOYONO

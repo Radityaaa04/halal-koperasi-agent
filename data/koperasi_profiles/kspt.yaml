@@ -1,0 +1,97 @@
+# Profil Koperasi: Koperasi Sumber Tani Makmur (KSPT)
+# Happy path case - 78% completeness, produk pertanian (kacang, tempe, tahu)
+
+koperasi:
+  id: "KSPT-002"
+  nama: "Koperasi Sumber Tani Makmur"
+  nama_pimpinan: "Bapak Bambang Susilo"
+  nik_pimpinan: "3578012345678902"
+  alamat:
+    desa_kelurahan: "Sukodadi"
+    kecamatan: "Ngawi"
+    kabupaten_kota: "Ngawi"
+    provinsi: "Jawa Timur"
+    kode_pos: "63214"
+    rincian: "Jl. Raya Sukodadi Km 3, RT 02/RW 01"
+  kontak:
+    telepon: "0351-876543"
+    email: "kspt.sukodadi@gmail.com"
+    website: ""
+    cp_nama: "Ibu Sri Wahyuni (Sekretaris)"
+    cp_telepon: "0813-4567-8901"
+    cp_email: "sri.wahyuni.kspt@gmail.com"
+  profil_usaha:
+    bidang_usaha: "Pengolahan Hasil Pertanian (Kacang & Kedelai)"
+    kbli_utama: "10392"  # Pengolahan kacang-kacangan dan biji-bijian lain
+    kbli_detail: ["10392", "10391", "10791"]
+    produk_utama:
+      - nama: "Kacang Tanah Goreng"
+        sku: "KSPT-KT-001"
+        kategori: "makanan_olahan"
+        deskripsi: "Kacang tanah goreng renyah, rasa asin & pedas, tanpa pengawet"
+        bahan_baku_utama: ["Kacang tanah kupas", "Garam", "Cabai bubuk", "Minyak goreng"]
+        proses_singkat: "Penerimaan -> Pengupasan -> Penggorengan -> Penyedotan minyak -> Pendinginan -> Kemasan"
+        kemasan: "Plastik 150g, karton 50 bungkus"
+        label_halal_saat_ini: false
+        sertifikat_halal_nomor: null
+        target_pasar: ["domestik_tradisional", "domestik_modern", "horeca"]
+      - nama: "Tempe Kedelai"
+        sku: "KSPT-TK-002"
+        kategori: "makanan_olahan"
+        deskripsi: "Tempe kedelai tradisional, fermentasi alami, protein tinggi"
+        bahan_baku_utama: ["Kedelai putih", "Ragi tempe (Rhizopus)", "Daun waru"]
+        proses_singkat: "Penerimaan -> Pencucian -> Penghalusan -> Perebusan -> Inokulasi -> Fermentasi -> Kemasan"
+        kemasan: "Daun waru + plastik 250g, kotak 20 bungkus"
+        label_halal_saat_ini: false
+        sertifikat_halal_nomor: null
+        target_pasar: ["domestik_tradisional", "pasar_swasta", "sekolah"]
+      - nama: "Tahu Putih"
+        sku: "KSPT-TP-003"
+        kategori: "makanan_olahan"
+        deskripsi: "Tahu putih lembut, dari kedelai pilihan, tanpa formalin"
+        bahan_baku_utama: ["Kedelai putih", "Koagulan (garam/air kapur)", "Air bersih"]
+        proses_singkat: "Penerimaan -> Penghalusan -> Perebusan -> Koagulasi -> Pencetakan -> Pendinginan -> Kemasan"
+        kemasan: "Plastik 500g (isi 5 tahu), kotak 10 bungkus"
+        label_halal_saat_ini: false
+        sertifikat_halal_nomor: null
+        target_pasar: ["domestik_tradisional", "pasar_swasta", "warung_makan"]
+    kapasitas_produksi_bulan:
+      kacang_tanah_kg: 800
+      tempe_kg: 1200
+      tahu_kg: 1500
+    jumlah_anggota: 112
+    jumlah_karyawan: 18
+    tahun_berdiri: 2015
+    modal_dasar: 500000000  # 500 juta IDR
+  fasilitas_produksi:
+    unit_pengolahan_m2: 200
+    cold_storage_m3: 10
+    area_pendingin_m2: 30
+    area_kemasan_m2: 25
+    kendaraan_distribusi: 2  # 1 pickup, 1 truck kecil
+    utilitas: ["air_bersih", "listrik_3_phase", "generator_30kva", "kompor_gas_industri"]
+    sertifikat_lain: ["BPOM_ML_2345678901", "ISO_22000_IN_PROGRESS", "SNV_2023"]
+  status_halal:
+    bersertifikat: false
+    nomor_sertifikat: null
+    tanggal_terbit: null
+    tanggal_expired: null
+    penerbit_lph: null
+    pernah_mengajukan: false
+    alasan_belum: "Fokus ekspansi pasar modern, baru menyadari wajib halal 2026, dokumen administrasi lengkap tapi SOP & HAS belum disusun"
+  motivasi:
+    - "Kontrak供货 ke Superindo & Lotte Mart butuh sertifikat halal"
+    - "Persiapan wajib halal Oktober 2026"
+    - "Diferensiasi dengan kompetitor yang belum bersertifikat"
+  target_completeness_pct: 78
+
+error_injection:
+  missing_docs: ["SOP_PRODUKSI", "ORGANOGRAM_HAS", "BUKTI_PELATIHAN_HAS"]
+  expired_docs: []
+  incomplete_fields:
+    SOP_PRODUKSI: ["ccp_points_detail"]
+    ORGANOGRAM_HAS: ["pelatihan_has_detail"]
+    BUKTI_PELATIHAN_HAS: ["jadwal_pelatihan_berikutnya"]
+  inconsistent_data: []
+  low_quality_scans: []
+  wrong_templates: []

@@ -1,0 +1,52 @@
+{
+  "profiles": [
+    {
+      "id": "kmbj",
+      "file": "kmbj.yaml",
+      "name": "Koperasi Mina Bahari Jaya",
+      "type": "primary",
+      "completeness_pct": 62,
+      "products": 4,
+      "description": "Primary test case - pengolahan ikan, medium complexity"
+    },
+    {
+      "id": "kspt",
+      "file": "kspt.yaml",
+      "name": "Koperasi Sumber Tani Makmur",
+      "type": "happy_path",
+      "completeness_pct": 78,
+      "products": 3,
+      "description": "Happy path - pertanian, admin lengkap, SOP/HAS belum jadi"
+    },
+    {
+      "id": "kpnl",
+      "file": "kpnl.yaml",
+      "name": "Koperasi Nelayan Sejahtera",
+      "type": "stress_test",
+      "completeness_pct": 35,
+      "products": 2,
+      "description": "Stress test - ikan asin tradisional, dokumen minimal, scan buruk"
+    },
+    {
+      "id": "kpsd",
+      "file": "variants/kpsd.yaml",
+      "name": "Koperasi Sari Daun Sehat",
+      "type": "variant",
+      "completeness_pct": 45,
+      "products": 2,
+      "description": "Herbal/teh - risiko non-halal (alkohol ekstraksi)"
+    },
+    {
+      "id": "kbti",
+      "file": "variants/kbti.yaml",
+      "name": "Koperasi Bumi Tani Indah",
+      "type": "variant",
+      "completeness_pct": 55,
+      "products": 5,
+      "description": "Sayur beku - fokus cold chain, 5 SKU"
+    }
+  ],
+  "total": 5,
+  "generated_at": "2025-07-21T00:00:00Z",
+  "note": "5 profiles created for Week 1. 15 more variants to generate via script."
+}

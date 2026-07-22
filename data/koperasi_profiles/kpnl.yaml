@@ -1,0 +1,98 @@
+# Profil Koperasi: Koperasi Nelayan Sejahtera (KPNL)
+# Stress test case - 35% completeness, produk ikan asin/teri, dokumen minimal
+
+koperasi:
+  id: "KPNL-003"
+  nama: "Koperasi Nelayan Sejahtera"
+  nama_pimpinan: "Bapak H. Mahmud"
+  nik_pimpinan: "3374012345678903"
+  alamat:
+    desa_kelurahan: "Karangtalun"
+    kecamatan: "Cilacap Selatan"
+    kabupaten_kota: "Cilacap"
+    provinsi: "Jawa Tengah"
+    kode_pos: "53212"
+    rincian: "Pantai Karangtalun, RT 04/RW 02"
+  kontak:
+    telepon: "0282-567890"
+    email: ""
+    website: ""
+    cp_nama: "Bapak Sarjito (Anggota)"
+    cp_telepon: "0822-3456-7890"
+    cp_email: ""
+  profil_usaha:
+    bidang_usaha: "Pengolahan Hasil Perikanan Tradisional (Ikan Asin & Teri)"
+    kbli_utama: "10212"  # Pengolahan dan pengawetan ikan (asin, kering, asap)
+    kbli_detail: ["10212", "10211"]
+    produk_utama:
+      - nama: "Ikan Asin Tenggiri"
+        sku: "KPNL-IA-001"
+        kategori: "makanan_olahan"
+        deskripsi: "Ikan tenggiri asin tradisional, pengawetan garam, tanpa pengawet kimia"
+        bahan_baku_utama: ["Ikan tenggiri segar", "Garam kasar", "Air laut"]
+        proses_singkat: "Penerimaan -> Pencucian -> Penggaraman -> Penjemuran matahari -> Kemasan"
+        kemasan: "Plastik 500g, karung 10kg"
+        label_halal_saat_ini: false
+        sertifikat_halal_nomor: null
+        target_pasar: ["domestik_tradisional", "pasar_ibu", "warung_makan"]
+      - nama: "Teri Medan Nusantara"
+        sku: "KPNL-TM-002"
+        kategori: "makanan_olahan"
+        deskripsi: "Teri medan kering, cocok taburan nasi & bahan sambal"
+        bahan_baku_utama: ["Ikan teri segar", "Garam", "Air"]
+        proses_singkat: "Penerimaan -> Pencucian -> Penggaraman -> Penjemuran -> Pengayakan -> Kemasan"
+        kemasan: "Plastik 250g, kotak 40 bungkus"
+        label_halal_saat_ini: false
+        sertifikat_halal_nomor: null
+        target_pasar: ["domestik_tradisional", "horeca", "ekspor_kecil_ke_malaysia"]
+    kapasitas_produksi_bulan:
+      ikan_asin_kg: 600
+      teri_kg: 400
+    jumlah_anggota: 45
+    jumlah_karyawan: 6
+    tahun_berdiri: 2008
+    modal_dasar: 150000000  # 150 juta IDR
+  fasilitas_produksi:
+    unit_pengolahan_m2: 80
+    cold_storage_m3: 5
+    area_pendingin_m2: 20
+    area_kemasan_m2: 15
+    kendaraan_distribusi: 1  # 1 motor truk kecil
+    utilitas: ["air_sumur", "listrik_220v", "pengering_matahari_tradisional"]
+    sertifikat_lain: []
+  status_halal:
+    bersertifikat: false
+    nomor_sertifikat: null
+    tanggal_terbit: null
+    tanggal_expired: null
+    penerbit_lph: null
+    pernah_mengajukan: false
+    alasan_belum: "Tidak paham regulasi, dokumen administrasi tidak lengkap (hanya AKTA & NPWP), fasilitas tradisional, takut gagal audit & biaya LPH mahal"
+  motivasi:
+    - "Ada buyer Malaysia minta sertifikat halal untuk ekspor teri"
+    - "Dinas Koperasi sosialisasi wajib halal 2026"
+    - "Ingin naik kelas jadi koperasi menengah"
+  target_completeness_pct: 35
+
+error_injection:
+  missing_docs:
+    - "NIB"
+    - "IZIN_USAHA"
+    - "SOP_PRODUKSI"
+    - "DAFTAR_BAHAN_BAKU"
+    - "RUTE_PRODUKSI"
+    - "SERTIFIKAT_HALAL_BAHAN"
+    - "LAYOUT_FASILITAS"
+    - "ORGANOGRAM_HAS"
+    - "BUKTI_PELATIHAN_HAS"
+  expired_docs: []
+  incomplete_fields:
+    AKTA_PENDIRIAN: ["alamat_koperasi"]  # alamat lama
+    NPWP: ["alamat_wp"]  # mismatch dengan alamat aktual
+  inconsistent_data:
+    - "AKTA_PENDIRIAN alamat: Desa Karangtalun (typo) vs NPWP: Desa Karangtalun"
+    - "Nama pimpinan AKTA: H. Mahmud vs NPWP: Mahmud (tanpa H.)"
+  low_quality_scans:
+    - "AKTA_PENDIRIAN: scan foto hp, kecerahan tidak merata, OCR confidence ~0.5"
+    - "NPWP: foto KTP + NPWP digabung, teks kecil"
+  wrong_templates: []

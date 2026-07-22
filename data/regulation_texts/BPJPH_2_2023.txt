@@ -1,0 +1,128 @@
+PERATURAN BADAN PENYELENGGARA JAMINAN PRODUK HALAL
+NOMOR 2 TAHUN 2023
+TENTANG AUDIT HALAL DAN PENERBITAN SERTIFIKAT HALAL
+
+===================================================================
+
+BAB I: KETENTUAN UMUM
+
+Pasal 1
+Dalam Peraturan ini yang dimaksud dengan:
+1. Audit Halal adalah pemeriksaan sistematis terhadap pelaksanaan SJH.
+2. Auditor Halal adalah orang yang memiliki sertifikat kompetensi auditor halal.
+3. Temuan Audit adalah hasil evaluasi kesesuaian antara pelaksanaan dan ketentuan.
+4. Conformity (C) adalah kesesuaian penuh.
+5. Minor Non-Conformance (MNC) adalah ketidaksesuaian yang tidak critical.
+6. Major Non-Conformance (MJNC) adalah ketidaksesuaian critical.
+7. Re-audit adalah audit ulang untuk verifikasi perbaikan MJNC.
+8. Sertifikat Halal adalah bukti tertulis kehalalan produk.
+
+BAB II: PROSEDUR AUDIT
+
+Pasal 2
+(1) Audit dilaksanakan oleh LPH yang dipilih pelaku usaha.
+(2) LPH menetapkan tim audit minimal 2 auditor.
+(3) Ketua tim audit wajib bersertifikat auditor halal tingkat lanjut.
+
+Pasal 3
+Audit mencakup 2 tahap:
+a. Tahap 1: Audit Dokumen (Document Review)
+   - Verifikasi kelengkapan dokumen SJH;
+   - Evaluasi SOP, rute produksi, organogram HAS;
+   - Verifikasi sertifikat halal bahan baku;
+   - Evaluasi bukti pelatihan HAS.
+b. Tahap 2: Audit Lapangan (Site Audit)
+   - Inspeksi fasilitas dan peralatan;
+   - Observasi proses produksi;
+   - Verifikasi segregasi halal/non-halal;
+   - Pemeriksaan bahan baku dan kemasan;
+   - Wawancara personel HAS;
+   - Verifikasi rekaman CCP dan dokumentasi.
+
+Pasal 4
+(1) Audit dokumen dilaksanakan sebelum audit lapangan.
+(2) Hasil audit dokumen: LAYAK atau TIDAK LAYAK untuk audit lapangan.
+(3) Jika TIDAK LAYAK, LPH mengembalikan ke pelaku usaha untuk perbaikan.
+
+Pasal 5
+(1) Audit lapangan dilaksanakan maksimal 30 hari kerja.
+(2) Waktu audit disesuaikan kompleksitas fasilitas dan jumlah produk.
+
+BAB III: PENILAIAN TEMUAN AUDIT
+
+Pasal 6
+Temuan audit dikategorikan:
+a. Conformity (C): Sesuai sepenuhnya dengan ketentuan.
+b. Minor Non-Conformance (MNC):
+   - Ketidaksesuaian yang tidak berdampak langsung pada kehalalan produk;
+   - Contoh: dokumentasi tidak lengkap, label tidak standar, rekaman tidak update;
+   - Perbaikan wajib dalam 30 hari kerja;
+   - Verifikasi perbaikan via dokumen (tidak perlu re-audit lapangan).
+c. Major Non-Conformance (MJNC):
+   - Ketidaksesuaian yang berdampak langsung pada kehalalan produk;
+   - Contoh: bahan baku tanpa sertifikat halal, segregasi tidak ada, CCP tidak dikendalikan, Ketua HAS tidak bersertifikat;
+   - Perbaikan wajib dalam 14 hari kerja;
+   - Re-audit lapangan WAJIB untuk verifikasi perbaikan.
+
+Pasal 7
+(1) Jumlah MJNC > 0: sertifikat halal TIDAK diterbitkan.
+(2) Jumlah MNC > 5: sertifikat halal TIDAK diterbitkan.
+(3) Hanya C dan MNC ≤ 5: sertifikat halal DAPAT diterbitkan.
+
+Pasal 8
+(1) Pelaku usaha menyusun rencana perbaikan (Corrective Action Plan) untuk setiap temuan.
+(2) Rencana perbaikan disetujui LPH sebelum implementasi.
+(3) Bukti perbaikan dikirim ke LPH untuk verifikasi.
+
+BAB IV: RE-AUDIT
+
+Pasal 9
+(1) Re-audit dilaksanakan untuk verifikasi perbaikan MJNC.
+(2) Re-audit minimal mencakup area temuan MJNC.
+(3) Re-audit dilaksanakan maksimal 14 hari kerja setelah bukti perbaikan diterima.
+
+Pasal 10
+Hasil re-audit:
+a. MJNC diperbaiki: status menjadi C.
+b. MJNC tidak diperbaiki: status tetap MJNC, sertifikat tidak diterbitkan.
+c. Temuan baru: dievaluasi sesuai Pasal 6.
+
+BAB V: PENERBITAN SERTIFIKAT HALAL
+
+Pasal 11
+(1) BPJPH menerbitkan sertifikat halal jika:
+a. Semua temuan MJNC sudah diperbaiki dan diverifikasi re-audit;
+b. Jumlah MNC ≤ 5;
+c. Rekomendasi LPH: LAYAK.
+(2) Sertifikat halal diterbitkan maksimal 7 hari kerja setelah persyaratan terpenuhi.
+
+Pasal 12
+Sertifikat halal berlaku 4 tahun dengan ketentuan:
+a. Audit surveillance tahunan wajib;
+b. Perubahan produk/proses/fasilitas wajib dilaporkan;
+c. Perpanjangan diajukan 6 bulan sebelum habis.
+
+BAB V: AUDIT SURVEILLANCE
+
+Pasal 13
+(1) Audit surveillance dilaksanakan minimal 1x/tahun.
+(2) Audit surveillance fokus pada:
+a. Perubahan produk/proses/fasilitas;
+b. Temuan audit sebelumnya;
+c. Tren non-conformance;
+d. Efektivitas SJH.
+
+Pasal 14
+Hasil audit surveillance:
+a. C dan MNC ≤ 3: sertifikat pertahankan;
+b. MNC > 3 atau ada MJNC: rencana perbaikan wajib;
+c. MJNC tidak diperbaiki 2x berturut-turut: rekomendasi pencabutan sertifikat.
+
+BAB VI: KETENTUAN PENUTUP
+
+Pasal 15
+Peraturan ini mulai berlaku pada tanggal diundangkan.
+
+Jakarta, 13 Februari 2023
+KEPALA BPJPH
+ttd. DR. H. M. PADLI

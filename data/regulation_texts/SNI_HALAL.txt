@@ -1,0 +1,157 @@
+SNI 99001:2023 - SISTEM JAMINAN HALAL (HAS)
+PERSYARATAN UNTUK SERTIFIKASI HALAL
+
+===================================================================
+
+SECTION 1: RUANG LINGKUP
+Standar ini menetapkan persyaratan Sistem Jaminan Halal (SJH) untuk pelaku usaha
+yang akan memperoleh dan mempertahankan sertifikat halal.
+Berlaku untuk semua kategori produk: makanan, minuman, kosmetik, farmasi, jasa.
+
+SECTION 2: NORMATIF REFERENSI
+- UU 33/2014 Jaminan Produk Halal
+- PP 39/2021 Pelaksanaan Jaminan Produk Halal
+- Peraturan BPJPH 1/2023, 2/2023
+- Fatwa MUI No. 4/2003, 12/2010, 35/2014
+- SNI 3932:2022 Produk Makanan Halal
+
+SECTION 3: ISTILAH DAN DEFINISI
+3.1 Halal: diperbolehkan menurut hukum Islam
+3.2 Haram: dilarang menurut hukum Islam
+3.3 Najis: kotoran menurut hukum Islam
+3.4 Kontaminasi: pencemaran produk halal oleh najis/haram
+3.5 Segregasi: pemisahan fisik/waktu halal dan non-halal
+3.6 CCP (Critical Control Point): titik kontrol kritis
+3.7 HAS: Halal Assurance System (tim jaminan halal)
+3.8 SJH: Sistem Jaminan Halal (sistem manajemen)
+3.9 Traceability: kemampuan melacak riwayat produk
+
+SECTION 4: MANAJEMEN KOMITMEN HALAL
+4.1 Kebijakan Halal: ditetapkan pimpinan tertinggi, terdokumen, disosialisasikan
+4.2 Struktur Organisasi HAS:
+   - Ketua HAS (WAJIB bersertifikat pelatihan)
+   - Sekretaris HAS
+   - Koordinator Produksi
+   - Koordinator Gudang/Bahan Baku
+   - Koordinator Pemeliharaan
+   - Koordinator Quality Assurance
+   - Audit Internal (min 1 orang)
+4.3 Pelatihan: Semua personel HAS wajib lulus pelatihan BPJPH/LPH
+4.4 Komitmen Pimpinan: bukti dukungan sumber daya & budget
+
+SECTION 5: PERENCANAAN SJH
+5.1 Identifikasi Produk & Proses: daftar lengkap produk, flowchart, rute
+5.2 Analisis Bahaya Halal (Halal Hazard Analysis):
+   - Identifikasi bahan haram/najis potensial
+   - Identifikasi titik kontaminasi silang
+   - Evaluasi risiko per bahan baku & proses
+5.3 Penetapan CCP (Critical Control Points):
+   - Prinsip HACCP diterapkan untuk halal
+   - CCP minimal: receiving bahan baku, proses kritis, packing
+   - Batas kritis (critical limits) terdefinisi & terukur
+5.4 Rencana Pengendalian: monitoring, koreksi, verifikasi, dokumentasi
+
+SECTION 6: PENGELOLAAN BAHAN BAKU
+6.1 Daftar Bahan Baku Lengkap: kode, nama, supplier, kategori, status halal
+6.2 Verifikasi Supplier:
+   - Sertifikat halal supplier (LPH/BPJPH terdaftar)
+   - Surat jaminan halal dari supplier
+   - Evaluasi supplier berkala (min 1x/tahun)
+6.3 Penerimaan Bahan Baku:
+   - Verifikasi sertifikat halal sebelum diterima
+   - Pemeriksaan fisik kemasan & label
+   - Quarantine sampai verifikasi selesai
+6.4 Penyimpanan:
+   - Segregasi fisik/waktu halal vs non-halal
+   - Label area penyimpanan jelas
+   - FIFO (First In First Out)
+6.5 Traceability: tiap batch traceable dari supplier ke produk jadi
+
+SECTION 7: PENGELOLAAN PROSES PRODUKSI
+7.1 SOP Produksi: versi terkini, ditandatangani, tersedia di lokasi
+7.2 Identifikasi CCP: receiving, blending, thermal process, packing
+7.3 Batas Kritis CCP: suhu, waktu, pH, konsentrasi, dll - terukur
+7.4 Pemantauan CCP:
+   - Frekuensi: kontinu/per batch/per shift
+   - Metode: otomatis/manual terkalibrasi
+   - Penanggung jawab: operator terpelatihan
+7.5 Tindakan Koreksi: prosedur jelas, siap pakai, rekaman
+7.6 Verifikasi CCP:
+   - Kalibrasi alat ukur berkala
+   - Review rekaman mingguan
+   - Validasi ulang tahunan
+7.7 Segregasi Proses:
+   - Jalur produksi halal dedicated (ideal)
+   - Jika shared: cleaning validation wajib antar produk
+   - Waktu pemisahan (time segregation) jika fisik tidak memungkinkan
+7.8 Pembersihan & Sanitasi:
+   - Prosedur cleaning terstandarisasi
+   - Validasi kebersihan (swab test ATP/mikroba)
+   - Bahan kimia pencuci halal certified
+
+SECTION 8: PENGELOLAAN FASILITAS & PERALATAN
+8.1 Layout Fasilitas:
+   - Gambar teknis dengan skala & legenda
+   - Zonasi: Halal / Non-Halal / Bersama / Utility
+   - Aliran materi & personel terpisah
+8.2 Peralatan:
+   - Dedicated untuk halal (ideal)
+   - Identifikasi: label warna/kode (hijau=halal, merah=non-halal)
+   - Jika shared: prosedur changeover & validasi cleaning
+8.3 Utilitas:
+   - Air bersih: bebas kontaminan, COA berkala
+   - Udara terkompresi: filter terpasang, bebas minyak
+   - Listrik & backup: tidak mempengaruhi CCP
+8.4 Maintenance:
+   - Preventif: jadwal & rekaman
+   - Korektif: respons cepat, tidak ganggu CCP
+   - Kalibrasi: alat ukur CCP berkala (rekaman)
+8.5 Pest Control: program tertulis, rekaman, bahan aman halal
+8.6 Waste Management: limbah tidak kontaminasi produk halal
+
+SECTION 9: KEMASAN & PELABELAN
+9.1 Logo Halal Indonesia: wajib di kemasan primer (Kominfo 9/2023)
+9.2 Spesifikasi Logo:
+   - Ukuran minimal: 10x10 mm (kemasan kecil), 20x20 mm (normal)
+   - Warna: hijau Pantone 348C / hitam putih
+   - Posisi: jelas terlihat, tidak tertutup
+9.3 Informasi Label Wajib:
+   - Nama produk
+   - Daftar bahan (urutan berat menurun)
+   - Isi bersih (netto)
+   - Tanggal produksi & expired
+   - Nama & alamat produsen
+   - Nomor sertifikat halal
+   - Kode batch (traceability)
+9.3 Kemasan:
+   - Material: food grade, halal certified (bebas migrasi haram)
+   - Segregasi kemasan halal/non-halal di gudang
+9.4 Label Digital (E-commerce): QR code ke SEHATI (Kominfo 9/2023)
+
+SECTION 10: AUDIT INTERNAL & MANAGEMENT REVIEW
+10.1 Audit Internal: minimal 1x/tahun, auditor independen, rekaman lengkap
+10.2 Management Review: minimal 1x/tahun, pimpinan tertinggi, output: keputusan perbaikan
+10.3 Non-Conformance: prosedur koreksi & koreksi pencegahan, rekaman, verifikasi
+10.4 Perbaikan Berkelanjutan: trending NC, root cause analysis
+
+SECTION 11: DOKUMENTASI & PENCATATAN
+11.1 Master List Dokumen: versi terkini, review berkala
+11.2 Kontrol Dokumen: review, approval, distribusi, obsolet handling
+11.3 Rekaman: lengkap, traceable, retensi minimal 3 tahun
+11.4 Akses & Keamanan: kontrol akses, backup, recovery plan
+
+SECTION 12: PELATIHAN & KOMPETENSI
+12.1 Ketua HAS: WAJIB sertifikat pelatihan HAS (LPH/BPJPH)
+12.2 Personel HAS: minimal pelatihan dasar halal
+12.3 Operator CCP: pelatihan spesifik CCP, rekaman kompetensi
+12.4 Semua personel: pelatihan kebersihan & halal awareness
+12.5 Pelatihan ulang: minimal 1x/tahun atau saat perubahan
+
+SECTION 13: PENGAWASAN PASCA SERTIFIKAT
+13.1 Audit Surveillance: minimal 1x/tahun oleh LPH
+13.2 Perubahan produk/proses/fasilitas: wajib lapor ke BPJPH/LPH
+13.3 Perpanjangan: diajukan 6 bulan sebelum habis
+13.4 Sanksi pelanggaran: peringatan, denda, pencabutan, penghentian
+
+Jakarta, 2023
+BADAN STANDARISASI NASIONAL (BSN)

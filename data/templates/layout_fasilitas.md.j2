@@ -1,0 +1,123 @@
+# LAYOUT FASILITAS PRODUKSI - {{ nama_koperasi }}
+**Nomor Dokumen:** LF-{{ versi }}
+**Versi:** {{ versi }}
+**Tanggal:** {{ tanggal | strftime("%d %B %Y") }}
+**Skala:** {{ skala }}
+**Disusun Oleh:** {{ disusun_oleh }}
+
+---
+
+## 1. LEGENDA AREA
+
+| Kode | Nama Area | Fungsi | Tipe Area | Luas (m²) | Catatan |
+|------|-----------|--------|-----------|-----------|---------|
+{% for area in area_list %}
+| {{ area.kode }} | {{ area.nama }} | {{ area.fungsi }} | {{ area.tipe_area }} | {{ area.luas_m2 if area.luas_m2 else '-' }} | {{ area.catatan if area.catatan else '-' }} |
+{% endfor %}
+
+## 2. DESKRIPSI ALUR PRODUKSI
+
+### Alur Bahan Baku (Halal)
+```
+Penerimaan (A) → Pemeriksaan Kualitas (B) → Penyimpanan Bahan Baku Halal (C)
+      ↓                                                                  ↓
+Produksi (E) ← Pencucian/Persiapan (D) ←──────────────────────────────────
+```
+
+### Alur Produk Jadi
+```
+Produksi (E) → Pendinginan (F) → Kemasan (G) → Pemeriksaan Akhir (H)
+      ↓                                                         ↓
+Gudang Produk Jadi (I) → Pengiriman (J)
+```
+
+### Area Non-Halal / Buffer (Jika Ada)
+{% if non_halal_areas %}
+```
+Area Non-Halal: {{ non_halal_areas | join(', ') }}
+Prosedur Pembersihan: {{ cleaning_procedure_non_halal }}
+```
+{% else %}
+**Tidak ada area non-halal** - Seluruh fasilitas dedikasi halal.
+{% endif %}
+
+## 3. DETAIL PERALATAN PER AREA
+
+{% for area in area_list %}
+### Area {{ area.kode }}: {{ area.nama }} ({{ area.tipe_area }})
+**Peralatan:**
+{% for alat in area.peralatan %}
+- {{ alat }}
+{% endfor %}
+**Prosedur Khusus:**
+{% for proc in area.prosedur_khusus %}
+- {{ proc }}
+{% endfor %}
+---
+{% endfor %}
+
+## 4. TITIK KRITIS KONTAMINASI (CCP & PRP)
+
+| CCP/PRP | Lokasi (Area) | Parameter Kritis | Batas Kritis | Pemantauan | Koreksi | Verifikasi | Catatan |
+|---------|---------------|------------------|--------------|------------|---------|------------|---------|
+{% for ccp in ccp_list %}
+| {{ ccp.ccp_id }} | {{ ccp.lokasi }} | {{ ccp.parameter }} | {{ ccp.batas_kritis }} | {{ ccp.pemantauan }} | {{ ccp.koreksi }} | {{ ccp.verifikasi }} | {{ ccp.catatan }} |
+{% endfor %}
+
+## 5. SEGREGASI HALAL - NON HALAL
+
+### Prinsip Segregasi
+1. **Fisik:** Pisah ruang / pisah waktu dengan pembersihan validasi
+2. **Peralatan:** Dedicated equipment untuk halal
+3. **Personel:** Personel khusus / pembersihan tangan & ganti APD
+4. **Dokumen:** Pencatatan terpisah, label warna berbeda
+
+### Validasi Pembersihan (Jika Shared Equipment)
+{% if shared_equipment %}
+| Peralatan Shared | Produk Sebelumnya | Produk Sesudahnya | Prosedur Pembersihan | Validasi (Swab Test) | Frekuensi |
+|------------------|-------------------|-------------------|---------------------|---------------------|-----------|
+{% for item in shared_equipment %}
+| {{ item.peralatan }} | {{ item.produk_sebelum }} | {{ item.produk_sesudah }} | {{ item.prosedur }} | {{ item.validasi }} | {{ item.frekuensi }} |
+{% endfor %}
+{% else %}
+**Tidak ada peralatan shared** - Semua peralatan dedicated halal.
+{% endif %}
+
+## 6. UTILITAS & MEDIA PENGOLAHAN
+
+| Media | Sumber | Pengolahan | Kualitas Halal | Pemeriksaan | Catatan |
+|-------|--------|------------|----------------|-------------|---------|
+| Air Bersih | {{ air_bersih_sumber }} | {{ air_bersih_pengolahan }} | {{ air_bersih_kualitas }} | {{ air_bersih_pemeriksaan }} | {{ air_bersih_catatan }} |
+| Es | {{ es_sumber }} | {{ es_pengolahan }} | {{ es_kualitas }} | {{ es_pemeriksaan }} | {{ es_catatan }} |
+| Uap | {{ uap_sumber }} | {{ uap_pengolahan }} | {{ uap_kualitas }} | {{ uap_pemeriksaan }} | {{ uap_catatan }} |
+
+## 7. PENGENDALIAN SARANA PENDUKUNG
+
+| Sarana | Lokasi | Frekuensi Pemeriksaan | Kriteria | Tindakan Jika Tidak Memenuhi |
+|--------|--------|----------------------|----------|------------------------------|
+| Pest Control | Seluruh area | {{ pest_frekuensi }} | {{ pest_kriteria }} | {{ pest_tindakan }} |
+| Sampah / Limbah | {{ sampah_lokasi }} | {{ sampah_frekuensi }} | {{ sampah_kriteria }} | {{ sampah_tindakan }} |
+| Toilet / MCK | {{ toilet_lokasi }} | {{ toilet_frekuensi }} | {{ toilet_kriteria }} | {{ toilet_tindakan }} |
+| Tempat Cuci Tangan | {{ tct_lokasi }} | {{ tct_frekuensi }} | {{ tct_kriteria }} | {{ tct_tindakan }} |
+
+## 8. GAMBAR TEKNIS (LAMPIRAN)
+
+**Lampiran 1:** Denah Lantai Utama (Skala {{ skala }}) - File: `{{ denah_file }}`
+**Lampiran 2:** Potongan Melintang Area Produksi - File: `{{ potongan_file }}`
+**Lampiran 3:** Detail Area CCP - File: `{{ ccp_detail_file }}`
+
+> **Catatan:** Gambar teknis asli (CAD/PDF) disimpan terpisah. Template ini hanya deskripsi tekstual untuk keperluan RAG & audit simulasi.
+
+---
+
+**Disetujui,**
+
+__________________________
+**Ketua HAS**
+{{ ketua_has_nama }}
+Tanggal: {{ tanggal | strftime("%d %B %Y") }}
+
+__________________________
+**Ketua Koperasi**
+{{ ketua_koperasi_nama }}
+Tanggal: {{ tanggal | strftime("%d %B %Y") }}

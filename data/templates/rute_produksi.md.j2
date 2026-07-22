@@ -1,0 +1,171 @@
+# RUTE PRODUKSI - {{ nama_koperasi }}
+**Versi:** {{ versi }}
+**Tanggal Berlaku:** {{ tanggal_berlaku | strftime("%d %B %Y") }}
+**Dokumen No:** RP-{{ kode_koperasi }}-{{ versi.replace(".", "-") }}
+**Halaman:** 1 dari {{ total_halaman }}
+
+---
+
+## 1. TUJUAN
+Mendeskripsikan alur proses produksi dan rute material/personel untuk memastikan:
+- Segregasi halal/non-halal terjamin (PP 39/2021, Pasal 15-16)
+- Tidak terjadi kontaminasi silang (cross-contamination)
+- Traceability bahan baku hingga produk jadi
+- Kepatuhan HACCP & GMP
+
+## 2. RUANG LINGKUP
+Berlaku untuk semua lini produksi:
+{% for produk in produk_list %}
+- {{ produk.nama }} ({{ produk.sku }})
+{% endfor %}
+
+## 3. FLOWCHART PROSES PRODUKSI (Deskripsi)
+
+{{ flowchart_description }}
+
+### Alur Bahan Baku Halal
+```
+PENERIMAAN → PEMERIKSAAN QC → GUDANG BBAK HALAL → PERSIAPAN → PRODUKSI
+    (A)           (B)              (C)             (D)         (E)
+```
+
+### Alur Produksi Inti
+```
+PRODUKSI (E) → PEMANTAUAN CCP → PENDINGINAN → KEMASAN → PEMERIKSAAN FG
+     ↓              ↓               ↓           ↓            ↓
+  [CCP-1]       [CCP-2]        [CCP-3]     [CCP-4]      [QC Lab]
+```
+
+### Alur Produk Jadi
+```
+PEMERIKSAAN FG → GUDANG JADI HALAL → PENGIRIMAN → DISTRIBUSI
+      ↓                ↓              ↓           ↓
+   [Lulus]         [FIFO]        [DO/SJ]    [Cold Chain]
+```
+
+## 4. AREA SEGREGASI HALAL / NON-HALAL
+
+| Kode | Nama Area | Tipe | Luas (m²) | Peralatan Dedicated | Prosedur Pembersihan | Keterangan |
+|------|-----------|------|-----------|---------------------|---------------------|------------|
+{% for area in area_segregasi %}
+| {{ area.kode }} | {{ area.nama }} | {{ area.tipe }} | {{ area.luas_m2 }} | {{ "Ya" if area.peralatan_dedicated else "Tidak" }} | {{ area.prosedur_pembersihan }} | {{ area.keterangan }} |
+{% endfor %}
+
+### Legenda Tipe Area:
+- **HALAL:** Area dedikasi halal (label warna hijau)
+- **NON_HALAL:** Area non-halal (label warna merah) - Jika ada
+- **SHARED:** Area/peralatan digunakan bergantian (wajib cleaning validation)
+- **BUFFER:** Area perantara/transition (label warna kuning)
+
+## 5. TITIK KRITIS LINTAS HALAL / NON-HALAL
+
+{% if titik_kritis_lintas %}
+Titik-titik berikut memerlukan kontrol ketat untuk mencegah kontaminasi silang:
+
+| Titik Lintas | Dari Area | Ke Area | Risiko | Kontrol | Validasi | Frekuensi |
+|--------------|-----------|---------|--------|---------|----------|-----------|
+{% for titik in titik_kritis_lintas %}
+| {{ titik.kode }} | {{ titik.dari_area }} | {{ titik.ke_area }} | {{ titik.risiko }} | {{ titik.kontrol }} | {{ titik.validasi }} | {{ titik.frekuensi }} |
+{% endfor %}
+{% else %}
+**Tidak ada titik lintas halal/non-halal** - Seluruh fasilitas dedikasi halal (FULL HALAL FACILITY).
+{% endif %}
+
+## 6. PROSEDUR PEMBERSIHAN VALIDASI (Cleaning Validation)
+
+Untuk peralatan/area SHARED (jika ada):
+
+### 6.1 Prosedur Standar Pembersihan (SSOP)
+1. **Pra-pembersihan:** Buang sisa bahan kasar (dry cleaning)
+2. **Pencucian Utama:** Deterjen food-grade, suhu 40-50°C, waktu 15-20 menit
+3. **Bilas Pertama:** Air bersih hingga bebas deterjen (cek pH netral)
+4. **Sanitisasi:** Sanitizer food-grade:
+   - Klorin 100-200 ppm, atau
+   - Asam perasetat 150-200 ppm, atau
+   - Kuat ammonium 200-400 ppm
+   Kontak minimal 10 menit
+5. **Bilas Akhir:** Air bersih (jika sanitizer memerlukan bilas)
+6. **Pengeringan:** Angin bersih filtered / kain bersih sekali pakai
+7. **Verifikasi Visual:** Bebas residu, bau, noda
+8. **Verifikasi Mikro/ATP:** Swab test ATP < 10 RLU / TPC < 100 CFU/cm²
+9. **Pencatatan:** Formulir Cleaning Validation (CLV-{{ versi }})
+
+### 6.2 Matriks Cleaning Validation
+| Peralatan/Area | Produk Sebelum | Produk Sesudah | Prosedur | Kriteria Validasi | Frekuensi | PIC |
+|----------------|----------------|----------------|----------|-------------------|-----------|-----|
+{% for cv in cleaning_validation %}
+| {{ cv.peralatan }} | {{ cv.produk_sebelum }} | {{ cv.produk_sesudah }} | {{ cv.prosedur }} | {{ cv.kriteria }} | {{ cv.frekuensi }} | {{ cv.pic }} |
+{% endfor %}
+
+## 7. ALIRAN PERSONEL & APD
+
+### 7.1 Zonasi Personel
+| Zona | Area | APD Wajib | Prosedur Masuk | Prosedur Keluar |
+|------|------|-----------|----------------|-----------------|
+| **Zona 1: Luar Produksi** | Kantin, Loker, Toilet | Pakaian sipil | - | Cuci tangan, ganti sepatu |
+| **Zona 2: Transition** | Ruang ganti, cuci tangan | Sepatu boot, hairnet | Cuci tangan 7 langkah | - |
+| **Zona 3: Produksi Halal** | Area A-E (Halal) | Seragam halal, masker, sarafan, sarung tangan | Sanitasi tangan, cek APD | Lepas APD di zona 2 |
+{% if non_halal_areas %}
+| **Zona 4: Non-Halal** | Area Non-Halal | Seragam merah, APD beda | Dekontaminasi penuh | Dekontaminasi penuh |
+{% endif %}
+
+### 7.2 Larangan Silang Zona
+- ❌ Dilarang memasukkan APD non-halal ke area halal
+- ❌ Dilarang personel pindah zona tanpa prosedur dekontaminasi
+- ❌ Dilarang bawa makanan/minuman pribadi ke area produksi
+
+## 8. ALIRAN BAHAN & PRODUK SAMPING
+
+| Jenis | Sumber | Tujuan | Kontrol | Catatan |
+|-------|--------|--------|---------|---------|
+| **Bahan Baku Halal** | Supplier → Penerimaan → Gudang BBAK Halal | Produksi | Cek sertifikat halal, COA, suhu | Label hijau |
+| **Bahan Baku Non-Halal** | (Jika ada) | Area Non-Halal | Segregasi fisik, label merah | Label merah |
+| **Produk Jadi Halal** | Produksi → Kemasan → Gudang Jadi | Distribusi | QC Lulus, label halal | FIFO, label hijau |
+| **Retur / Reject** | QC / Buyer | Karantina | Label "REJECT", segregasi | Investigasi root cause |
+| **Limbah Cair** | Produksi → IPLT | Lingkungan | COD, BOD, pH, minyak | IPLT terlisensi |
+| **Limbah Padat** | Produksi → TPS | TPA / Pengepul | Segregasi B3 / non-B3 | Catat manifest |
+
+## 9. TRACEABILITY (RONTAI JEJAK)
+
+### 9.1 Forward Traceability (Produk → Konsumen)
+```
+Batch Produk → Batch Bahan Baku → Supplier → DO/COA/Sertifikat Halal
+     ↓
+No. Batch Produk → Tanggal Produksi → Tanggal Expired → Customer (DO/SJ)
+```
+
+### 9.2 Backward Traceability (Komplain → Sumber)
+```
+Komplain Konsumen → No. Batch → Log Produksi → Bahan Baku (Batch & Supplier)
+     ↓
+Non-Conformance → Root Cause Analysis → CAPA
+```
+
+### 9.3 Pencatatan Wajib per Batch
+| Record | Kode Formulir | Retensi |
+|--------|---------------|---------|
+| Produksi Harian | FRM-PROD-{{ kode_produk }}-001 | 2 tahun |
+| Monitoring CCP | FRM-CCP-{{ kode_produk }}-001 | 2 tahun |
+| Penerimaan Bahan Baku | FRM-TRM-001 | 2 tahun |
+| Hasil Analisis QC | FRM-QC-{{ kode_produk }}-001 | 2 tahun |
+| Pengiriman | FRM-DLV-001 | 2 tahun |
+
+## 10. KONTROL DOKUMEN RUTE PRODUKSI
+
+| Versi | Tanggal | Perubahan | Disetujui |
+|-------|---------|-----------|-----------|
+| {{ versi }} | {{ tanggal_berlaku | strftime("%d %B %Y") }} | Dokumen baru | Ketua HAS / Pimpinan |
+
+---
+
+**DISETUJUI OLEH:**
+
+__________________________
+**{{ nama_ketua_has }}**
+Ketua HAS
+Tanggal: {{ tanggal_berlaku | strftime("%d %B %Y") }}
+
+__________________________
+**{{ nama_pimpinan }}**
+Pimpinan {{ nama_koperasi }}
+Tanggal: {{ tanggal_berlaku | strftime("%d %B %Y") }}

@@ -1,0 +1,104 @@
+PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA
+NOMOR 9 TAHUN 2023
+TENTANG STANDAR PELABELAN PRODUK HALAL DIGITAL
+
+===================================================================
+
+BAB I: KETENTUAN UMUM
+
+Pasal 1
+Dalam Peraturan Menteri ini yang dimaksud dengan:
+1. Logo Halal Indonesia adalah logo resmi kehalalan produk yang diterbitkan BPJPH.
+2. Pelabelan Digital adalah penempatan logo halal dan informasi sertifikasi pada platform digital.
+3. E-Commerce adalah perdagangan elektronik melalui platform digital.
+4. QR Code Halal adalah kode QR yang mengarah ke verifikasi sertifikat di SEHATI.
+5. Platform Digital adalah aplikasi/website yang digunakan untuk perdagangan produk.
+6. Penyelenggara Platform adalah pengelola platform e-commerce/marketplace.
+7. Produk Halal Bersertifikat adalah produk yang memiliki sertifikat halal valid dari BPJPH.
+
+BAB II: KEWAJIBAN PELABELAN FISIK
+
+Pasal 2
+(1) Setiap produk halal bersertifikat WAJIB mencantumkan Logo Halal Indonesia pada kemasan primer.
+(2) Logo Halal Indonesia harus memenuhi spesifikasi:
+   a. Desain: sesuai logo resmi BPJPH (lingkaran dengan tulisan "HALAL" dan "MUI");
+   b. Warna: 
+      - Utama: Hijau Pantone 348C (C:100 M:0 Y:100 K:0);
+      - Alternatif: Hitam (C:0 M:0 Y:0 K:100) atau Putih (C:0 M:0 Y:0 K:0);
+   c. Ukuran minimal:
+      - Kemasan kecil (< 50 cm²): 10 mm x 10 mm;
+      - Kemasan sedang (50-200 cm²): 15 mm x 15 mm;
+      - Kemasan besar (> 200 cm²): 20 mm x 20 mm;
+   d. Posisi: sudut kanan atas atau area paling terlihat;
+   e. Background: kontras dengan warna kemasan;
+   e. Tidak boleh: terpotong, tertutup, transparan, blur, distorsi.
+
+Pasal 3
+(1) Informasi wajib di samping logo halal:
+   a. Nomor sertifikat halal (format: XX-YYYY-NNNNNN);
+   b. Atau QR Code yang mengarah ke verifikasi SEHATI.
+(2) Nomor sertifikat dicantumkan dengan font minimal 8 pt, jelas terbaca.
+
+Pasal 4
+(1) Pelabelan fisik WAJIB untuk:
+   a. Kemasan primer (langka kontak produk);
+   b. Kemasan sekunder (jika dijual per kemasan);
+   c. Kemasan tersier (kardus pengiriman - opsional).
+(2) Dilarang: mencantumkan logo halal pada produk non-halal, produk tanpa sertifikat, atau produk yang sertifikatnya expired/dicabut.
+
+BAB III: KEWAJIBAN PELABELAN DIGITAL
+
+Pasal 5
+(1) Setiap produk halal yang dijual melalui platform digital WAJIB menampilkan:
+   a. Logo Halal Indonesia (resolusi minimal 200x200 px);
+   b. Nomor sertifikat halal;
+   c. QR Code Halal yang mengarah ke: https://sehatilogo.halal.go.id/verify/[nomor_sertifikat];
+   d. Status sertifikat: AKTIF / EXPIRED / DICABUT (real-time dari SEHATI).
+
+(2) Penyelenggara Platform WAJIB:
+   a. Menyediakan fitur filter "Produk Halal";
+   b. Menampilkan badge "Halal Terverifikasi" pada produk bersertifikat;
+   c. Menyinkronkan data sertifikat dengan SEHATI minimal 1x/hari;
+   c. Menghapus/sembunyikan logo halal jika sertifikat expired/dicabut (otomatis via API SEHATI).
+
+Pasal 6
+Spesifikasi QR Code Halal:
+   a. Format: QR Code Model 2, Error Correction Level M;
+   b. Ukuran minimal: 25 mm x 25 mm (cetak), 100x100 px (digital);
+   b. URL: https://sehatilogo.halal.go.id/verify/{nomor_sertifikat};
+   c. Landing page menampilkan: nama produk, pelaku usaha, masa berlaku, status.
+
+Pasal 7
+(1) Pelaku usaha wajib menyediakan file logo halal & QR code resolusi tinggi ke Penyelenggara Platform.
+(2) Penyelenggara Platform wajib memvalidasi sertifikat via API SEHATI sebelum menampilkan badge.
+
+BAB IV: PENGAWASAN DAN SANKSI
+
+Pasal 8
+Pengawasan pelabelan digital dilakukan oleh:
+   a. Kementerian Komunikasi dan Informatika (Kominfo);
+   b. BPJPH melalui SEHATI;
+   c. Masyarakat melalui fitur laporkan.
+
+Pasal 9
+Pelanggaran pelabelan digital:
+   a. Tidak menampilkan logo halal pada e-commerce: Peringatan tertulis → Denda Rp 50.000.000;
+   b. Menampilkan logo halal palsu/tidak valid: Denda Rp 200.000.000;
+   c. Penyelenggara Platform tidak sinkron SEHATI: Peringatan → Denda Rp 500.000.000;
+   d. Tidak menghapus logo halal expired: Denda Rp 100.000.000 per produk.
+
+Pasal 10
+Denda administratif dibayarkan ke Kas Negara melalui BPJPH.
+
+BAB V: KETENTUAN PERALIHAN
+
+Pasal 11
+(1) Produk yang sudah beredar sebelum Peraturan ini berlaku diberi tenggang waktu 12 bulan.
+(2) Penyelenggara Platform wajib siap implementasi teknis maksimal 6 bulan.
+
+Pasal 12
+Peraturan ini mulai berlaku pada tanggal diundangkan.
+
+Jakarta, 12 Mei 2023
+MENTERI KOMUNIKASI DAN INFORMATIKA
+ttd. BUDI ARIE SETIADI

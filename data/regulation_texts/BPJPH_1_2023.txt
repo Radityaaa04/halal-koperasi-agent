@@ -1,0 +1,137 @@
+PERATURAN BADAN PENYELENGGARA JAMINAN PRODUK HALAL
+NOMOR 1 TAHUN 2023
+TENTANG PROSEDUR PENGAJUAN SERTIFIKAT HALAL
+
+===================================================================
+
+BAB I: KETENTUAN UMUM
+
+Pasal 1
+Dalam Peraturan ini yang dimaksud dengan:
+1. BPJPH adalah Badan Penyelenggara Jaminan Produk Halal.
+2. LPH adalah Lembaga Pemeriksa Halal.
+3. SEHATI adalah Sistem Elektronik Halal.
+4. SJH adalah Sistem Jaminan Halal.
+5. HAS adalah Halal Assurance System.
+6. Auditor Halal adalah orang yang memiliki kompetensi dan disahkan oleh LPH.
+7. Sertifikat Halal adalah bukti tertulis kehalalan produk.
+8. Pelaku Usaha Koperasi adalah koperasi yang menyelenggarakan usaha.
+
+BAB II: PROSEDUR PENGAJUAN
+
+Pasal 2
+(1) Pengajuan sertifikat halal dilakukan melalui SEHATI.
+(2) Pelaku usaha wajib memiliki akun SEHATI.
+
+Pasal 3
+(1) Dokumen yang wajib dilampirkan:
+a. Akta pendirian koperasi dan anggaran dasar;
+b. NIB (Nomor Induk Berusaha);
+c. NPWP (Nomor Pokok Wajib Pajak);
+d. Izin usaha (SIUP/izin lain jika diperlukan);
+e. Daftar produk yang disertifikasi;
+f. Daftar bahan baku dan bahan penolong lengkap;
+g. Rute produksi dan flowchart proses;
+h. SOP produksi per produk;
+i. Layout fasilitas produksi dengan skala dan legenda;
+j. Organogram HAS (struktur organisasi tim jaminan halal);
+k. Bukti pelatihan HAS (Ketua HAS wajib bersertifikat);
+l. Sertifikat halal bahan baku kritis (jika ada);
+m. Daftar peralatan produksi;
+n. Daftar supplier bahan baku; dan
+o. Surat pernyataan kesediaan audit.
+
+(2) Untuk koperasi mikro/kecil: dokumen disederhanakan sesuai ketentuan BPJPH.
+
+Pasal 4
+(1) BPJPH verifikasi kelengkapan dokumen maksimal 7 hari kerja.
+(2) Hasil verifikasi: LENGKAP atau TIDAK LENGKAP.
+(3) Jika TIDAK LENGKAP, pelaku usaha diberi tenggang waktu 14 hari untuk melengkapi.
+
+Pasal 5
+(1) Setelah dokumen LENGKAP, BPJPH meneruskan ke LPH yang dipilih pelaku usaha.
+(2) Pelaku usaha bebas memilih LPH dari daftar terdaftar di BPJPH.
+(3) Kriteria pemilihan LPH: cakupan kategori, lokasi, biaya, jadwal.
+
+BAB III: AUDIT HALAL
+
+Pasal 6
+(1) LPH menjadwalkan audit maksimal 14 hari setelah menerima dokumen.
+(2) Audit dilaksanakan maksimal 30 hari kerja.
+
+Pasal 7
+Audit mencakup 8 area:
+1. Audit dokumen (dokumen review);
+2. Fasilitas produksi dan peralatan;
+3. Proses produksi;
+4. Bahan baku dan bahan penolong;
+5. Kemasan dan pelabelan;
+6. Sistem Jaminan Halal (SJH);
+7. Personel dan pelatihan HAS;
+8. Pencatatan dan dokumentasi.
+
+Pasal 8
+Temuan audit dikategorikan:
+a. Conformity (C) - sesuai;
+b. Minor Non-Conformance (MNC) - ketidaksesuaian minor, perbaikan 30 hari;
+c. Major Non-Conformance (MJNC) - ketidaksesuaian mayor, perbaikan 14 hari, re-audit wajib.
+
+Pasal 9
+(1) LPH menyerahkan laporan audit ke BPJPH maksimal 7 hari kerja.
+(2) Laporan berisi: kesesuaian dokumen, temuan, rekomendasi perbaikan, rekomendasi sertifikat.
+
+BAB IV: PENERBITAN SERTIFIKAT
+
+Pasal 10
+(1) BPJPH terbitkan sertifikat halal dalam 7 hari kerja setelah terima laporan audit.
+(2) Syarat: semua temuan MJNC sudah diperbaiki dan diverifikasi.
+
+Pasal 11
+Sertifikat halal berisi:
+- Nomor sertifikat unik;
+- Nama pelaku usaha dan alamat fasilitas;
+- Daftar produk bersertifikat;
+- Masa berlaku 4 tahun;
+- Nomor registrasi BPJPH;
+- QR code verifikasi.
+
+Pasal 12
+(1) Perpanjangan diajukan minimal 6 bulan sebelum habis.
+(2) Prosedur perpanjangan sama dengan pengajuan baru (dokumen update).
+
+BAB V: PENGAWASAN PASCA SERTIFIKAT
+
+Pasal 13
+(1) BPJPH melakukan monitoring berkala melalui SEHATI.
+(2) Audit surveillance minimal 1x/tahun.
+
+Pasal 14
+Pelanggaran pasca sertifikat:
+- Perubahan produk/proses tanpa notifikasi: peringatan/denda;
+- Tidak melakukan audit internal: peringatan;
+- Sertifikat tidak dicantumkan di kemasan: denda.
+
+BAB VI: KETENTUAN KHUSUS KOPERASI
+
+Pasal 15
+Koperasi mikro/kecil mendapat kemudahan:
+a. Subsidi biaya audit 50-100%;
+b. Pelatihan HAS gratis via BPJPH/LPH;
+c. Bantuan pendokumentasian SJH;
+d. Prioritas jadwal audit;
+e. Dokumen disederhanakan.
+
+Pasal 16
+Tenggang waktu kewajiban sertifikasi:
+- Koperasi mikro: 7 tahun (hingga Okt 2028);
+- Koperasi kecil: 5 tahun (hingga Okt 2026);
+- Koperasi menengah: 3 tahun (hingga Okt 2024).
+
+BAB VII: KETENTUAN PENUTUP
+
+Pasal 17
+Peraturan ini mulai berlaku pada tanggal diundangkan.
+
+Jakarta, 13 Februari 2023
+KEPALA BPJPH
+ttd. DR. H. M. PADLI

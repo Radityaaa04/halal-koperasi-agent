@@ -1,0 +1,1485 @@
+[
+  {
+    "id": "A01",
+    "category": "A. Persyaratan Administrasi",
+    "sub_category": "Administrasi Umum",
+    "checklist_item": "Akta Pendirian Koperasi",
+    "description": "Akta pendirian sah dan tercatat di Kemenkumham",
+    "regulatory_refs": [
+      "UU 25/2008 Pasal 43",
+      "BPJPH Peraturan 1/2023 Pasal 7"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "A01_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "A02",
+    "category": "A. Persyaratan Administrasi",
+    "sub_category": "Administrasi Umum",
+    "checklist_item": "Anggaran Dasar Koperasi",
+    "description": "AD mencakup tujuan usaha halal",
+    "regulatory_refs": [
+      "UU 25/2008 Pasal 12",
+      "PP 39/2021 Pasal 14"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "A02_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "A03",
+    "category": "A. Persyaratan Administrasi",
+    "sub_category": "Administrasi Umum",
+    "checklist_item": "NPWP Koperasi",
+    "description": "NPWP aktif dan sesuai identitas",
+    "regulatory_refs": [
+      "UU 28/2007 Pasal 2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "A03_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "A04",
+    "category": "A. Persyaratan Administrasi",
+    "sub_category": "Administrasi Umum",
+    "checklist_item": "NIB (Nomor Induk Berusaha)",
+    "description": "NIB aktif via OSS",
+    "regulatory_refs": [
+      "UU 11/2020",
+      "PP 39/2021 Pasal 14"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "A04_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "A05",
+    "category": "A. Persyaratan Administrasi",
+    "sub_category": "Administrasi Umum",
+    "checklist_item": "Izin Usaha / SIUP",
+    "description": "Izin usaha valid dan belum expired",
+    "regulatory_refs": [
+      "UU 20/2008",
+      "PP 39/2021"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "A05_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "A06",
+    "category": "A. Persyaratan Administrasi",
+    "sub_category": "Administrasi Umum",
+    "checklist_item": "SKTU / Sertifikat Koperasi",
+    "description": "Sah dan berlaku",
+    "regulatory_refs": [
+      "UU 25/2008 Pasal 47"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "A06_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "A07",
+    "category": "A. Persyaratan Administrasi",
+    "sub_category": "Administrasi Umum",
+    "checklist_item": "Daftar Anggota & Pengurus",
+    "description": "Lengkap dengan NIK, alamat, jabatan",
+    "regulatory_refs": [
+      "UU 25/2008 Pasal 43"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "A07_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "A08",
+    "category": "A. Persyaratan Administrasi",
+    "sub_category": "Administrasi Umum",
+    "checklist_item": "Surat Kuasa Pengurus",
+    "description": "Untuk mengurus sertifikasi halal",
+    "regulatory_refs": [
+      "BPJPH Peraturan 1/2023 Pasal 7"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "A08_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "A09",
+    "category": "A. Persyaratan Administrasi",
+    "sub_category": "Administrasi Umum",
+    "checklist_item": "Surat Pernyataan Kebersamaan",
+    "description": "Komitmen halal dari semua pengurus",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 14"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "A09_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "A10",
+    "category": "A. Persyaratan Administrasi",
+    "sub_category": "Administrasi Umum",
+    "checklist_item": "Profil Usaha & Produk",
+    "description": "Deskripsi usaha, produk, kapasitas produksi",
+    "regulatory_refs": [
+      "BPJPH Peraturan 1/2023 Pasal 8"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "A10_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B01",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Struktur & SDM HAS",
+    "checklist_item": "Ketua HAS Terpenuhi",
+    "description": "Ketua HAS memiliki sertifikat pelatihan valid",
+    "regulatory_refs": [
+      "BPJPH Peraturan 1/2023 Pasal 11",
+      "SNI 99001:2023 4.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "B01_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B02",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Struktur & SDM HAS",
+    "checklist_item": "Anggota HAS Lengkap",
+    "description": "Minimal 3 anggota (Ketua, Sekretaris, Audit Internal)",
+    "regulatory_refs": [
+      "SNI 99001:2023 4.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "B02_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B03",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Struktur & SDM HAS",
+    "checklist_item": "Pelatihan HAS Terbaru",
+    "description": "Semua anggota HAS lulus pelatihan BPJPH/LPH",
+    "regulatory_refs": [
+      "BPJPH Peraturan 1/2023 Pasal 11"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "B03_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B04",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Sistem HAS",
+    "checklist_item": "Manual HAS (MHAS)",
+    "description": "Terdapat manual HAS versi terbaru",
+    "regulatory_refs": [
+      "SNI 99001:2023 4.3"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "B04_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B05",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Sistem HAS",
+    "checklist_item": "Prosedur Operasional HAS",
+    "description": "SOP untuk setiap aktivitas HAS",
+    "regulatory_refs": [
+      "SNI 99001:2023 4.4"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "B05_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B06",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Sistem HAS",
+    "checklist_item": "Tim Verifikasi Internal",
+    "description": "Terdapat tim verifikasi internal berkala",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "B06_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B07",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Sistem HAS",
+    "checklist_item": "Audit Internal HAS",
+    "description": "Audit internal minimal 1x/tahun",
+    "regulatory_refs": [
+      "SNI 99001:2023 9.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "B07_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B08",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Sistem HAS",
+    "checklist_item": "Manajemen Perubahan",
+    "description": "Prosedur perubahan bahan/proses/fasilitas",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.4"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "B08_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B09",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Sistem HAS",
+    "checklist_item": "Penanganan Ketidaksesuaian",
+    "description": "Prosedur non-conformance & koreksi",
+    "regulatory_refs": [
+      "SNI 99001:2023 10.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "B09_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B10",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Sistem HAS",
+    "checklist_item": "Pencatatan & Dokumentasi HAS",
+    "description": "Semua aktivitas HAS terdokumen",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "B10_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B11",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Sistem HAS",
+    "checklist_item": "Management Review",
+    "description": "Review manajemen HAS berkala",
+    "regulatory_refs": [
+      "SNI 99001:2023 9.3"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "B11_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "B12",
+    "category": "B. Halal Assurance System (HAS)",
+    "sub_category": "Sistem HAS",
+    "checklist_item": "Komunikasi Internal/Eksternal",
+    "description": "Saluran komunikasi halal jelas",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.4"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "B12_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C01",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Manajemen Bahan",
+    "checklist_item": "Daftar Bahan Baku Lengkap",
+    "description": "Semua bahan baku terdaftar dengan kode internal",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 16",
+      "BPJPH Peraturan 2/2023"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C01_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C02",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Sertifikasi Bahan",
+    "checklist_item": "Sertifikat Halal Bahan Baku",
+    "description": "Setiap bahan baku kritis punya sertifikat halal valid",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 16",
+      "BPJPH Peraturan 2/2023 Pasal 5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "C02_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C03",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Sertifikasi Bahan",
+    "checklist_item": "Sertifikat Halal Tidak Expired",
+    "description": "Tidak ada sertifikat halal bahan baku yang expired",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 16"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "C03_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C04",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Sertifikasi Bahan",
+    "checklist_item": "Supplier Bahan Baku Terverifikasi",
+    "description": "Supplier memiliki sertifikat halal/LPH terdaftar",
+    "regulatory_refs": [
+      "BPJPH Peraturan 2/2023 Pasal 6"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C04_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C05",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Sertifikasi Bahan",
+    "checklist_item": "Bahan Penolong Produksi",
+    "description": "Enzim, mikroba, dll memiliki sertifikat halal",
+    "regulatory_refs": [
+      "MUI Fatwa No. 4/2003",
+      "BPJPH Peraturan 2/2023"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C05_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C06",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Manajemen Bahan",
+    "checklist_item": "Segregasi Bahan Halal/Non-Halal",
+    "description": "Gudang & penanganan terpisah",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 15",
+      "SNI 99001:2023 8.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "C06_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C07",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Manajemen Bahan",
+    "checklist_item": "Penerimaan Bahan Baku",
+    "description": "Prosedur penerimaan dengan verifikasi halal",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.4"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C07_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C08",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Manajemen Bahan",
+    "checklist_item": "Identifikasi & Traceability",
+    "description": "Setiap batch bahan baku traceable",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C08_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C09",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Manajemen Bahan",
+    "checklist_item": "Kontrol Bahan Non-Halal",
+    "description": "Kontrol ketat bahan non-halal (jika ada)",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 15",
+      "MUI Fatwa"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C09_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C10",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Manajemen Bahan",
+    "checklist_item": "Bahan Baku Hewan",
+    "description": "Jika ada bahan hewan: sertifikat halal & rantai pasokan",
+    "regulatory_refs": [
+      "MUI Fatwa No. 12/2010",
+      "BPJPH Peraturan 2/2023"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C10_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C11",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Manajemen Bahan",
+    "checklist_item": "Bahan Baku Minuman",
+    "description": "Jika ada minuman: bebas alkohol/khamer",
+    "regulatory_refs": [
+      "MUI Fatwa No. 10/2018",
+      "PP 39/2021"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C11_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C12",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Manajemen Bahan",
+    "checklist_item": "Bahan Kimia & Aditif",
+    "description": "Semua aditif food-grade & halal certified",
+    "regulatory_refs": [
+      "BPOM Peraturan",
+      "MUI Fatwa"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C12_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C13",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Manajemen Bahan",
+    "checklist_item": "Kontrak/Jaminan Supplier",
+    "description": "Surat jaminan halal dari supplier",
+    "regulatory_refs": [
+      "BPJPH Peraturan 2/2023 Pasal 7"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C13_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "C14",
+    "category": "C. Bahan Baku & Bahan Penolong",
+    "sub_category": "Manajemen Bahan",
+    "checklist_item": "Monitoring Berkala Supplier",
+    "description": "Evaluasi supplier minimal 1x/tahun",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.4"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "C14_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D01",
+    "category": "D. Proses Produksi",
+    "sub_category": "SOP & HACCP",
+    "checklist_item": "SOP Produksi Lengkap",
+    "description": "SOP mencakup semua tahap produksi",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 15",
+      "SNI 99001:2023 8.5.1"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "D01_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D02",
+    "category": "D. Proses Produksi",
+    "sub_category": "SOP & HACCP",
+    "checklist_item": "Identifikasi CCP (Critical Control Points)",
+    "description": "CCP teridentifikasi per prinsip HACCP",
+    "regulatory_refs": [
+      "SNI 99001:2023",
+      "HACCP Principle 2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "D02_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D03",
+    "category": "D. Proses Produksi",
+    "sub_category": "SOP & HACCP",
+    "checklist_item": "Batas Kritis (Critical Limits) CCP",
+    "description": "Setiap CCP punya batas kritis terukur",
+    "regulatory_refs": [
+      "HACCP Principle 3"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "D03_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D04",
+    "category": "D. Proses Produksi",
+    "sub_category": "SOP & HACCP",
+    "checklist_item": "Sistem Pemantauan CCP",
+    "description": "Monitoring CCP real-time/terjadwal",
+    "regulatory_refs": [
+      "HACCP Principle 4"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "D04_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D05",
+    "category": "D. Proses Produksi",
+    "sub_category": "SOP & HACCP",
+    "checklist_item": "Tindakan Koreksi CCP",
+    "description": "Prosedur koreksi jika CCP melampaui batas",
+    "regulatory_refs": [
+      "HACCP Principle 5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "D05_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D06",
+    "category": "D. Proses Produksi",
+    "sub_category": "SOP & HACCP",
+    "checklist_item": "Verifikasi CCP",
+    "description": "Verifikasi efektivitas CCP berkala",
+    "regulatory_refs": [
+      "HACCP Principle 6"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "D06_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D07",
+    "category": "D. Proses Produksi",
+    "sub_category": "SOP & HACCP",
+    "checklist_item": "Dokumentasi CCP",
+    "description": "Rekaman pemantauan CCP lengkap",
+    "regulatory_refs": [
+      "HACCP Principle 7",
+      "SNI 99001:2023 7.5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "D07_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D08",
+    "category": "D. Proses Produksi",
+    "sub_category": "Kontrol Proses",
+    "checklist_item": "Segregasi Proses Halal/Non-Halal",
+    "description": "Jalur produksi & peralatan terpisah",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 15",
+      "SNI 99001:2023 8.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "D08_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D09",
+    "category": "D. Proses Produksi",
+    "sub_category": "Kontrol Proses",
+    "checklist_item": "Pembersihan Antara Produk",
+    "description": "Prosedur cleaning & validasi kebersihan",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "D09_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D10",
+    "category": "D. Proses Produksi",
+    "sub_category": "Kontrol Proses",
+    "checklist_item": "Penggunaan Air & Utilitas",
+    "description": "Air & utilitas bebas kontaminan non-halal",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.3"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "D10_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D11",
+    "category": "D. Proses Produksi",
+    "sub_category": "Kontrol Proses",
+    "checklist_item": "Kontrol Kontaminasi Silang",
+    "description": "Pencegahan cross-contamination lengkap",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 15",
+      "SNI 99001:2023 8.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "D11_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D12",
+    "category": "D. Proses Produksi",
+    "sub_category": "Kontrol Proses",
+    "checklist_item": "Manajemen Limbah",
+    "description": "Limbah tidak mencemari produk halal",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.4"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "D12_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D13",
+    "category": "D. Proses Produksi",
+    "sub_category": "Kontrol Proses",
+    "checklist_item": "Kalibrasi Alat Ukur",
+    "description": "Semua alat CCP terkalibrasi berkala",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.1.5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "D13_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D14",
+    "category": "D. Proses Produksi",
+    "sub_category": "Kontrol Proses",
+    "checklist_item": "Pelatihan Operator CCP",
+    "description": "Operator CCP terlatih & kompeten",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "D14_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D15",
+    "category": "D. Proses Produksi",
+    "sub_category": "Kontrol Proses",
+    "checklist_item": "Validasi Proses Produksi",
+    "description": "Validasi awal & periodik proses",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.1"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "D15_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "D16",
+    "category": "D. Proses Produksi",
+    "sub_category": "Kontrol Proses",
+    "checklist_item": "Rekaman Produksi Harian",
+    "description": "Log produksi lengkap & traceable",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "D16_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "E01",
+    "category": "E. Fasilitas & Peralatan",
+    "sub_category": "Layout & Zonasi",
+    "checklist_item": "Layout Fasilitas (Gambar Teknis)",
+    "description": "Layout lengkap dengan zona halal/non-halal",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 15",
+      "BPJPH Peraturan 1/2023 Pasal 9"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "E01_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "E02",
+    "category": "E. Fasilitas & Peralatan",
+    "sub_category": "Layout & Zonasi",
+    "checklist_item": "Zonasi Area Halal",
+    "description": "Area produksi, penyimpanan, kemasan terpisah",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 15",
+      "SNI 99001:2023 8.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "E02_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "E03",
+    "category": "E. Fasilitas & Peralatan",
+    "sub_category": "Fasilitas Fisik",
+    "checklist_item": "Fasilitas Pencucian & Sanitasi",
+    "description": "Cukup & terpisah untuk halal/non-halal",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "E03_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "E04",
+    "category": "E. Fasilitas & Peralatan",
+    "sub_category": "Fasilitas Fisik",
+    "checklist_item": "Peralatan Khusus Halal",
+    "description": "Peralatan dedicated untuk produksi halal",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 15"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "E04_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "E05",
+    "category": "E. Fasilitas & Peralatan",
+    "sub_category": "Fasilitas Fisik",
+    "checklist_item": "Identifikasi Peralatan",
+    "description": "Label/tanda peralatan halal vs non-halal",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "E05_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "E06",
+    "category": "E. Fasilitas & Peralatan",
+    "sub_category": "Fasilitas Fisik",
+    "checklist_item": "Kondisi Kebersihan Fasilitas",
+    "description": "Kebersihan memenuhi standar GMP",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "E06_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "E07",
+    "category": "E. Fasilitas & Peralatan",
+    "sub_category": "Fasilitas Fisik",
+    "checklist_item": "Pengendalian Hama (Pest Control)",
+    "description": "Program pest control terdocumentasi",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.4"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "E07_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "E08",
+    "category": "E. Fasilitas & Peralatan",
+    "sub_category": "Fasilitas Fisik",
+    "checklist_item": "Manajemen Air & Limbah",
+    "description": "Sistem air bersih & limbah terpisah",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.3"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "E08_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "E09",
+    "category": "E. Fasilitas & Peralatan",
+    "sub_category": "Fasilitas Fisik",
+    "checklist_item": "Ventilasi & Pencahayaan",
+    "description": "Memenuhi kebutuhan produksi & higiene",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "E09_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "E10",
+    "category": "E. Fasilitas & Peralatan",
+    "sub_category": "Fasilitas Fisik",
+    "checklist_item": "Maintenance Preventif",
+    "description": "Jadwal maintenance peralatan terencana",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.1.5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "E10_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "F01",
+    "category": "F. Kemasan & Pelabelan",
+    "sub_category": "Pelabelan",
+    "checklist_item": "Logo Halal pada Kemasan",
+    "description": "Logo halal Indonesia per Kominfo 9/2023",
+    "regulatory_refs": [
+      "Kominfo 9/2023",
+      "PP 39/2021 Pasal 20"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "F01_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "F02",
+    "category": "F. Kemasan & Pelabelan",
+    "sub_category": "Pelabelan",
+    "checklist_item": "Kesesuaian Logo Halal",
+    "description": "Ukuran, warna, posisi logo sesuai ketentuan",
+    "regulatory_refs": [
+      "Kominfo 9/2023 Pasal 4"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "F02_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "F03",
+    "category": "F. Kemasan & Pelabelan",
+    "sub_category": "Pelabelan",
+    "checklist_item": "Informasi Wajib Label",
+    "description": "Nama produk, bahan, netto, expired, dll",
+    "regulatory_refs": [
+      "BPOM Peraturan 27/2017",
+      "PP 39/2021"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "F03_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "F04",
+    "category": "F. Kemasan & Pelabelan",
+    "sub_category": "Pelabelan",
+    "checklist_item": "Nomor Sertifikat Halal pada Label",
+    "description": "Nomor sertifikat tertera",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 20"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "F04_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "F05",
+    "category": "F. Kemasan & Pelabelan",
+    "sub_category": "Kemasan",
+    "checklist_item": "Kemasan Primer Halal",
+    "description": "Material kemasan bebas kontaminan non-halal",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.5",
+      "MUI Fatwa"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "F05_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "F06",
+    "category": "F. Kemasan & Pelabelan",
+    "sub_category": "Kemasan",
+    "checklist_item": "Kemasan Sekunder/Tersier",
+    "description": "Segregasi kemasan halal/non-halal",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "F06_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "F07",
+    "category": "F. Kemasan & Pelabelan",
+    "sub_category": "Kemasan",
+    "checklist_item": "Label Digital (E-Commerce)",
+    "description": "Logo halal digital per Kominfo 9/2023",
+    "regulatory_refs": [
+      "Kominfo 9/2023 Pasal 5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "F07_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "F08",
+    "category": "F. Kemasan & Pelabelan",
+    "sub_category": "Kemasan",
+    "checklist_item": "Verifikasi Label Sebelum Cetak",
+    "description": "Proses approval label sebelum produksi",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "F08_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "G01",
+    "category": "G. Penanganan Produk Non-Halal",
+    "sub_category": "Segregasi & Prosedur",
+    "checklist_item": "Identifikasi Produk Non-Halal",
+    "description": "Daftar produk/jalur non-halal jelas",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 15",
+      "MUI Fatwa"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "G01_document"
+    ],
+    "applicable_to": [
+      "mixed"
+    ]
+  },
+  {
+    "id": "G02",
+    "category": "G. Penanganan Produk Non-Halal",
+    "sub_category": "Segregasi & Prosedur",
+    "checklist_item": "Segregasi Fisik Non-Halal",
+    "description": "Area, peralatan, gudang terpisah total",
+    "regulatory_refs": [
+      "PP 39/2021 Pasal 15",
+      "SNI 99001:2023 8.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.5,
+    "evidence_required": [
+      "G02_document"
+    ],
+    "applicable_to": [
+      "mixed"
+    ]
+  },
+  {
+    "id": "G03",
+    "category": "G. Penanganan Produk Non-Halal",
+    "sub_category": "Segregasi & Prosedur",
+    "checklist_item": "Prosedur Pembersihan Non-Halal",
+    "description": "Cleaning validated setelah non-halal",
+    "regulatory_refs": [
+      "SNI 99001:2023 8.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "G03_document"
+    ],
+    "applicable_to": [
+      "mixed"
+    ]
+  },
+  {
+    "id": "G04",
+    "category": "G. Penanganan Produk Non-Halal",
+    "sub_category": "Segregasi & Prosedur",
+    "checklist_item": "Pencatatan Produk Non-Halal",
+    "description": "Log produksi non-halal terpisah",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.5"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "G04_document"
+    ],
+    "applicable_to": [
+      "mixed"
+    ]
+  },
+  {
+    "id": "G05",
+    "category": "G. Penanganan Produk Non-Halal",
+    "sub_category": "Segregasi & Prosedur",
+    "checklist_item": "Pelatihan Personel Non-Halal",
+    "description": "Personel paham risiko kontaminasi",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "G05_document"
+    ],
+    "applicable_to": [
+      "mixed"
+    ]
+  },
+  {
+    "id": "G06",
+    "category": "G. Penanganan Produk Non-Halal",
+    "sub_category": "Segregasi & Prosedur",
+    "checklist_item": "Audit Internal Non-Halal",
+    "description": "Pemeriksaan berkala segregasi",
+    "regulatory_refs": [
+      "SNI 99001:2023 9.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "G06_document"
+    ],
+    "applicable_to": [
+      "mixed"
+    ]
+  },
+  {
+    "id": "H01",
+    "category": "H. Dokumen & Pencatatan",
+    "sub_category": "Manajemen Dokumen",
+    "checklist_item": "Master List Dokumen HAS",
+    "description": "Daftar master semua dokumen HAS versi terkini",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.5.2"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "H01_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "H02",
+    "category": "H. Dokumen & Pencatatan",
+    "sub_category": "Manajemen Dokumen",
+    "checklist_item": "Kontrol Dokumen",
+    "description": "Prosedur review, approval, distribusi dokumen",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.5.3"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "H02_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "H03",
+    "category": "H. Dokumen & Pencatatan",
+    "sub_category": "Manajemen Dokumen",
+    "checklist_item": "Rekaman HAS Lengkap",
+    "description": "Semua rekaman HAS tersimpan & traceable",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.5.1"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "H03_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "H04",
+    "category": "H. Dokumen & Pencatatan",
+    "sub_category": "Manajemen Dokumen",
+    "checklist_item": "Retensi Dokumen",
+    "description": "Kebijakan retensi minimal 3 tahun",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.5.4"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "H04_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  },
+  {
+    "id": "H05",
+    "category": "H. Dokumen & Pencatatan",
+    "sub_category": "Manajemen Dokumen",
+    "checklist_item": "Akses & Keamanan Dokumen",
+    "description": "Kontrol akses dokumen sensitif",
+    "regulatory_refs": [
+      "SNI 99001:2023 7.5.3"
+    ],
+    "is_mandatory": true,
+    "severity_weight": 1.0,
+    "evidence_required": [
+      "H05_document"
+    ],
+    "applicable_to": [
+      "all"
+    ]
+  }
+]

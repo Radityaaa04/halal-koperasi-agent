@@ -1,0 +1,87 @@
+# ===========================================
+# Environment & Secrets
+# ===========================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+
+# ===========================================
+# Python
+# ===========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+# ===========================================
+# Virtual Environments
+# ===========================================
+.venv/
+venv/
+env/
+ENV/
+*.venv/
+
+# ===========================================
+# IDE & Editor
+# ===========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===========================================
+# Build & Distribution
+# ===========================================
+dist/
+build/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# ===========================================
+# Data & Output (Large/Generated)
+# ===========================================
+output/
+data/downloads/
+data/regulatory_chunks/
+data/synthetic_docs/
+data/eval/
+data/kb/
+*.log
+*.sqlite
+*.db
+
+# ===========================================
+# Model Weights & Cache
+# ===========================================
+*.bin
+*.pt
+*.pth
+*.gguf
+model_cache/
+hf_cache/
+
+# ===========================================
+# Docker
+# ===========================================
+.docker/
+docker-compose.override.yml
+
+# ===========================================
+# OS
+# ===========================================
+.DS_Store
+Thumbs.db

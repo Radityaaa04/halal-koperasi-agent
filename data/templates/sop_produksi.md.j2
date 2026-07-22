@@ -1,0 +1,233 @@
+# SOP PRODUKSI - {{ nama_produk | default("Produk") }}
+**Versi:** {{ versi_sop | default("01/Rev-0") }}
+**Tanggal Berlaku:** {{ tgl_berlaku | default(today) | strftime("%d %B %Y") }}
+**Dokumen No:** SOP-PROD-{{ kode_produk | default("PRD001") }}-{{ (versi_sop | default("01/Rev-0")).replace(".", "-").replace("/", "-") }}
+**Halaman:** 1 dari {{ total_halaman | default(8) }}
+
+---
+
+## 1. TUJUAN
+Menetapkan prosedur standar produksi {{ nama_produk }} untuk memastikan kualitas, keamanan pangan, dan kepatuhan halal sesuai:
+- UU No. 33/2014 (Jaminan Produk Halal)
+- PP No. 39/2021 (Pelaksanaan JPH)
+- Peraturan BPJPH No. 1/2023 & 2/2023
+- SNI 99001:2023 (Halal Assurance System)
+- HACCP (Jika berlaku)
+
+## 2. RUANG LINGKUP
+Berlaku untuk seluruh proses produksi {{ nama_produk }} di:
+**Unit:** {{ nama_unit }}
+**Lokasi:** {{ alamat_unit }}
+**Kapasitas:** {{ kapasitas_bulan }} kg/bulan
+
+## 3. DEFINISI & SINGKATAN
+| Istilah | Definisi |
+|---------|----------|
+| CCP | Critical Control Point (Titik Kontrol Kritis) |
+| HAS | Halal Assurance System |
+| PRP | Prerequisite Program |
+| QA | Quality Assurance |
+| QC | Quality Control |
+
+## 4. TANGGUNG JAWAB & WEWENANG
+| Peran | Tanggung Jawab |
+|-------|----------------|
+| **Ketua HAS** | Koordinasi sistem jaminan halal, internal audit, management review |
+| **Koordinator Produksi** | Pelaksanaan produksi sesuai SOP, monitoring CCP |
+| **Koordinator Gudang** | Penerimaan & penyimpanan bahan baku halal, segregasi |
+| **Koordinator QC** | Pemeriksaan kualitas bahan baku, in-process, finished goods |
+| **Operator Produksi** | Eksekusi prosedur, pencatatan monitoring CCP |
+
+## 5. ALUR PROSES PRODUKSI
+
+```mermaid
+flowchart TD
+    A[Penerimaan Bahan Baku] --> B{Pemeriksaan Masuk QC}
+    B -->|Lulus| C[Penyimpanan Bahan Baku Halal]
+    B -->|Tidak Lulus| D[Non-Conformance / Return]
+    C --> E[Persiapan Produksi]
+    E --> F[Proses Utama]
+    F --> G{Monitoring CCP}
+    G -->|OK| H[Pendinginan/Kemasan]
+    G -->|Deviasi| I[Tindakan Koreksi]
+    I --> F
+    H --> J[Pemeriksaan Produk Jadi]
+    J -->|Lulus| K[Penyimpanan Produk Jadi]
+    J -->|Tidak Lulus| L[Non-Conformance]
+    K --> M[Distribusi]
+```
+
+### 5.1 Detail Langkah-Langkah Produksi
+
+| No | Tahap | Deskripsi | Peralatan | Parameter Kontrol | CCP | Batas Kritis | Monitoring | Frekuensi | PIC |
+|----|-------|-----------|-----------|-------------------|-----|--------------|------------|-----------|-----|
+{% for step in langkah_produksi %}
+| {{ step.urutan }} | {{ step.nama_tahap }} | {{ step.deskripsi }} | {{ step.peralatan | join(", ") }} | {{ step.parameter_kontrol | join(", ") }} | {{ "CCP-" + step.ccp_number if step.is_ccp else "-" }} | {{ step.batas_kritis if step.is_ccp else "-" }} | {{ step.pemantauan if step.is_ccp else "-" }} | {{ step.frekuensi if step.is_ccp else "-" }} | {{ step.pic }} |
+{% endfor %}
+
+## 6. CRITICAL CONTROL POINTS (CCP)
+
+| CCP | Nama | Hazards | Batas Kritis | Monitoring | Koreksi | Verifikasi | Dokumen |
+|-----|------|---------|--------------|------------|---------|------------|---------|
+{% for ccp in ccp_points %}
+| {{ ccp.ccp_id }} | {{ ccp.nama }} | {{ ccp.hazards }} | {{ ccp.batas_kritis }} | {{ ccp.pemantauan }} | {{ ccp.tindakan_koreksi }} | {{ ccp.verifikasi }} | {{ ccp.pencatatan }} |
+{% endfor %}
+
+## 7. PREREQUISITE PROGRAMS (PRP)
+
+### 7.1 Good Manufacturing Practice (GMP)
+- Kebersihan pribadi pekerja (cuci tangan, seragam, masker, topi)
+- Kebersihan fasilitas & peralatan (jadwal pembersihan harian/mingguan)
+- Pengendalian hama (kontrak pest control, pemasangan trap)
+- Manajemen air & es (uji lab berkala, sertifikat halal air)
+- Pengelolaan limbah (segregasi, penyimpanan, pengangkutan)
+
+### 7.2 Sanitasi & Hygiene
+| Area | Frekuensi | Metode | Bahan Kimia | PIC | Record |
+|------|-----------|--------|-------------|-----|--------|
+| Lantai produksi | Setiap shift | Semprot + sapu | Deterjen netral + sanitizer | Operator | Checklist harian |
+| Peralatan kontak makanan | Setiap ganti produk | CIP/COP | Deterjen alkali + asam + sanitizer | QC | Log CIP |
+| Tangan pekerja | Setiap masuk area | Cuci 7 langkah + sanitizer | Sabun antiseptik + alkohol 70% | Operator | Log masuk |
+
+### 7.3 Segregasi Halal & Non-Halal
+- [ ] Area produksi halal terpisah fisik dari non-halal
+- [ ] Peralatan dedicated halal (berlabel warna hijau)
+- [ ] Prosedur pembersihan validasi jika shared equipment
+- [ ] Penyimpanan bahan baku halal terpisah (rak/area berlabel hijau)
+- [ ] Alur material & orang terpisah (one-way flow)
+
+## 8. PENERIMAAN BAHAN BAKU
+
+### 8.1 Kriteria Penerimaan
+| Bahan Baku | Spesifikasi | Sertifikat Halal Wajib | Suhu Maks | Kemasan |
+|------------|-------------|------------------------|-----------|---------|
+{% for bb in bahan_baku %}
+| {{ bb.nama }} | {{ bb.spesifikasi }} | {{ "Ya" if bb.sertifikat_halal_wajib else "Tidak" }} | {{ bb.suhu_maks }}°C | {{ bb.kemasan }} |
+{% endfor %}
+
+### 8.2 Prosedur Penerimaan
+1. Cek fisik kendaraan (kebersihan, suhu jika cold chain)
+2. Cek dokumen: DO, COA, Sertifikat Halal, Sertifikat Analisis
+3. Sampling & pemeriksaan QC (organoleptik, suhu, kemasan)
+4. Jika LULUS → Label "HALAL - DISETUJUI" → Gudang Bahan Baku Halal
+5. Jika TIDAK LULUS → Label "KARANTINA" → Non-Conformance Report → Return/Disposisi
+
+## 9. PENGELOLAAN BAHAN BAKU HALAL
+
+### 9.1 Daftar Bahan Baku & Status Halal
+| Kode | Nama Bahan | Supplier | No. Sertifikat Halal | Penerbit LPH | Expired | Status |
+|------|------------|----------|---------------------|--------------|---------|--------|
+{% for bb in bahan_baku %}
+| {{ bb.kode_internal }} | {{ bb.nama }} | {{ bb.supplier }} | {{ bb.sertifikat_halal_nomor }} | {{ bb.sertifikat_halal_penerbit }} | {{ bb.sertifikat_halal_expired | strftime("%d %b %Y") }} | {{ bb.status }} |
+{% endfor %}
+
+### 9.2 Prosedur Penggunaan Bahan Baku
+- FIFO (First In First Out) ketat
+- Cek expired sertifikat halal sebelum produksi (sistem alert H-30)
+- Segregasi bahan baku expired/non-halal di area karantina
+- Traceability: setiap batch produk tercatat batch bahan baku yang dipakai
+
+## 10. KEMASAN & LABELING
+
+### 10.1 Spesifikasi Kemasan
+| Produk | Kemasan Primer | Kemasan Sekunder | Materi | Sertifikat Halal Kemasan |
+|--------|----------------|------------------|--------|-------------------------|
+{% for pk in produk %}
+| {{ pk.nama }} | {{ pk.kemasan_primer }} | {{ pk.kemasan_sekunder }} | {{ pk.materi_kemasan }} | {{ pk.sertifikat_halal_kemasan }} |
+{% endfor %}
+
+### 10.2 Label Halal
+- Logo Halal BPJPH + Nomor Sertifikat (sesuai PP 39/2021)
+- Posisi label: terlihat jelas, tidak tertutup
+- Bahasa Indonesia (wajib), boleh ditambah bahasa lain
+- Informasi wajib: Nama produk, Netto, Komposisi, Produsen, Tanggal Produksi/Expired, No. Izin Edar (BPOM), Logo Halal
+
+## 11. PENYIMPANAN & DISTRIBUSI
+
+| Produk | Suhu Penyimpanan | RH Maks | Shelf Life | Metode Distribusi |
+|--------|------------------|---------|------------|-------------------|
+{% for pd in produk %}
+| {{ pd.nama }} | {{ pd.suhu_simpan }}°C | {{ pd.rh_maks }}% | {{ pd.shelf_life }} | {{ pd.metode_distribusi }} |
+{% endfor %}
+
+- Cold chain maintained untuk produk beku/dingin
+- Kendaraan distribusi bersih, tidak bercampur non-halal
+- Dokumen pengiriman: DO, Surat Jalan, Sertifikat Halal (jika diminta buyer)
+
+## 12. DOKUMENTASI & PENCATATAN
+
+| Dokumen | Kode | Retensi | Lokasi | PIC |
+|---------|------|---------|-----|
+| SOP Produksi | {{ sop_code }} | Server QA / Hardcopy Produksi | Ketua HAS |
+| Monitoring CCP | FRM-CCP-{{ kode_produk }} | Server QA / Hardcopy Produksi | Koordinator Produksi |
+| Penerimaan Bahan Baku | FRM-TRM-{{ kode_produk }} | Server QA / Gudang | Koordinator Gudang |
+| Hasil Analisis QC | FRM-QC-{{ kode_produk }} | Server QA | Koordinator QC |
+| Internal Audit HAS | FRM-IA-HAS | Server QA | Ketua HAS |
+| Management Review | FRM-MR-HAS | Server QA | Ketua HAS |
+| Non-Conformance | FRM-NCR | Server QA | Ketua HAS |
+| Tindakan Koreksi/Preventif | FRM-CAPA | Server QA | Ketua HAS |
+
+## 13. INTERNAL AUDIT & MANAGEMENT REVIEW
+
+### 13.1 Internal Audit HAS
+- Frekuensi: Minimal 2x/tahun (semesteran)
+- Auditor: Internal auditor terlatih (bukan dari area yang diaudit)
+- Cakupan: Seluruh klausul SNI 99001:2023
+- Hasil: Laporan Audit → Tindakan Koreksi → Verifikasi → Tutup Temuan
+
+### 13.2 Management Review
+- Frekuensi: Minimal 1x/tahun
+- Peserta: Pimpinan, Ketua HAS, Koordinator Produksi/Gudang/QC
+- Input: Hasil audit, komplain pelanggan, performa CCP, perubahan regulasi, dll
+- Output: Keputusan perbaikan, alokasi sumber daya, update SOP/HAS
+
+## 14. PELATIHAN
+
+| Topik | Target Peserta | Frekuensi | Metode | Pelaksana |
+|-------|----------------|-----------|--------|-----------|
+| Dasar Halal & HAS | Semua karyawan | Tahunan | In-house / LPH | Ketua HAS |
+| GMP & Sanitasi | Operator, Gudang | 6 bulanan | In-house | Koordinator QC |
+| CCP Monitoring | Operator CCP | 6 bulanan | On-job training | Koordinator Produksi |
+| Internal Audit | Auditor Internal | Tahunan | LPH / Konsultan | Ketua HAS |
+| Penanganan Darurat | Semua karyawan | Tahunan | Simulasi | Koordinator K3 |
+
+## 15. DAFTAR FORMULIR TERKAIT
+
+| Kode Formulir | Nama Formulir | Deskripsi |
+|---------------|---------------|-----------|
+| FRM-PROD-001 | Checklist Persiapan Produksi | Cek peralatan, bahan, dokumen sebelum start |
+| FRM-CCP-001 | Monitoring CCP Harian | Pencatatan parameter CCP per batch |
+| FRM-TRM-001 | Penerimaan Bahan Baku | Log penerimaan & QC masuk |
+| FRM-QC-001 | Hasil Analisis In-Process | Parameter fisik/kimia/mikro in-process |
+| FRM-QC-002 | Hasil Analisis Finished Goods | COA produk jadi |
+| FRM-NCR-001 | Non-Conformance Report | Pelanggaran SOP, deviasi CCP, komplain |
+| FRM-CAPA-001 | Corrective & Preventive Action | Tindakan korektif & preventif |
+| FRM-IA-001 | Checklist Internal Audit HAS | Audit internal semesteran |
+| FRM-MR-001 | Agenda & MoM Management Review | Rapat tinjauan manajemen |
+
+---
+
+## 16. REVISI DOKUMEN
+
+| Versi | Tanggal | Deskripsi Perubahan | Disetujui Oleh |
+|-------|---------|---------------------|----------------|
+| 01/Rev-0 | {{ tgl_berlaku | strftime("%d %B %Y") }} | Dokumen baru | Ketua HAS / Pimpinan |
+| {{ versi_sop }} | {{ tgl_revisi | strftime("%d %B %Y") }} | {{ deskripsi_revisi }} | Ketua HAS / Pimpinan |
+
+---
+
+**DISETUJUI OLEH:**
+
+__________________________
+**{{ nama_pimpinan }}**
+Pimpinan {{ nama_koperasi }}
+Tanggal: {{ tgl_persetujuan | strftime("%d %B %Y") }}
+
+__________________________
+**{{ nama_ketua_has }}**
+Ketua HAS
+Tanggal: {{ tgl_persetujuan | strftime("%d %B %Y") }}
+
+---
+
+*Catatan: Template ini untuk simulasi data sintetis UAS Proyek Data Mining. SOP produksi aktual harus disesuaikan dengan produk, fasilitas, & regulasi terkini.*

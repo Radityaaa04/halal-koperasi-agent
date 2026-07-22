@@ -1,0 +1,218 @@
+PERATURAN PEMERINTAH REPUBLIK INDONESIA NOMOR 39 TAHUN 2021
+TENTANG PELAKSANAAN JAMINAN PRODUK HALAL
+
+===================================================================
+
+BAB I: KETENTUAN UMUM
+
+Pasal 1
+Dalam Peraturan Pemerintah ini yang dimaksud dengan:
+1. Produk Halal adalah produk yang telah dideklarasikan halal berdasarkan ketentuan peraturan perundang-undangan.
+2. Jaminan Produk Halal adalah upaya yang dilakukan untuk memberikan kepastian kehalalan produk.
+3. Sertifikat Halal adalah bukti tertulis yang menyatakan kehalalan produk yang diterbitkan oleh BPJPH.
+4. Badan Penyelenggara Jaminan Produk Halal (BPJPH) adalah badan yang dibentuk oleh Pemerintah.
+5. Lembaga Pemeriksa Halal (LPH) adalah lembaga yang dibentuk oleh organisasi keagamaan Islam dan terdaftar di BPJPH.
+6. Auditor Halal adalah orang yang memiliki kompetensi dan disahkan oleh LPH.
+7. Sistem Jaminan Halal (SJH) adalah sistem manajemen yang diimplementasikan pelaku usaha.
+8. Pelaku Usaha adalah orang perseorangan atau badan usaha yang menyelenggarakan usaha di bidang barang/jasa.
+9. Koperasi adalah badan usaha yang anggotanya serta modalnya terdiri atas orang atau badan hukum koperasi.
+10. Produk adalah barang dan/atau jasa yang diproduksi, diimpor, diedarkan, dan/atau diperdagangkan.
+11. Bahan Baku adalah bahan yang digunakan dalam proses produksi produk.
+12. Bahan Penolong adalah bahan yang digunakan untuk membantu proses produksi namun tidak menjadi bagian produk akhir.
+13. Kontaminan adalah zat yang dapat menajiskan produk halal.
+15. Segregasi adalah pemisahan fisik dan/atau waktu antara halal dan non-halal.
+
+BAB II: PENYELENGGARAAN JAMINAN PRODUK HALAL
+
+Bagian Pertama: Kewajiban Pelaku Usaha
+
+Pasal 2
+(1) Pelaku usaha wajib menerapkan Sistem Jaminan Halal (SJH).
+(2) SJH sebagaimana dimaksud pada ayat (1) mencakup:
+a. manajemen komitmen halal;
+b. tim jaminan halal (HAS);
+c. standar operasional prosedur (SOP);
+d. pelatihan personel;
+e. pengelolaan bahan baku dan bahan penolong;
+f. pengelolaan proses produksi;
+g. pengelolaan fasilitas dan peralatan;
+h. pengelolaan kemasan dan pelabelan;
+i. pengelolaan pencatatan dan dokumentasi; dan
+j. audit internal dan verifikasi.
+
+Bagian Kedua: Permohonan Sertifikat Halal
+
+Pasal 3
+(1) Permohonan sertifikat halal diajukan melalui SEHATI.
+(2) Permohonan disertai dokumen:
+a. akta pendirian dan anggaran dasar;
+b. NIB dan NPWP;
+c. izin usaha (jika diperlukan);
+d. daftar produk, bahan baku, bahan penolong;
+e. rute produksi dan layout fasilitas;
+f. SOP produksi dan rute produksi;
+g. organogram HAS dan bukti pelatihan HAS;
+h. sertifikat halal bahan baku (jika ada);
+i. daftar peralatan produksi; dan
+j. dokumen lain per BPJPH.
+
+Pasal 4
+(1) BPJPH verifikasi kelengkapan dokumen maksimal 7 hari kerja.
+(2) Dokumen lengkap diteruskan ke LPH untuk audit.
+(3) Dokumen tidak lengkap dikembalikan untuk dilengkapi.
+
+Pasal 5
+(1) Pelaku usaha wajib memilih LPH terdaftar di BPJPH.
+(2) Pemilihan LPH mempertimbangkan:
+a. cakupan kategori produk;
+b. lokasi geografis;
+c. biaya audit; dan
+d. jadwal ketersediaan.
+
+Bagian Ketiga: Audit Halal
+
+Pasal 6
+(1) Audit halal dilaksanakan LPH maksimal 30 hari kerja sejak dokumen lengkap.
+(2) Audit mencakup:
+a. audit dokumen (dokumen review);
+b. audit lapangan (site audit):
+   1. fasilitas produksi dan peralatan;
+   2. proses produksi;
+   3. bahan baku dan bahan penolong;
+   4. kemasan dan pelabelan;
+   5. sistem jaminan halal (SJH);
+   6. personel dan pelatihan HAS;
+   7. pencatatan dan dokumentasi;
+   8. penanganan produk non-halal (jika ada); dan
+   9. audit internal dan verifikasi.
+
+Pasal 7
+(1) Hasil audit berupa laporan audit dengan:
+a. kesesuaian dokumen;
+b. temuan: conformance (C), minor non-conformance (MNC), major non-conformance (MJNC);
+c. rekomendasi perbaikan; dan
+d. rekomendasi penerbitan sertifikat halal.
+(2) LPH serahkan laporan ke BPJPH maksimal 7 hari kerja.
+
+Bagian Keempat: Penerbitan Sertifikat Halal
+
+Pasal 8
+(1) BPJPH terbitkan sertifikat halal berdasarkan rekomendasi LPH.
+(2) Sertifikat halal berlaku 4 tahun.
+(3) Perpanjangan diajukan minimal 6 bulan sebelum habis.
+
+Pasal 9
+(1) Sertifikat halal mencantumkan:
+a. nomor sertifikat;
+b. nama pelaku usaha;
+c. alamat fasilitas produksi;
+c. daftar produk bersertifikat;
+d. masa berlaku; dan
+e. nomor registrasi BPJPH.
+
+Pasal 10
+(1) Pelaku usaha wajib mencantumkan logo halal dan nomor sertifikat pada kemasan.
+(2) Logo halal harus memenuhi ketentuan Kominfo.
+
+BAB III: SISTEM JAMINAN HALAL (SJH)
+
+Pasal 11
+SJH minimal mencakup:
+a. kebijakan halal ditetapkan pimpinan tertinggi;
+b. struktur organisasi HAS dengan Ketua HAS bersertifikat pelatihan;
+c. SOP untuk setiap aktivitas kritis;
+d. identifikasi dan pengendalian titik kritis (CCP);
+e. prosedur penanganan non-conformance;
+f. audit internal minimal 1x/tahun;
+g. management review minimal 1x/tahun; dan
+h. dokumentasi dan pencatatan lengkap.
+
+Pasal 12
+(1) Ketua HAS wajib memiliki sertifikat pelatihan HAS dari LPH/BPJPH.
+(2) Personel HAS minimal lulus pelatihan dasar halal.
+
+Pasal 13
+Pengelolaan bahan baku:
+a. daftar bahan baku lengkap dengan kode internal;
+b. sertifikat halal bahan baku kritis wajib ada;
+c. verifikasi supplier bahan baku;
+d. segregasi penyimpanan halal/non-halal; dan
+e. traceability setiap batch.
+
+Pasal 14
+Pengelolaan proses produksi:
+a. identifikasi CCP (Critical Control Points);
+b. batas kritis (critical limits) per CCP;
+c. prosedur pemantauan CCP;
+d. tindakan koreksi jika CCP melampaui batas;
+e. validasi dan verifikasi CCP; dan
+f. rekaman pemantauan CCP.
+
+Pasal 15
+Pengelolaan fasilitas:
+a. layout fasilitas dengan zonasi halal/non-halal;
+b. peralatan dedicated untuk halal;
+c. identifikasi peralatan (label/tag);
+d. prosedur cleaning dan validasi kebersihan;
+e. pest control program; dan
+f. kalibrasi alat ukur berkala.
+
+Pasal 16
+Pengelolaan kemasan dan pelabelan:
+a. logo halal pada kemasan primer;
+b. nomor sertifikat halal;
+c. informasi wajib label (BPOM);
+d. material kemasan bebas kontaminan; dan
+e. segregasi kemasan halal/non-halal.
+
+BAB IV: KOPERASI DAN UMKM
+
+Pasal 17
+(1) Koperasi mikro, kecil, dan menengah mendapat kemudahan:
+a. subsidi biaya audit;
+b. pelatihan HAS gratis;
+c. bantuan pendokumentasian SJH;
+d. prioritas jadwal audit; dan
+e. tenggang waktu memenuhi kewajiban.
+
+Pasal 18
+Klasifikasi usaha:
+a. Mikro: aset < Rp1 M atau omset < Rp300 Jt;
+b. Kecil: aset Rp1 M - Rp500 M atau omset Rp300 Jt - Rp2,5 M;
+c. Menengah: aset Rp500 M - Rp10 M atau omset Rp2,5 M - Rp50 M.
+
+Pasal 19
+Tenggang waktu kewajiban sertifikasi:
+a. Koperasi mikro: 7 tahun sejak UU 33/2014 diundangkan;
+b. Koperasi kecil: 5 tahun;
+c. Koperasi menengah: 3 tahun.
+
+BAB V: PENGAWASAN DAN SANKSI
+
+Pasal 20
+Pengawasan oleh BPJPH, kementerian terkait, dan masyarakat.
+
+Pasal 21
+Sanksi administratif:
+a. peringatan tertulis;
+b. denda administratif maksimal Rp2 M;
+c. pencabutan sertifikat halal;
+d. penghentian sementara produksi.
+
+Pasal 22
+Denda administratif per pelanggaran:
+a. Tidak bersertifikat halal: Rp2.000.000.000;
+c. Sertifikat palsu: Rp2.000.000.000;
+d. Laporan audit palsu: Rp500.000.000.
+
+BAB VI: KETENTUAN PERALIHAN DAN PENUTUP
+
+Pasal 23
+Peraturan pelaksanaan teknis ditetapkan oleh Kepala BPJPH.
+
+Pasal 24
+Peraturan Pemerintah ini mulai berlaku pada tanggal diundangkan.
+
+Jakarta, 11 Juni 2021
+PRESIDEN REPUBLIK INDONESIA
+ttd. JOKO WIDODO

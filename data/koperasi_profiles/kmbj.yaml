@@ -1,0 +1,122 @@
+# Profil Koperasi Utama: Koperasi Mina Bahari Jaya (KMBJ)
+# Primary test case - 4 SKU produk ikan, completeness 62%
+
+koperasi:
+  id: "KMBJ-001"
+  nama: "Koperasi Mina Bahari Jaya"
+  nama_pimpinan: "Bapak H. Sutrisno"
+  nik_pimpinan: "3578012345678901"
+  alamat:
+    desa_kelurahan: "Tambakrejo"
+    kecamatan: "Sidoarjo"
+    kabupaten_kota: "Sidoarjo"
+    provinsi: "Jawa Timur"
+    kode_pos: "61219"
+    rincian: "Jl. Raya Tambakrejo No. 45, RT 03/RW 01"
+  kontak:
+    telepon: "031-8945678"
+    email: "kmbj.tambakrejo@gmail.com"
+    website: ""
+    cp_nama: "Ibu Siti Rahayu (Sekretaris)"
+    cp_telepon: "0812-3456-7890"
+    cp_email: "siti.rahayu.kmbj@gmail.com"
+  profil_usaha:
+    bidang_usaha: "Pengolahan Hasil Perikanan"
+    kbli_utama: "10211"  # Pengolahan dan pengawetan ikan
+    kbli_detail: ["10211", "10212", "10213"]
+    produk_utama:
+      - nama: "Tengiri Asap"
+        sku: "KMBJ-TA-001"
+        kategori: "makanan_olahan"
+        deskripsi: "Ikan tengiri diasap tradisional dengan kayu nangka, tanpa pengawet sintetis"
+        bahan_baku_utama: ["Ikan tengiri segar", "Garam", "Kayu nangka untuk asap"]
+        proses_singkat: "Penerimaan -> Pencucian -> Pengasapan -> Pendinginan -> Kemasan"
+        kemasan: "Vacuum pouch 250g, kotak kardus 10 pouch"
+        label_halal_saat_ini: false
+        sertifikat_halal_nomor: null
+        target_pasar: ["domestik_modern", "ekspor_malaysia"]
+      - nama: "Abon Ikan Tengiri"
+        sku: "KMBJ-AI-002"
+        kategori: "makanan_olahan"
+        deskripsi: "Abon ikan tengiri gurih, renyah, tahan lama 6 bulan"
+        bahan_baku_utama: ["Ikan tengiri", "Kelapa muda", "Bumbu rempah", "Minyak goreng"]
+        proses_singkat: "Penerimaan -> Pengukusan -> Penyisiran -> Penggorengan -> Pendinginan -> Kemasan"
+        kemasan: "Plastik standing pouch 100g, karton 24 pouch"
+        label_halal_saat_ini: false
+        sertifikat_halal_nomor: null
+        target_pasar: ["domestik_modern", "ekspor_malaysia", "horeca"]
+      - nama: "Fish Cracker (Krupuk Ikan)"
+        sku: "KMBJ-FC-003"
+        kategori: "makanan_olahan"
+        deskripsi: "Krupuk ikan tengiri empuk, renyah, rasa original dan pedas"
+        bahan_baku_utama: ["Tepung ikan tengiri", "Tepung tapioka", "Telur", "Bumbu"]
+        proses_singkat: "Pencampuran -> Pencetakan -> Pengukusan -> Pengeringan -> Penggorengan -> Kemasan"
+        kemasan: "Plastik 200g, karton 50 bungkus"
+        label_halal_saat_ini: false
+        sertifikat_halal_nomor: null
+        target_pasar: ["domestik_tradisional", "domestik_modern", "ekspor_malaysia"]
+      - nama: "Ikan Bakar Vacuum"
+        sku: "KMBJ-IB-004"
+        kategori: "makanan_olahan"
+        deskripsi: "Ikan tengiri dibakar bumbu khas, divacuum untuk shelf life 3 bulan"
+        bahan_baku_utama: ["Ikan tengiri segar", "Bumbu bakar khas", "Minyak kelapa"]
+        proses_singkat: "Penerimaan -> Marinasi -> Pembakaran -> Pendinginan -> Vacuum -> Kemasan"
+        kemasan: "Vacuum pouch 300g, kotak kemasan premium"
+        label_halal_saat_ini: false
+        sertifikat_halal_nomor: null
+        target_pasar: ["domestik_premium", "ekspor_malaysia", "horeca"]
+    kapasitas_produksi_bulan:
+      tengiri_asap_kg: 500
+      abon_ikan_kg: 300
+      fish_cracker_kg: 400
+      ikan_bakar_kg: 200
+    jumlah_anggota: 87
+    jumlah_karyawan: 12
+    tahun_berdiri: 2018
+    modal_dasar: 250000000  # 250 juta IDR
+  fasilitas_produksi:
+    unit_pengolahan_m2: 120
+    cold_storage_m3: 15
+    area_pendingin_m2: 20
+    area_kemasan_m2: 15
+    kendaraan_distribusi: 1  # 1 unit pickup
+    utilitas: ["air_bersih", "listrik_3_phase", "generator_20kva"]
+    sertifikat_lain: ["BPOM_ML_1234567890", "HACCP_IN_PROGRESS"]
+  status_halal:
+    bersertifikat: false
+    nomor_sertifikat: null
+    tanggal_terbit: null
+    tanggal_expired: null
+    penerbit_lph: null
+    pernah_mengajukan: false
+    alasan_belum: "Tidak paham prosedur lengkap, dokumen SOP & HAS belum siap, takut gagal audit LPH, biaya LPH dirasa mahal untuk koperasi mikro"
+  motivasi:
+    - "Permintaan buyer modern market (Superindo, Lotte Mart) wajib sertifikat halal"
+    - "Rencana ekspor ke Malaysia butuh sertifikat halal MUI/BPJPH yang diakui JAKIM"
+    - "Peningkatan kepercayaan anggota & konsumen lokal"
+    - "Kepatuhan UU 33/2014 wajib halal Oktober 2026"
+  target_completeness_pct: 62  # Target untuk synthetic data generation
+
+# Konfigurasi error injection untuk synthetic data
+error_injection:
+  missing_docs: ["SOP_PRODUKSI", "DAFTAR_BAHAN_BAKU", "RUTE_PRODUKSI", "SERTIFIKAT_HALAL_BAHAN", "BUKTI_PELATIHAN_HAS"]
+  expired_docs: ["NPWP", "SERTIFIKAT_HALAL_BAHAN"]
+  incomplete_fields:
+    SOP_PRODUKSI: ["ccp_points", "versi"]
+    DAFTAR_BAHAN_BAKU: ["sertifikat_halal_nomor", "sertifikat_halal_expired"]
+    RUTE_PRODUKSI: ["area_segregasi", "cleaning_procedures"]
+    ORGANOGRAM_HAS: ["ketua_has_sertifikat", "anggota_count"]
+    BUKTI_PELATIHAN_HAS: ["pelatihan_list"]
+  inconsistent_data:
+    - field: "alamat"
+      doc_types: ["AKTA_PENDIRIAN", "NPWP", "NIB"]
+      description: "Alamat di AKTA beda dengan NPWP/NIB (RT/RW beda)"
+    - field: "nama_pimpinan"
+      doc_types: ["AKTA_PENDIRIAN", "NPWP"]
+      description: "Nama di AKTA 'H. Sutrisno' tapi NPWP 'Sutrisno'"
+  low_quality_scans:
+    - doc_types: ["LAYOUT_FASILITAS", "AKTA_PENDIRIAN"]
+      description: "Scan foto HP, blur, teks kecil, bayangan tangan"
+  wrong_templates:
+    - doc_type: "SOP_PRODUKSI"
+      description: "Menggunakan template SOP lama (sebelum PP 39/2021), tidak referensi CCP"

@@ -1,0 +1,224 @@
+# ANGGARAN DASAR KOPERASI - {{ nama_koperasi }}
+**Nomor Pendaftaran:** {{ nomor_pendaftaran }}
+**Tanggal Sah:** {{ tanggal_sah | strftime("%d %B %Y") }}
+
+---
+
+## BAB I: KETENTUAN UMUM
+
+### Pasal 1
+Dalam Anggaran Dasar ini yang dimaksud dengan:
+1. **Koperasi** adalah {{ nama_koperasi }}, berkedudukan di {{ kabupaten_kota }}, {{ provinsi }}.
+2. **Anggota** adalah orang atau badan hukum yang telah memenuhi syarat keanggotaan dan disetujui oleh pengurus.
+3. **Pengurus** adalah anggota yang dipilih dalam Rapat Anggota Tahunan untuk mengurus Koperasi.
+4. **Pengawas** adalah anggota yang dipilih dalam Rapat Anggota Tahunan untuk mengawasi pengurus.
+5. **Rapat Anggota** adalah organ kekuasaan tertinggi Koperasi.
+6. **SHU** adalah Sisa Hasil Usaha Koperasi dalam satu tahun buku.
+7. **Simpanan Pokok** adalah simpanan wajib yang disetor anggota sebagai bukti keanggotaan.
+8. **Simpanan Wajib** adalah simpanan yang wajib disetor anggota secara berkala.
+9. **Simpanan Sukarela** adalah simpanan yang disetor anggota berdasarkan kemauan sendiri.
+
+## BAB II: MAKSUD, TUJUAN, DAN KEGIATAN USAHA
+
+### Pasal 2
+Maksud dan tujuan Koperasi:
+1. Meningkatkan kesejahteraan anggota khususnya dan masyarakat umumnya.
+2. Membantu usaha pemerintah dalam pembangunan ekonomi nasional.
+3. Mengembangkan potensi ekonomi anggota melalui usaha bersama.
+
+### Pasal 3
+Kegiatan usaha Koperasi:
+{% for kegiatan in kegiatan_usaha %}
+{{ loop.index }}. {{ kegiatan }}
+{% endfor %}
+
+## BAB III: ANGGOTA
+
+### Pasal 4: Syarat Keanggotaan
+1. Warga Negara Indonesia.
+2. Berumur minimal 17 (tujuh belas) tahun atau sudah menikah.
+3. Berdomisili/berusaha di wilayah kerja Koperasi.
+4. Menyetujui Anggaran Dasar & Anggaran Rumah Tangga.
+5. Membayar Simpanan Pokok minimal Rp {{ simpanan_pokok_min | format_currency }}.
+6. Membayar Simpanan Wajib minimal Rp {{ simpanan_wajib_min | format_currency }}/bulan.
+
+### Pasal 5: Hak Anggota
+1. Hadir & berpendapat di Rapat Anggota.
+2. Memilih & dipilih menjadi Pengurus/Pengawas.
+3. Memanfaatkan jasa & usaha Koperasi.
+4. Menerima bagian SHU (jasa usaha & bonus).
+5. Mengajukan keberatan tertulis ke Rapat Anggota.
+
+### Pasal 6: Kewajiban Anggota
+1. Menaati AD/ART & keputusan Rapat Anggota.
+2. Membayar Simpanan Pokok & Wajib tepat waktu.
+3. Menggunakan jasa & usaha Koperasi.
+4. Menjaga nama baik Koperasi.
+
+### Pasal 7: Berhenti Menjadi Anggota
+1. Meninggal dunia.
+2. Mengundurkan diri tertulis.
+3. Dikeluarkan oleh Rapat Anggota (pelanggaran berat, tidak memenuhi kewajiban 6 bulan berturut-turut).
+4. Koperasi dibubarkan.
+
+## BAB IV: MODAL
+
+### Pasal 8
+Modal Koperasi terdiri dari:
+1. Simpanan Pokok anggota.
+2. Simpanan Wajib anggota.
+3. Simpanan Sukarela anggota.
+4. Pinjaman dari bank/lembaga keuangan/pihak lain.
+5. Hibah/sumbangan yang tidak mengikat.
+6. Hasil usaha Koperasi (SHU) yang tidak dibagikan.
+7. Sumber lain yang sah menurut hukum.
+
+### Pasal 9
+Simpanan Pokok tidak dapat ditarik kembali selagi anggota masih tercatat, kecuali:
+1. Anggota meninggal (diwariskan ke ahli waris).
+2. Anggota mengundurkan diri (setelah audit & persetujuan Pengurus).
+
+## BAB V: RAPAT ANGGOTA
+
+### Pasal 10
+Rapat Anggota adalah organ kekuasaan tertinggi Koperasi.
+
+### Pasal 11: Rapat Anggota Tahunan (RAT)
+Diselenggarakan paling lambat 6 (enam) bulan setelah tahun buku berakhir.
+**Akuan RAT:**
+1. Laporan Pengurus & Pengawas.
+2. Laporan Keuangan (Neraca, Laba Rugi, Aliran Kas) yang diaudit.
+3. Rencana Kerja & Anggaran (RKAT) tahun berikutnya.
+4. Penggunaan SHU tahun berjalan.
+5. Pengisian jabatan Pengurus/Pengawas (jika masa jabatan habis).
+6. Penetapan Anggaran Rumah Tangga (ART).
+7. Hal lain yang diajukan Pengurus/Anggota.
+
+### Pasal 12: Rapat Anggota Khusus (RAK)
+Diadakan sewaktu-waktu jika:
+1. Diperlukan oleh Pengurus.
+2. Diminta minimal 1/5 (satu per lima) jumlah anggota.
+3. Diminta oleh Pengawas.
+
+### Pasal 13: Kuorum & Keputusan
+- **Kuorum RAT/RAK:** > 1/2 (setengah) anggota berhak suara hadir.
+- **Jika tidak tercapai:** Rapdit kedua 7-14 hari, sah dengan > 1/3 anggota.
+- **Keputusan:** Musyawarah mufakat. Jika tidak tercapai: > 1/2 + 1 suara hadir.
+- **Keputusan khusus (pembubaran, penggabungan, perubahan AD):** > 3/4 suara hadir.
+
+## BAB VI: PENGURUS DAN PENGAWAS
+
+### Pasal 14: Susunan Pengurus
+- **Ketua:** 1 orang
+- **Sekretaris:** 1 orang
+- **Bendahara:** 1 orang
+- **Anggota Pengurus Bidang:** Maksimal {{ max_anggota_pengurus }} orang
+
+### Pasal 15: Syarat Pengurus
+1. Anggota Koperasi.
+2. Berusia minimal 21 tahun.
+3. Sehat jasmani & rohani.
+4. Tidak pernah dihukum pidana penjara ≥ 5 tahun.
+5. Tidak pernah dibebaskan dari tanggung jawab sebagai pengurus badan hukum lain.
+
+### Pasal 16: Tugas & Wewenang Pengurus
+**Ketua:**
+1. Memimpin Koperasi & mewakili di dalam/mahkamah.
+2. Menandatangani surat resmi, cek, dokumen keuangan.
+3. Memimpin Rapat Pengurus & Rapat Anggota.
+
+**Sekretaris:**
+1. Membantu Ketua, menggantikan Ketua jika berhalangan.
+2. Mengurus administrasi, surat-menyurat, risalah rapat.
+3. Menyimpan arsip & inventaris Koperasi.
+
+**Bendahara:**
+1. Mengurus keuangan, kas, buku kas, pembukuan.
+2. Menyetorkan uang ke bank (rekening Koperasi).
+3. Menyusun laporan keuangan bulanan & tahunan.
+
+### Pasal 17: Susunan Pengawas
+- **Ketua Pengawas:** 1 orang
+- **Anggota Pengawas:** {{ (jumlah_pengawas | default(3) | int) - 1 }} orang
+
+### Pasal 18: Tugas Pengawas
+1. Mengawasi jalannya pengurusan Koperasi.
+2. Memeriksa buku, surat, bukti keuangan, kas.
+3. Memberi nasihat & saran ke Pengurus.
+4. Melaporkan hasil pengawasan ke Rapat Anggota.
+
+### Pasal 19: Masa Jabatan
+Pengurus & Pengawas dipilih untuk masa **{{ masa_jabatan_tahun }} ({{ masa_jabatan_tahun }}) tahun**, dapat dipilih kembali untuk 1 (satu) masa jabatan berikutnya.
+
+## BAB VII: KEUANGAN & AKUNTANSI
+
+### Pasal 20
+Tahun buku Koperasi: 1 Januari – 31 Desember.
+
+### Pasal 21
+Pengurus wajib menyusun:
+1. Buku Kas & Besar (sesuai SAK ETAP / PSAK 11).
+2. Neraca Saldo bulanan.
+3. Laporan Keuangan Tahun Buku (Neraca, Laba Rugi, Aliran Kas, Catatan Atas LK).
+4. Laporan Penggunaan SHU.
+
+### Pasal 22
+Laporan Keuangan Tahun Buku diaudit oleh:
+1. Akuntan Publik (jika modal/omzet > ambang batas).
+2. Atau Pengawas + Anggota yang ditunjuk Rapat (jika di bawah ambang).
+
+## BAB VIII: PENGGUNAAN SHU
+
+### Pasal 23
+SHU digunakan untuk:
+1. Cadangan Wajib: Minimal **10%** SHU.
+2. Cadangan Sukarela: Maksimal **20%** SHU.
+3. Bonus Jasa Usaha: Maksimal **10%** SHU (proporsional transaksi anggota).
+4. SHU Bagi Anggota: Sisa, dibagikan proporsional **Simpanan Pokok + Wajib + Jasa Usaha**.
+
+## BAB IX: PEMBUBARAN & LIKUIDASI
+
+### Pasal 24
+Koperasi dibubarkan oleh Rapat Anggota Khusus dengan keputusan > 3/4 suara hadir.
+
+### Pasal 25
+Likuidasi dilakukan oleh Likuidator yang ditunjuk Rapat Anggota.
+Hasil likuidasi setelah membayar utang: dibagikan ke anggota proporsional Simpanan Pokok + Wajib.
+
+## BAB X: PERUBAHAN ANGGARAN DASAR
+
+### Pasal 26
+Perubahan AD hanya dapat dilakukan di Rapat Anggota dengan keputusan > 3/4 suara hadir, dan harus dilaporkan ke Dinas Koperasi.
+
+## BAB XI: KETENTUAN PENUTUP
+
+### Pasal 27
+Hal-hal yang belum diatur dalam AD ini, diatur dalam Anggaran Rumah Tangga (ART).
+
+### Pasal 28
+AD ini berlaku sejak disahkan oleh instansi yang berwenang.
+
+---
+
+**DISAHKAN OLEH:**
+**Kepala Dinas Koperasi, UKM & Perindustrian {{ kabupaten_kota }}**
+
+__________________________
+**{{ nama_pemerintah_daerah }}**
+Tanggal: {{ tanggal_pengesahan | strftime("%d %B %Y") }}
+
+---
+
+**MENGETAHUI,**
+**PENGURUS {{ nama_koperasi.upper() }}**
+
+__________________________
+**{{ nama_ketua }}** - Ketua
+__________________________
+**{{ nama_sekretaris }}** - Sekretaris
+__________________________
+**{{ nama_bendahara }}** - Bendahara
+
+---
+
+*Catatan: Template ini untuk simulasi data sintetis UAS Proyek Data Mining. AD asli harus disesuaikan dengan UU No. 25/1992 jo UU No. 17/2012 dan Peraturan Dinas Koperasi setempat.*

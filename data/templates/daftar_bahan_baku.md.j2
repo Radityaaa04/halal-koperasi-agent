@@ -1,0 +1,72 @@
+# DAFTAR BAHAN BAKU - {{ nama_koperasi }}
+**Nomor Dokumen:** DBB-{{ versi }}
+**Versi:** {{ versi }}
+**Tanggal Berlaku:** {{ tanggal_berlaku | strftime("%d %B %Y") }}
+**Disusun Oleh:** {{ disusun_oleh }} ({{ jabatan }})
+**Diperiksa Oleh:** {{ diperiksa_oleh }} ({{ jabatan_pemeriksa }})
+**Disetujui Oleh:** {{ disetujui_oleh }} (Ketua Koperasi)
+
+---
+
+## 1. TUJUAN
+Dokumen ini berisi daftar lengkap bahan baku, bahan tambahan, dan bahan bantu yang digunakan dalam proses produksi {{ nama_koperasi }}, beserta status sertifikat halal masing-masing bahan.
+
+## 2. RUANG LINGKUP
+Berlaku untuk semua produk produksi:
+{% for produk in produk_list %}
+- {{ produk.nama }} (SKU: {{ produk.sku }})
+{% endfor %}
+
+## 3. DAFTAR BAHAN BAKU
+
+| No | Kode Internal | Nama Bahan Baku | Supplier | Alamat Supplier | Kategori Risiko | Sertifikat Halal No | Penerbit LPH | Tgl Terbit | Tgl Expired | Status | Jumlah/Bulan ({{ unit }}) | Catatan |
+|----|---------------|-----------------|----------|-----------------|-----------------|---------------------|--------------|------------|-------------|--------|---------------------------|---------|
+{% for bahan in bahan_baku %}
+| {{ loop.index }} | {{ bahan.kode_internal if bahan.kode_internal else '-' }} | {{ bahan.nama }} | {{ bahan.supplier }} | {{ bahan.alamat_supplier if bahan.alamat_supplier else '-' }} | {{ bahan.kategori }} | {{ bahan.sertifikat_halal_nomor if bahan.sertifikat_halal_nomor else 'BELUM ADA' }} | {{ bahan.sertifikat_halal_penerbit if bahan.sertifikat_halal_penerbit else '-' }} | {{ bahan.sertifikat_halal_tanggal_terbit | strftime("%d/%m/%Y") if bahan.sertifikat_halal_tanggal_terbit else '-' }} | {{ bahan.sertifikat_halal_expired | strftime("%d/%m/%Y") if bahan.sertifikat_halal_expired else '-' }} | {{ bahan.status }} | {{ bahan.jumlah_penggunaan_bulan_kg if bahan.jumlah_penggunaan_bulan_kg else '-' }} | {{ bahan.catatan if bahan.catatan else '-' }} |
+{% endfor %}
+
+## 4. RINGKASAN STATUS SERTIFIKAT HALAL
+
+| Status | Jumlah Bahan | Persentase |
+|--------|--------------|------------|
+| Valid | {{ valid_count }} | {{ valid_pct }}% |
+| Akan Expired (< 3 bln) | {{ expiring_count }} | {{ expiring_pct }}% |
+| Expired | {{ expired_count }} | {{ expired_pct }}% |
+| Belum Ada Sertifikat | {{ missing_count }} | {{ missing_pct }}% |
+| **TOTAL** | {{ total_count }} | **100%** |
+
+## 5. BAHAN BAKU KRITIS (TANPA SERTIFIKAT / EXPIRED)
+{% if critical_missing %}
+⚠️ **PERLU TINDAKAN SEGERA:** Bahan baku berikut tidak memiliki sertifikat halal valid:
+{% for bahan in critical_missing %}
+- **{{ bahan.nama }}** (Supplier: {{ bahan.supplier }}) - {{ bahan.status }}
+  - Rekomendasi: {{ bahan.rekomendasi }}
+{% endfor %}
+{% else %}
+✅ Semua bahan baku kritis memiliki sertifikat halal valid.
+{% endif %}
+
+## 6. PROSEDUR VERIFIKASI SUPPLIER
+1. Supplier baru wajib menyerahkan fotokopi sertifikat halal yang masih berlaku
+2. Verifikasi keaslian sertifikat via website BPJPH / LPH penerbit
+3. Evaluasi supplier dilakukan setiap 6 bulan
+4. Bahan baku tanpa sertifikat halal **TIDAK BOLEH** diterima ke gudang
+
+## 7. PENCATATAN & TRACEABILITY
+- Setiap penerimaan bahan baku dicatat di **Buku Penerimaan Bahan Baku (BPBB-{{ versi }})**
+- Nomor batch bahan baku dicatat untuk traceability
+- Retensi record: Minimal 2 tahun
+
+---
+
+**Disetujui,**
+
+__________________________
+**{{ disetujui_oleh }}**
+Ketua Koperasi
+Tanggal: {{ tanggal_berlaku | strftime("%d %B %Y") }}
+
+__________________________
+**{{ disusun_oleh }}**
+Koordinator Gudang / HAS
+Tanggal: {{ tanggal_berlaku | strftime("%d %B %Y") }}

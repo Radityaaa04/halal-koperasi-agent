@@ -1,0 +1,91 @@
+# NOMOR INDUK BERUSAHA (NIB) - {{ nama_koperasi }}
+**Nomor NIB:** {{ nib_number }}
+**Status NIB:** {{ status_nib }} (Aktif / Tidak Aktif / Dibatalkan)
+
+---
+
+## 1. IDENTITAS USAHA
+
+| Atribut | Keterangan |
+|---------|------------|
+| **Nama Usaha** | {{ nama_usaha }} |
+| **Alamat Usaha** | {{ alamat_usaha }} |
+| **RT/RW** | {{ rt_rw_usaha }} |
+| **Kelurahan/Desa** | {{ kelurahan_usaha }} |
+| **Kecamatan** | {{ kecamatan_usaha }} |
+| **Kabupaten/Kota** | {{ kabupaten_kota_usaha }} |
+| **Provinsi** | {{ provinsi_usaha }} |
+| **Kode Pos** | {{ kode_pos_usaha }} |
+| **Telepon** | {{ telepon_usaha }} |
+| **Email** | {{ email_usaha }} |
+| **Website** | {{ website_usaha }} |
+
+## 2. PEMILIK / PENGURUS
+
+| Atribut | Keterangan |
+|---------|------------|
+| **Nama Pemilik** | {{ nama_pemilik }} |
+| **NIK** | {{ nik_pemilik }} |
+| **Jenis Kelamin** | {{ jk_pemilik }} |
+| **Tempat/Tgl Lahir** | {{ tempat_lahir_pemilik }}, {{ tgl_lahir_pemilik | strftime("%d %B %Y") }} |
+| **Kewarganegaraan** | {{ kewarganegaraan_pemilik }} |
+| **Alamat KTP** | {{ alamat_ktp_pemilik }} |
+
+## 3. KEGIATAN USAHA (KBLI)
+
+| No | Kode KBLI | Kegiatan Usaha | Status |
+|----|-----------|----------------|--------|
+{% for kbli in kbli_list %}
+| {{ loop.index }} | {{ kbli.kode }} | {{ kbli.nama }} | {{ kbli.status }} |
+{% endfor %}
+
+**KBLI Utama:** {{ kbli_utama }}
+
+## 4. MODAL & INVESTASI
+
+| Atribut | Keterangan |
+|---------|------------|
+| **Modal Disetor** | Rp {{ modal_disetor | format_currency }} |
+| **Nilai Investasi** | Rp {{ nilai_investasi | format_currency }} |
+| **Tenaga Kerja** | {{ tenaga_kerja }} orang (L: {{ tk_laki }}, P: {{ tk_perempuan }}) |
+| **Luas Tanah** | {{ luas_tanah }} m² |
+| **Luas Bangunan** | {{ luas_bangunan }} m² |
+
+## 5. IZIN & PENDAFTARAN
+
+| Izin / Pendaftaran | Nomor | Tanggal Terbit | Tanggal Berlaku | Status |
+|--------------------|-------|----------------|-----------------|--------|
+| NIB | {{ nib_number }} | {{ nib_tgl_terbit | strftime("%d %B %Y") }} | {{ nib_tgl_berlaku | strftime("%d %B %Y") }} | {{ status_nib }} |
+| SKTU / Izin Usaha | {{ sku_nomor }} | {{ sku_tgl_terbit | strftime("%d %B %Y") }} | {{ sku_tgl_berlaku | strftime("%d %B %Y") }} | {{ sku_status }} |
+| TDUP | {{ tdup_nomor }} | {{ tdup_tgl_terbit | strftime("%d %B %Y") }} | {{ tdup_tgl_berlaku | strftime("%d %B %Y") }} | {{ tdup_status }} |
+| BPOM (jika makanan) | {{ bpom_nomor }} | {{ bpom_tgl_terbit | strftime("%d %B %Y") }} | {{ bpom_tgl_berlaku | strftime("%d %B %Y") }} | {{ bpom_status }} |
+| Halal (jika sudah) | {{ halal_nomor }} | {{ halal_tgl_terbit | strftime("%d %B %Y") }} | {{ halal_tgl_berlaku | strftime("%d %B %Y") }} | {{ halal_status }} |
+
+## 6. LOKASI USAHA
+
+- **Zonasi:** {{ zonasi }} (Sesuai RTRW / Tidak Sesuai)
+- **Hak Atas Tanah:** {{ hak_tanah }} (SHM / HGB / Sewa / Lainnya)
+- **Jarak ke Permukiman:** {{ jarak_permukiman }} km
+- **Akses Jalan:** {{ akses_jalan }} (Tol / Arteri / Kolektor / Lokal)
+
+## 7. KEPATUHAN LINGKUNGAN (AMDAL / UKL-UPL)
+
+| Dokumen | Nomor | Tanggal | Status |
+|---------|-------|---------|--------|
+| AMDAL | {{ amdal_nomor }} | {{ amdal_tanggal | strftime("%d %B %Y") }} | {{ amdal_status }} |
+| UKL-UPL | {{ ukl_upl_nomor }} | {{ ukl_upl_tanggal | strftime("%d %B %Y") }} | {{ ukl_upl_status }} |
+| SPPL | {{ sppl_nomor }} | {{ sppl_tanggal | strftime("%d %B %Y") }} | {{ sppl_status }} |
+
+## 8. KETERANGAN TAMBAHAN
+
+- **Sistem Informasi:** Terdaftar di OSS (Online Single Submission)
+- **Verifikasi:** {{ verifikasi_oss }} (Terverifikasi / Belum)
+- **Pembaruan Terakhir:** {{ pembaruan_terakhir | strftime("%d %B %Y") }}
+
+---
+
+**Dicetak dari:** Sistem OSS (Online Single Submission)
+**Tanggal Cetak:** {{ tanggal_cetak | strftime("%d %B %Y") }}
+**Kode Verifikasi:** {{ kode_verifikasi }}
+
+> **Catatan:** NIB adalah identitas usaha tunggal yang menggantikan TDP, IUI, dan registrasi lain (UU No. 11/2020 Cipta Kerja). Template ini untuk simulasi data sintetis UAS Proyek Data Mining.

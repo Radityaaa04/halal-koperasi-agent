@@ -1,0 +1,117 @@
+# IZIN USAHA / SURAT KETERANGAN TERAFAKUS ULAMA (SKTU) - {{ nama_koperasi }}
+**Nomor:** {{ nomor_sku }}
+**Tanggal Terbit:** {{ tanggal_terbit | strftime("%d %B %Y") }}
+**Masa Berlaku:** {{ tanggal_terbit | strftime("%d %B %Y") }} s.d. {{ tanggal_berlaku | strftime("%d %B %Y") }}
+
+---
+
+## 1. IDENTITAS USAHA
+
+| Atribut | Keterangan |
+|---------|------------|
+| **Nama Usaha** | {{ nama_koperasi }} |
+| **Bentuk Hukum** | Koperasi |
+| **Alamat Usaha** | {{ alamat_usaha }} |
+| **RT/RW** | {{ rt_rw }} |
+| **Kelurahan/Desa** | {{ kelurahan }} |
+| **Kecamatan** | {{ kecamatan }} |
+| **Kabupaten/Kota** | {{ kabupaten_kota }} |
+| **Provinsi** | {{ provinsi }} |
+| **Kode Pos** | {{ kode_pos }} |
+| **Telepon** | {{ telepon }} |
+| **Email** | {{ email }} |
+| **Website** | {{ website }} |
+
+## 2. PEMILIK / PENGURUS
+
+| Atribut | Keterangan |
+|---------|------------|
+| **Nama Pemilik** | {{ nama_pemilik }} |
+| **NIK** | {{ nik_pemilik }} |
+| **Jabatan** | {{ jabatan_pemilik }} |
+| **Alamat KTP** | {{ alamat_ktp_pemilik }} |
+
+## 3. KEGIATAN USAHA (KBLI)
+
+| No | Kode KBLI | Kegiatan Usaha | Status |
+|----|-----------|----------------|--------|
+{% for kbli in kbli_list %}
+| {{ loop.index }} | {{ kbli.kode }} | {{ kbli.nama }} | {{ kbli.status }} |
+{% endfor %}
+
+**KBLI Utama:** {{ kbli_utama }}
+
+## 3. MODAL & INVESTASI
+
+| Atribut | Nilai |
+|---------|-------|
+| **Modal Dasar** | Rp {{ modal_dasar | format_currency }} |
+| **Modal Disetor** | Rp {{ modal_disetor | format_currency }} |
+| **Nilai Investasi** | Rp {{ nilai_investasi | format_currency }} |
+| **Tenaga Kerja** | {{ tenaga_kerja }} orang (L: {{ tk_laki }}, P: {{ tk_perempuan }}) |
+
+## 4. IZIN & PENDAFTARAN LAINNYA
+
+| Izin / Pendaftaran | Nomor | Tanggal Terbit | Tanggal Berlaku | Status |
+|--------------------|-------|----------------|-----------------|--------|
+| NIB | {{ nib_number }} | {{ nib_tgl_terbit | strftime("%d %B %Y") }} | {{ nib_tgl_berlaku | strftime("%d %B %Y") }} | {{ nib_status }} |
+| NPWP | {{ npwp_number }} | {{ npwp_tgl_daftar | strftime("%d %B %Y") }} | - | {{ npwp_status }} |
+| BPOM (MD/PIRT) | {{ bpom_nomor }} | {{ bpom_tgl_terbit | strftime("%d %B %Y") }} | {{ bpom_tgl_berlaku | strftime("%d %B %Y") }} | {{ bpom_status }} |
+| Sertifikat Halal | {{ halal_nomor }} | {{ halal_tgl_terbit | strftime("%d %B %Y") }} | {{ halal_tgl_berlaku | strftime("%d %B %Y") }} | {{ halal_status }} |
+| TDUP | {{ tdup_nomor }} | {{ tdup_tgl_terbit | strftime("%d %B %Y") }} | {{ tdup_tgl_berlaku | strftime("%d %B %Y") }} | {{ tdup_status }} |
+| AMDAL / UKL-UPL | {{ amdal_nomor }} | {{ amdal_tgl_terbit | strftime("%d %B %Y") }} | {{ amdal_tgl_berlaku | strftime("%d %B %Y") }} | {{ amdal_status }} |
+
+## 5. LOKASI USAHA
+
+| Atribut | Keterangan |
+|---------|------------|
+| **Zonasi** | {{ zonasi }} (Sesuai RTRW: {{ "Ya" if zonasi_sesuai else "Tidak" }}) |
+| **Hak Atas Tanah** | {{ hak_tanah }} (SHM/HGB/Sewa) |
+| **Luas Tanah** | {{ luas_tanah }} m² |
+| **Luas Bangunan** | {{ luas_bangunan }} m² |
+| **Jarak ke Permukiman** | {{ jarak_permukiman }} km |
+| **Akses Jalan** | {{ akses_jalan }} |
+
+## 6. KEPATUHAN LINGKUNGAN & K3
+
+| Dokumen | Nomor | Tanggal | Status |
+|---------|-------|---------|--------|
+| AMDAL / UKL-UPL | {{ amdal_nomor }} | {{ amdal_tgl | strftime("%d %B %Y") }} | {{ amdal_status }} |
+| SPPL | {{ spppl_nomor }} | {{ spppl_tgl | strftime("%d %B %Y") }} | {{ spppl_status }} |
+| Izin Gangguan | {{ izin_gangguan_nomor }} | {{ izin_gangguan_tgl | strftime("%d %B %Y") }} | {{ izin_gangguan_status }} |
+| K3 (jika > 50 TK) | {{ k3_nomor }} | {{ k3_tgl | strftime("%d %B %Y") }} | {{ k3_status }} |
+
+## 7. KETENTUAN KHUSUS
+
+1. Izin ini **tidak melepas kewajiban** memenuhi peraturan perundang-undangan lainnya.
+2. Setiap perubahan data wajib dilaporkan ke Dinas Pelayanan Terpadu Satu Pintu (DPMPTSP) maksimal 14 hari kerja.
+3. Izin ini **dapat dicabut** jika:
+   - Tidak memulai usaha dalam 6 bulan sejak terbit
+   - Tidak memenuhi kewajiban lingkungan
+   - Melanggar ketentuan perundang-undangan
+4. Masa berlaku: **{{ masa_berlaku_tahun }} tahun** (perpanjangan minimal 30 hari sebelum expired).
+
+---
+
+**DITERBITKAN OLEH:**
+**KEPALA DINAS PELAYANAN TERPADU SATU PINTU**
+**{{ kabupaten_kota }}, {{ provinsi }}**
+
+__________________________
+**{{ nama_kepala_dinas }}**
+NIP. {{ nip_kepala_dinas }}
+
+**Tanggal:** {{ tanggal_terbit | strftime("%d %B %Y") }}
+
+---
+
+**Tembusan:**
+1. Bupati/Walikota {{ kabupaten_kota }}
+2. Kepala Dinas Koperasi & UKM
+3. Kepala Dinas Kesehatan (jika makanan)
+4. Kepala Dinas Lingkungan Hidup
+5. Arsip
+
+---
+
+*Catatan: Template ini untuk simulasi data sintetis UAS Proyek Data Mining. SKTU/Izin Usaha asli terbit via OSS/RBA sesuai UU No. 11/2020 jo PP No. 5/2021.*

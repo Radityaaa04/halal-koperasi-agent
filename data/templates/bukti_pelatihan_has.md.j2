@@ -1,0 +1,78 @@
+# BUKTI PELATIHAN HAS (HALAL ASSURANCE SYSTEM) - {{ nama_koperasi }}
+**Nomor Dokumen:** BPH-{{ versi }}
+**Versi:** {{ versi }}
+**Tanggal:** {{ tanggal_berlaku | strftime("%d %B %Y") }}
+
+---
+
+## 1. TUJUAN
+Dokumen ini merupakan bukti bahwa personel HAS {{ nama_koperasi }} telah mengikuti pelatihan yang memenuhi persyaratan PP No. 39 Tahun 2021 dan Peraturan BPJPH No. 1/2023.
+
+## 2. DAFTAR PELATIHAN HAS
+
+| No | Nama Pelatihan | Penyelenggara | Tanggal | Peserta | Nomor Sertifikat | Masa Berlaku | Topik Utama | Status |
+|----|----------------|---------------|---------|---------|------------------|--------------|-------------|--------|
+{% for pelatihan in pelatihan_list %}
+| {{ loop.index }} | {{ pelatihan.nama_pelatihan }} | {{ pelatihan.penyelenggara }} | {{ pelatihan.tanggal | strftime("%d/%m/%Y") }} | {{ pelatihan.peserta | join(', ') }} | {{ pelatihan.sertifikat_nomor if pelatihan.sertifikat_nomor else '-' }} | {{ pelatihan.masa_berlaku | strftime("%d/%m/%Y") if pelatihan.masa_berlaku else '-' }} | {{ pelatihan.topik | join(', ') }} | {{ pelatihan.status }} |
+{% endfor %}
+
+## 3. RINGKASAN PELATIHAN PER PERSONEL
+
+{% for person in [ketua_has] + anggota_has %}
+### {{ person.nama }} ({{ person.jabatan_has }})
+| Pelatihan | Tanggal | Sertifikat | Masa Berlaku | Status |
+|-----------|---------|------------|--------------|--------|
+{% set person_trainings = [] %}
+{% for tr in pelatihan_list %}
+  {% if person.nama in tr.peserta %}
+    {% set _ = person_trainings.append(tr) %}
+  {% endif %}
+{% endfor %}
+{% if person_trainings %}
+{% for tr in person_trainings %}
+| {{ tr.nama_pelatihan }} | {{ tr.tanggal | strftime("%d/%m/%Y") }} | {{ tr.sertifikat_nomor if tr.sertifikat_nomor else '-' }} | {{ tr.masa_berlaku | strftime("%d/%m/%Y") if tr.masa_berlaku else '-' }} | {{ tr.status }} |
+{% endfor %}
+{% else %}
+| *Belum ada pelatihan tercatat* | - | - | - | **BELUM TERLATIH** |
+{% endif %}
+---
+{% endfor %}
+
+## 4. KELENGKAPAN PELATIHAN WAJIB
+
+| Pelatihan Wajib | Target Peserta | Terpenuhi? | Keterangan |
+|-----------------|----------------|------------|------------|
+| Pelatihan Dasar HAS (min. 16 jam) | Seluruh Personel HAS | {{ '✅' if basic_has_done else '❌' }} | {{ basic_has_note }} |
+| Pelatihan Auditor Internal Halal | Min. 2 orang (Ketua HAS + Koord. QC) | {{ '✅' if auditor_done else '❌' }} | {{ auditor_note }} |
+| Pelatihan HACCP Dasar | Koord. Produksi, Koord. QC | {{ '✅' if haccp_done else '❌' }} | {{ haccp_note }} |
+| Sosialisasi Peraturan Terbaru (BPJPH/MUI) | Seluruh Personel HAS (tahunan) | {{ '✅' if social_done else '❌' }} | {{ social_note }} |
+
+## 5. RENCANA PELENGKAPAN PELATIHAN (JIKA ADA KEKURANGAN)
+
+| Pelatihan | Target Peserta | Target Tanggal | Penyelenggara Rencana | Estimasi Biaya | PIC |
+|-----------|----------------|----------------|----------------------|----------------|-----|
+{% for plan in training_plan %}
+| {{ plan.nama_pelatihan }} | {{ plan.target_peserta | join(', ') }} | {{ plan.target_tanggal | strftime("%d/%m/%Y") }} | {{ plan.penyelenggara }} | {{ plan.estimasi_biaya }} | {{ plan.pic }} |
+{% endfor %}
+
+## 6. CATATAN PENTING
+
+1. **Sertifikat pelatihan harus asli / certified true copy** dan disimpan di arsip HAS
+2. **Masa berlaku pelatihan HAS:** Maksimal 3 tahun (perlu refresher)
+3. **Penyelenggara pelatihan:** Harus LPH terakreditasi BPJPH atau BPJPH langsung
+4. **Attendance list & materi pelatihan** harus diarsipkan sebagai bukti pendukung
+5. **Evaluasi pasca pelatihan** wajib dilakukan (min. kuisioner pemahaman)
+
+---
+
+**Disusun Oleh:** ________________________ **Diketahui:** ________________________
+**Sekretaris HAS / Koordinator HAS** | **Ketua HAS**
+**Tanggal:** {{ tanggal_berlaku | strftime("%d %B %Y") }} | **Tanggal:** {{ tanggal_berlaku | strftime("%d %B %Y") }}
+
+---
+
+*Lampiran:*
+1. *Fotokopi sertifikat pelatihan (per orang)*
+2. *Attendance list tiap pelatihan*
+3. *Materi pelatihan (syllabus/slide)*
+4. *Hasil evaluasi pasca pelatihan*

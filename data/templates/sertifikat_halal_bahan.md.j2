@@ -1,0 +1,63 @@
+# SERTIFIKAT HALAL BAHAN BAKU - {{ nama_koperasi }}
+**Nomor Dokumen:** SHB-{{ versi }}
+**Versi:** {{ versi }}
+**Tanggal Berlaku:** {{ tanggal_berlaku | strftime("%d %B %Y") }}
+
+---
+
+## 1. TUJUAN
+Dokumen ini berisi daftar sertifikat halal bahan baku yang digunakan oleh {{ nama_koperasi }} untuk memastikan semua bahan baku memenuhi persyaratan halal sesuai PP No. 39 Tahun 2021 dan Peraturan BPJPH.
+
+## 2. DAFTAR SERTIFIKAT HALAL BAHAN BAKU
+
+| No | Nama Bahan / Produk | Nomor Sertifikat | Penerbit LPH | Tanggal Terbit | Tanggal Expired | Ruang Lingkup | Status | Catatan |
+|----|---------------------|------------------|--------------|----------------|-----------------|---------------|--------|---------|
+{% for sertifikat in sertifikat_list %}
+| {{ loop.index }} | {{ sertifikat.nama_produk_bahan }} | {{ sertifikat.nomor_sertifikat }} | {{ sertifikat.penerbit_lph }} | {{ sertifikat.tanggal_terbit | strftime("%d/%m/%Y") }} | {{ sertifikat.tanggal_expired | strftime("%d/%m/%Y") }} | {{ sertifikat.scope }} | {{ sertifikat.status }} | {{ sertifikat.catatan if sertifikat.catatan else '-' }} |
+{% endfor %}
+
+## 3. RINGKASAN STATUS
+
+| Status | Jumlah | Persentase |
+|--------|--------|------------|
+| Valid | {{ valid_count }} | {{ valid_pct }}% |
+| Akan Expired (< 3 bln) | {{ expiring_count }} | {{ expiring_pct }}% |
+| Expired | {{ expired_count }} | {{ expired_pct }}% |
+| Tidak Valid (LPH tidak terakreditasi) | {{ invalid_count }} | {{ invalid_pct }}% |
+| **TOTAL** | {{ total_count }} | **100%** |
+
+## 4. SERTIFIKAT YANG PERLU DIPERBARUI (URGENT)
+
+{% if urgent_renewal %}
+⚠️ **SERTIFIKAT EXPIRED / AKAN EXPIRED 3 BULAN:**
+{% for sertifikat in urgent_renewal %}
+- **{{ sertifikat.nama_produk_bahan }}** (No: {{ sertifikat.nomor_sertifikat }})
+  - Penerbit: {{ sertifikat.penerbit_lph }}
+  - Expired: {{ sertifikat.tanggal_expired | strftime("%d/%m/%Y") }}
+  - Status: {{ sertifikat.status }}
+  - **Aksi:** {{ sertifikat.rekomendasi_aksi }}
+{% endfor %}
+{% else %}
+✅ Tidak ada sertifikat yang expired atau akan expired dalam 3 bulan.
+{% endif %}
+
+## 5. VERIFIKASI KEASLIAN SERTIFIKAT
+Setiap sertifikat halal bahan baku diverifikasi keasliannya melalui:
+1. Website BPJPH: https://bpjph.halal.go.id (Cek Nomor Sertifikat)
+2. Website LPH Penerbit (jika tersedia)
+3. QR Code pada sertifikat (jika ada)
+
+**Frekuensi Verifikasi:** Setiap penerimaan bahan baku baru + evaluasi 6 bulanan supplier.
+
+## 6. PROSEDUR JIKA SERTIFIKAT EXPired / TIDAK VALID
+1. **STOP** penggunaan bahan baku tersebut
+2. Koordinasi dengan supplier untuk memperbarui sertifikat
+3. Cari supplier alternatif dengan sertifikat valid
+4. Lakukan cleaning validation pada peralatan yang terkena bahan non-halal
+5. Catat di **Non-Conformance Report (NCR-{{ versi }})**
+
+---
+
+**Disusun Oleh:** ________________________ **Disetujui Oleh:** ________________________
+**Koordinator Gudang / HAS** | **Ketua Koperasi**
+**Tanggal:** {{ tanggal_berlaku | strftime("%d %B %Y") }} | **Tanggal:** {{ tanggal_berlaku | strftime("%d %B %Y") }}
