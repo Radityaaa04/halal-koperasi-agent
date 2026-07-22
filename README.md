@@ -36,21 +36,20 @@
 
 ```mermaid
 graph TB
-    O[ApplicationState<br/>{docs, rag_ctx, audit, reports, htl}]
+    O[ApplicationState: docs, rag_ctx, audit, reports, htl]
+    DI[Document Intake Agent: PyMuPDF + PaddleOCR]
+    RR[Regulatory RAG Agent: ChromaDB + BGE-M3 + Reranker]
+    AS[Audit Simulation Agent: Rule-based + LLM reasoning]
+    CM[Communication Agent: Jinja2 + WeasyPrint/ReportLab]
     
-    DI[Document Intake Agent<br/>PyMuPDF + PaddleOCR]
-    RR[Regulatory RAG Agent<br/>ChromaDB + BGE-M3 + Reranker]
-    AS[Audit Simulation Agent<br/>Rule-based + LLM reasoning]
-    CM[Communication Agent<br/>Jinja2 + WeasyPrint/ReportLab]
+    O --> DI
+    O --> RR
+    O --> AS
+    O --> CM
     
-    O -->|Document Intake| DI
-    O -->|Regulatory RAG| RR
-    O -->|Audit Simulation| AS
-    O -->|Communication| CM
-    
-    DI -.->|Extracted fields| RR
-    RR -.->|Regulatory context| AS
-    AS -.->|Findings + scores| CM
+    DI -.-> RR
+    RR -.-> AS
+    AS -.-> CM
     
     style O fill:#1f77b4,color:#fff
     style DI fill:#ff7f0e,color:#fff
