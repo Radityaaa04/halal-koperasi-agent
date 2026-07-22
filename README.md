@@ -1,9 +1,9 @@
 # Halal Koperasi Agent — Multi-Agent System for Halal Certification Readiness
 
 > **UAS Proyek Data Mining (ST167) — 4 SKS**  
-> Universitas Amikom Yogyakarta | Semester Genap 2025/2026  
-> **Timeline:** 3 Minggu (21 Juli – 10 Agustus 2025)  
-> **Team:** Max 3 orang | **Dosen:** Anna Baita, M.Kom | Kusnawi, S.Kom, M.Eng | Theopilus Bayu Sasongko, S.Kom., M.Eng
+> Universitas Amikom Yogyakarta | Semester Genap 2026/2027  \
+> **Timeline:** 3 Minggu (21 Juli – 10 Agustus 2026)  \
+> **Last Updated:** 10 Agustus 2026
 
 ---
 

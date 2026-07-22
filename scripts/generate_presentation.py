@@ -96,7 +96,7 @@ add_shape_rect(slide, 4.5, 4.6, 4.3, 0.03, MED_BLUE)
 
 # Info
 add_textbox(slide, 1.5, 5.0, 10.3, 0.5, 'Proyek UAS: Proyek Data Mining (ST167) \u2014 4 SKS', 18, False, WHITE, PP_ALIGN.CENTER)
-add_textbox(slide, 1.5, 5.4, 10.3, 0.5, 'Universitas Amikom Yogyakarta | 2025', 16, False, LIGHT_BLUE, PP_ALIGN.CENTER)
+add_textbox(slide, 1.5, 5.4, 10.3, 0.5, 'Universitas Amikom Yogyakarta | 2026', 16, False, LIGHT_BLUE, PP_ALIGN.CENTER)
 
 # Team
 add_textbox(slide, 1.5, 6.0, 10.3, 0.8, 'Tim: [Nama 1] | [Nama 2] | [Nama 3]  |  Dosen: Anna Baita, M.Kom | Kusnawi, S.Kom, M.Eng | Theopilus Bayu Sasongko, S.Kom., M.Eng', 14, False, RGBColor(0xAA, 0xCC, 0xEE), PP_ALIGN.CENTER)

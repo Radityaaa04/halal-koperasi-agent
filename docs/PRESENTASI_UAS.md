@@ -2,7 +2,7 @@
 
 **Mata Kuliah:** Proyek Data Mining (ST167) — 4 SKS  
 **Tim:** 3 Mahasiswa | **Dosen:** Anna Baita, M.Kom | Kusnawi, S.Kom, M.Eng | Theopilus Bayu Sasongko, S.Kom., M.Eng  
-**Tanggal:** 10 Agustus 2025
+**Tanggal:** 10 Agustus 2026
 
 ---
 
@@ -14,8 +14,7 @@
 
 **Tim:** [Nama Anggota 1], [Nama Anggota 2], [Nama Anggota 3]  
 **Dosen Pengampu:** Anna Baita, M.Kom | Kusnawi, S.Kom, M.Eng | Theopilus Bayu Sasongko, S.Kom., M.Eng  
-**Universitas Amikom Yogyakarta** | **Proyek Data Mining (ST167)**  
-**10 Agustus 2025**
+**Universitas Amikom Yogyakarta** | **Proyek Data Mining (ST167)**  \n**10 Agustus 2026**
 
 ---
 
@@ -260,4 +259,4 @@ class HalalCertEvaluator:
 
 **Tim Proyek Data Mining ST167**  
 Universitas Amikom Yogyakarta  
-10 Agustus 2025
+10 Agustus 2026

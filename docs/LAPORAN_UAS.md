@@ -2,11 +2,11 @@
 
 ## Sistem Multi-Agent Sertifikasi Halal Koperasi Petani/Nelayan Kecil
 
-**Mata Kuliah:** Proyek Data Mining (ST167) — 4 SKS  
-**Dosen Pengampu:** Anna Baita, M.Kom | Kusnawi, S.Kom, M.Eng | Theopilus Bayu Sasongko, S.Kom., M.Eng  
-**Timeline:** 21 Juli – 10 Agustus 2025 (3 Minggu)  
-**Tim:** 3 Mahasiswa  
-**Status:** SELESAI ✅  
+**Mata Kuliah:** Proyek Data Mining (ST167) — 4 SKS  \
+**Dosen Pengampu:** Anna Baita, M.Kom | Kusnawi, S.Kom, M.Eng | Theopilus Bayu Sasongko, S.Kom., M.Eng  \
+**Timeline:** 21 Juli – 10 Agustus 2026 (3 Minggu)  \
+**Tim:** 3 Mahasiswa  \
+**Status:** SELESAI ✅
 
 ---
 
@@ -173,7 +173,7 @@ FORMAT JAWABAN:
 ### 5.1 Skema Data Utama
 ```python
 class KoperasiApplication(BaseModel):
-    id: str                          # e.g., "KMBJ-2025-001"
+    id: str                          # e.g., "KMBJ-2026-001"
     koperasi_nama: str
     koperasi_nib: str
     alamat_lengkap: str
@@ -187,9 +187,9 @@ class KoperasiApplication(BaseModel):
 
 | ID | Koperasi | Produk | Status Dokumen | Readiness Score |
 |----|----------|--------|----------------|-----------------|
-| **KMBJ-2025-001** | Mina Bahari Jaya | 4 SKU ikan (tengiri asap, abon, cracker, ikan bakar vacuum) | 12/15 lengkap, 3 expired | **62/100** |
-| **KSPT-2025-002** | Sumber Tani Makmur | 3 SKU kacang/kedelai (kacang tanah, tempe, tahu) | 14/15 lengkap, 1 missing | **78/100** |
-| **KPNL-2025-003** | Nelayan Sejahtera | 2 SKU ikan asin (ikan asin, teri medan) | 8/15 lengkap, 7 missing | **35/100** |
+| **KMBJ-2026-001** | Mina Bahari Jaya | 4 SKU ikan (tengiri asap, abon, cracker, ikan bakar vacuum) | 12/15 lengkap, 3 expired | **62/100** |
+| **KSPT-2026-002** | Sumber Tani Makmur | 3 SKU kacang/kedelai (kacang tanah, tempe, tahu) | 14/15 lengkap, 1 missing | **78/100** |
+| **KPNL-2026-003** | Nelayan Sejahtera | 2 SKU ikan asin (ikan asin, teri medan) | 8/15 lengkap, 7 missing | **35/100** |
 
 ### 5.3 Ground Truth untuk Evaluasi
 | Metrik | Ground Truth Source |
@@ -457,6 +457,6 @@ streamlit run app/streamlit_app.py
 
 ---
 
-**Disusun oleh:** Tim Proyek Data Mining ST167  
-**Tanggal:** 10 Agustus 2025  
+**Disusun oleh:** Tim Proyek Data Mining ST167  \
+**Tanggal:** 10 Agustus 2026  \
 **Versi:** 1.0 (Final UAS)
