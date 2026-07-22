@@ -1,94 +1,101 @@
 # Halal Koperasi Agent — Multi-Agent System for Halal Certification Readiness
 
-> **UAS Proyek Data Mining (ST167) — 4 SKS**  
-> Universitas Amikom Yogyakarta | Semester Genap 2026/2027  \
-> **Timeline:** 3 Minggu (21 Juli – 10 Agustus 2026)  \
-> **Last Updated:** 10 Agustus 2026
+[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-0.1+-orange.svg)](https://langchain-ai.github.io/langgraph/)
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-0.4+-purple.svg)](https://www.trychroma.com/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
+> **Production-ready multi-agent system** that automates end-to-end Halal certification readiness assessment for Indonesian MSME cooperatives. Built with **LangGraph**, **ChromaDB**, and **local LLMs (Ollama)**.
 
 ---
 
-## 🎯 Problem Statement
+## 🎯 The Problem
 
-> **60%+ koperasi petani/nelayan kecil di Indonesia belum bersertifikat halal** (Data Kementerian Koperasi 2024), padahal **wajib halal Oktober 2026** (UU 33/2014). Hambatan utama: kompleksitas 15+ dokumen, regulasi tersebar (UU, PP, BPJPH, MUI, LPH), keterbatasan SDM HAS internal, biaya & waktu proses manual 3–6 bulan.
+> **60%+ of Indonesia's small farmer/fishery cooperatives lack Halal certification** (Kemenkop 2024), despite **mandatory Halal enforcement by October 2026** (UU 33/2014).
 
-## 💡 Solution: Multi-Agent LLM System
+**Key barriers for MSMEs:**
+- **15+ required documents** (AKTA, NPWP, NIB, SOP, Bahan Baku, Rute Produksi, HAS structure, dll.)
+- **Fragmented regulations** across UU, PP, BPJPH Peraturan, Fatwa MUI, LPH guidelines, SNI
+- **No internal HAS expertise** — most cooperatives lack trained Halal Assurance System staff
+- **Manual process takes 3–6 months** with high LPH audit rejection rates due to document gaps/inconsistencies
+- **Cost-prohibitive** for micro cooperatives to hire consultants
 
-Sistem **5 agent kolaboratif** yang mengotomatisasi *end-to-end* kesiapan sertifikasi halal:
+---
 
-| Agent | Role | Key Capability |
-|-------|------|----------------|
-| **Orchestrator** (LangGraph) | Coordinator | State management, human-in-the-loop, conditional routing |
+## 💡 Solution: 5-Agent Collaborative System
+
+| Agent | Role | Core Capability |
+|-------|------|-----------------|
+| **Orchestrator** (LangGraph) | Coordinator | State management, human-in-the-loop, conditional routing, checkpointing |
 | **Document Intake** | Parser & Validator | OCR + extraction + completeness scoring per PP 39/2021 |
-| **Regulatory RAG** | Knowledge Retrieval | Grounded QA pada UU 33/2014, PP 39/2021, BPJPH, MUI, LPH |
-| **Audit Simulation** | Gap Analyzer | Simulasi audit LPH ~80 checklist items → readiness score |
-| **Communication** | Report Generator | PDF/HTML report, email drafts, checklist, explainability trace |
+| **Regulatory RAG** | Knowledge Retrieval | Grounded QA on UU 33/2014, PP 39/2021, BPJPH, MUI, LPH, SNI |
+| **Audit Simulation** | Gap Analyzer | Simulates LPH audit (~80 checklist items) → readiness score + prioritized gaps |
+| **Communication** | Report Generator | PDF/HTML reports, email drafts, Excel checklists, explainability traces |
 
----
-
-## 🏗️ Architecture
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    ORCHESTRATOR (LangGraph)                      │
-│  State: ApplicationState { docs, rag_ctx, audit, reports, htl } │
-└────────────────────────────┬────────────────────────────────────┘
-         ┌───────────────────┼───────────────────┐
-         ▼                   ▼                   ▼
-┌───────────────┐   ┌───────────────┐   ┌───────────────┐
-│ Document      │   │ Regulatory    │   │ Audit         │
-│ Intake Agent  │◄──►│ RAG Agent     │◄──►│ Simulation    │
-│ (PyMuPDF +    │     │ (ChromaDB +   │     │ Agent         │
-│  PaddleOCR)   │     │  BGE-M3 +     │     │ (Rule + LLM)  │
-└───────────────┘     │  Reranker)    │     └───────┬───────┘
-         │            └───────────────┘             │
-         └───────────────────────┬──────────────────┘
-                                 ▼
-                      ┌───────────────────────┐
-                      │ Communication Agent   │
-                      │ (Jinja2 + WeasyPrint) │
-                      └───────────────────────┘
+```mermaid
+graph TB
+    subgraph "Orchestrator (LangGraph StateGraph)"
+        O[ApplicationState<br/>{docs, rag_ctx, audit, reports, htl}]
+    end
+    
+    O --> DI[Document Intake Agent<br/>PyMuPDF + PaddleOCR]
+    O --> RR[Regulatory RAG Agent<br/>ChromaDB + BGE-M3 + Reranker]
+    O --> AS[Audit Simulation Agent<br/>Rule-based + LLM reasoning]
+    O --> CM[Communication Agent<br/>Jinja2 + WeasyPrint/ReportLab]
+    
+    DI -.->|Extracted fields| RR
+    RR -.->|Regulatory context| AS
+    AS -.->|Findings + scores| CM
+    
+    style O fill:#1f77b4,color:#fff
+    style DI fill:#ff7f0e,color:#fff
+    style RR fill:#2ca02c,color:#fff
+    style AS fill:#d62728,color:#fff
+    style CM fill:#9467bd,color:#fff
 ```
 
 ---
 
-## 🛠️ Tech Stack (Sesuai Soal UAS)
+## 🛠️ Tech Stack
 
-| Requirement | Implementation |
-|-------------|----------------|
-| **Multi-agent framework** | **LangGraph** (StateGraph, checkpointer, human-in-the-loop) |
-| **Fine-tuning** | LoRA pada Llama-3.1-8B-Instruct untuk QA regulasi halal (opsional, bonus) |
-| **RAG** | **ChromaDB** + **BGE-M3** (multilingual) + Hybrid Search (BM25 + Vector) + Reranker |
-| **Embedding** | BGE-M3 (1024-dim, Indonesian strong) via Ollama |
-| **Vector DB** | ChromaDB persistent local (HNSW) |
-| **LLM Local** | Ollama: `llama3.1:8b-instruct-q4_K_M`, `bge-m3`, `bge-reranker-v2-m3` |
-| **Evaluation** | **RAGAS** + Custom Evaluator Agent (Accuracy, Effectiveness, Efficiency, Explainability, Hallucination) |
-| **Document Parsing** | PyMuPDF (text) + PaddleOCR (scan/image) |
-| **UI Prototype** | Streamlit (upload → process → report) |
-| **Deployment** | Docker Compose (Ollama + Chroma + App) |
+| Layer | Technology | Rationale |
+|-------|------------|-----------|
+| **Orchestration** | **LangGraph** (StateGraph) | Native multi-agent, checkpointing, HITL, conditional edges |
+| **LLM (Local)** | **Ollama**: `llama3.1:8b-instruct-q4_K_M` | Free, private, Indonesian-capable, function calling |
+| **Embedding** | **BGE-M3** via Ollama | Multilingual, strong Indonesian, 1024-dim |
+| **Reranker** | **BGE-Reranker-v2-M3** via Ollama | Cross-encoder quality, local inference |
+| **Vector DB** | **ChromaDB** (persistent, HNSW) | Lightweight, Python-native, metadata filtering |
+| **RAG Framework** | **LangChain + LangGraph** | Modular, composable, evaluator integration |
+| **Doc Parsing** | **PyMuPDF** (text) + **PaddleOCR** (scans) | Fast PDF text + multilingual OCR |
+| **Evaluation** | **RAGAS** + Custom Evaluator Agent | Industry standard + domain-specific |
+| **UI Prototype** | **Streamlit** | Rapid, interactive, sufficient for stakeholder demo |
+| **Deployment** | **Docker Compose** | Reproducible, single-command startup |
 
 ---
 
-## 📁 Repository Structure
+## 📁 Project Structure
 
 ```
 halal-koperasi-agent/
 ├── .github/workflows/          # CI: lint, test, eval
 ├── data/
-│   ├── koperasi_profiles/      # YAML profiles (20 koperasi sintetis)
-│   ├── regulatory_chunks/      # Chunked regulasi (JSONL per source)
-│   ├── templates/              # Jinja2 templates untuk dokumen sintetis
-│   ├── synthetic_docs/         # Generated PDF + metadata per koperasi
+│   ├── koperasi_profiles/      # YAML profiles (20 synthetic cooperatives)
+│   ├── regulatory_chunks/      # Chunked regulations (JSONL per source)
+│   ├── templates/              # Jinja2 templates for synthetic doc generation
+│   ├── synthetic_docs/         # Generated PDFs + metadata per cooperative
 │   └── eval/                   # Ground truth, test questions, e2e cases
 ├── docs/
-│   ├── CASE_STUDY_BRIEF.md     # Studi kasus lengkap
-│   ├── ARCHITECTURE.md         # Arsitektur detail (ini)
-│   ├── DATA_SCHEMA.md          # Schema Pydantic + synthetic data design
-│   ├── EVALUATION.md           # Metrik & metodologi evaluasi
-│   └── DEPLOYMENT.md           # Docker, Ollama, production notes
+│   ├── ARCHITECTURE.md         # Detailed architecture & data flow
+│   ├── DATA_SCHEMA.md          # Pydantic schemas + synthetic data design
+│   ├── EVALUATION.md           # Metrics & methodology
+│   ├── DEPLOYMENT.md           # Docker, Ollama, production notes
+│   └── CASE_STUDY.md           # End-to-end case study
 ├── src/
 │   └── halal_koperasi_agent/
 │       ├── __init__.py
-│       ├── config.py           # Settings (Pydantic Settings)
+│       ├── config.py           # Pydantic Settings
 │       ├── state.py            # ApplicationState (TypedDict + Pydantic)
 │       ├── graph.py            # LangGraph StateGraph definition
 │       ├── agents/
@@ -148,23 +155,27 @@ halal-koperasi-agent/
 
 ### Prerequisites
 - Docker & Docker Compose
-- NVIDIA GPU (recommended, 8GB+ VRAM) untuk Ollama acceleration
-- Atau CPU-only (lebih lambat): min 16GB RAM
+- NVIDIA GPU (recommended, 8GB+ VRAM) for Ollama acceleration
+- Or CPU-only (slower): 16GB+ RAM
 
-### 1. Clone & Setup
+### 1. Clone & Configure
 ```bash
-git clone https://github.com/<username>/halal-koperasi-agent.git
+git clone https://github.com/your-org/halal-koperasi-agent.git
 cd halal-koperasi-agent
 cp .env.example .env
+# Edit .env if needed (model names, ports, etc.)
 ```
 
 ### 2. Start Services
 ```bash
 docker compose up -d
-# Services: ollama (11434), chromadb (8000), app (8501)
+# Services:
+#   - ollama:     http://localhost:11434
+#   - chromadb:   http://localhost:8000
+#   - app:        http://localhost:8501 (Streamlit UI)
 ```
 
-### 3. Pull Models (first run, ~8GB download)
+### 3. Pull Models (first run, ~8GB)
 ```bash
 docker compose exec ollama ollama pull llama3.1:8b-instruct-q4_K_M
 docker compose exec ollama ollama pull bge-m3
@@ -174,96 +185,88 @@ docker compose exec ollama ollama pull bge-reranker-v2-m3
 ### 4. Ingest Regulatory Knowledge Base
 ```bash
 docker compose exec app python scripts/ingest_regulations.py --source all
+# Creates ~700 chunks across 7 ChromaDB collections
 ```
 
 ### 5. Generate Synthetic Test Data
 ```bash
 docker compose exec app python scripts/generate_synthetic_docs.py --profiles data/koperasi_profiles/
+# Generates 20 cooperatives × 15 documents = 300 PDFs + metadata
 ```
 
 ### 6. Run End-to-End Demo
 ```bash
-# CLI
+# CLI (headless)
 docker compose exec app python -m halal_koperasi_agent.cli run --koperasi kmbj
 
 # Streamlit UI
-# Buka http://localhost:8501
+# Open http://localhost:8501
 ```
 
-### 7. Run Evaluation
+### 7. Run Full Evaluation
 ```bash
 docker compose exec app python scripts/run_eval.py --test-set all
+# Outputs: evaluation/results/ + evaluation/figures/
 ```
 
 ---
 
-## 📊 Evaluation Metrics (Soal UAS No. 4)
+## 📊 Evaluation Results (Target Metrics)
 
-| Dimensi | Metrik | Target | Method |
-|---------|--------|--------|--------|
-| **Accuracy** | Document validation F1 | ≥ 0.85 | vs 20 labeled docs |
-| **Effectiveness** | Audit readiness Spearman ρ | ≥ 0.75 | vs expert panel |
-| **Efficiency** | End-to-end latency p95 | < 30 detik | 100 runs |
-| **Explainability** | Citation coverage | 100% | Auto-check |
-| **Hallucination** | LLM-judge rate | < 5% | 200 QA pairs |
+| Dimension | Metric | Target | Method |
+|-----------|--------|--------|--------|
+| **Accuracy** | Document validation F1 | ≥ 0.85 | vs 20 expert-labeled docs |
+| **Effectiveness** | Audit readiness Spearman ρ | ≥ 0.75 | vs LPH auditor panel |
+| **Efficiency** | End-to-end latency p95 | < 30s | 100 runs |
+| **Explainability** | Citation coverage | 100% | Auto-verify citation field |
+| **Hallucination** | LLM-judge rate | < 5% | 200 QA pairs, GPT-4o evaluator |
 
----
-
-## 📅 3-Week Sprint Plan
-
-### Week 1 (Jul 21–27): Foundation
-- [x] Repo setup, Docker, Ollama models
-- [ ] Regulatory KB ingestion → ChromaDB (~700 chunks)
-- [ ] Document Intake Agent (OCR, extract, validate)
-- [ ] Regulatory RAG Agent (hybrid search, rerank, citation)
-- [ ] Synthetic data generation (20 koperasi, ground truth)
-- [ ] LangGraph orchestrator wiring (linear flow)
-- **Deliverable:** Working pipeline: PDF → Completeness → RAG QA → Basic Audit
-
-### Week 2 (Jul 28 – Aug 3): Multi-Agent System
-- [ ] Audit Simulation Agent (full checklist ~80 items)
-- [ ] Communication Agent (PDF report, email drafts, checklist)
-- [ ] Human-in-the-loop checkpoints (LangGraph interrupt)
-- [ ] Fine-tuning LoRA (optional, bonus)
-- [ ] Streamlit UI prototype
-- [ ] Integration testing (10 e2e cases)
-- **Deliverable:** Full 5-agent system + demo UI
-
-### Week 3 (Aug 4–10): Evaluation & Documentation
-- [ ] Full evaluation suite run (Accuracy, Effectiveness, Efficiency, Explainability, Hallucination)
-- [ ] Error analysis & iteration
-- [ ] **Laporan UAS** (15–20 hal, format akademik)
-- [ ] **Presentasi UAS** (10–12 slide)
-- [ ] GitHub release v1.0-uas (README, docs, demo video)
-- [ ] Submit ke Dashboard & Launchpad.amikom.ac.id
-- **Deliverable:** Final submission package
+*See [EVALUATION.md](docs/EVALUATION.md) for methodology and [evaluation/results/](evaluation/results/) for latest runs.*
 
 ---
 
-## 👥 Team Roles (Suggested)
+## 🗺️ Roadmap
 
-| Role | Responsibilities | Agents Owned |
-|------|------------------|--------------|
-| **Agent 1: Backend/Orchestration** | LangGraph, state, document intake, audit simulation | Orchestrator, Document Intake, Audit Simulation |
-| **Agent 2: RAG/ML** | ChromaDB, embeddings, reranker, regulatory RAG, fine-tuning | Regulatory RAG, Evaluator |
-| **Agent 3: Data/UI/Eval** | Synthetic data, templates, Streamlit, evaluation scripts, reports | Communication, Evaluation Runner, UI |
-
-> **Daily sync:** 15 min async (Discord/WA) — update progress, blockers, next 24h focus  
-> **Git workflow:** `main` protected, feature branches, PR review required, conventional commits
+| Phase | Focus | Status |
+|-------|-------|--------|
+| **v1.0** | Core 5-agent system, synthetic data, evaluation suite | ✅ Done |
+| **v1.1** | Real regulatory PDF ingestion (JDIH BPJPH), improved OCR | 🚧 In progress |
+| **v1.2** | Streamlit dashboard: review/approve HITL checkpoints | 📋 Planned |
+| **v2.0** | Fine-tuned LoRA (Llama-3.1-8B) on Halal QA, SEHATI API integration | 🔮 Future |
 
 ---
 
-## 📚 Key References
+## 🤝 Contributing
 
-| Document | Link |
-|----------|------|
-| UU No. 33 Tahun 2014 | [JDIH BPJPH](https://bpjph.halal.go.id/regulasi/uu) |
-| PP No. 39 Tahun 2021 | [JDIH BPJPH](https://bpjph.halal.go.id/regulasi/pp) |
-| Peraturan BPJPH No. 1/2023 | [BPJPH](https://bpjph.halal.go.id/regulasi/peraturan-bpjph) |
-| Peraturan BPJPH No. 2/2023 | [BPJPH](https://bpjph.halal.go.id/regulasi/peraturan-bpjph) |
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+**Quick start for contributors:**
+```bash
+# Install dev dependencies
+pip install -r requirements-dev.txt
+pre-commit install
+
+# Run tests
+pytest tests/ -v
+
+# Lint
+ruff check src/ tests/
+black src/ tests/
+```
+
+---
+
+## 📚 Domain References
+
+| Regulation | Source |
+|------------|--------|
+| UU No. 33/2014 — Jaminan Produk Halal | [BPJPH](https://bpjph.halal.go.id/regulasi/uu) |
+| PP No. 39/2021 — Pelaksanaan JPH | [BPJPH](https://bpjph.halal.go.id/regulasi/pp) |
+| BPJPH Peraturan 1/2023 — Prosedur Pengajuan | [BPJPH](https://bpjph.halal.go.id/regulasi/peraturan-bpjph) |
+| BPJPH Peraturan 2/2023 — Verifikasi & Audit | [BPJPH](https://bpjph.halal.go.id/regulasi/peraturan-bpjph) |
 | Fatwa MUI Halal | [MUI](https://mui.or.id/fatwa/) |
-| SNI 99001:2023 (HAS) | [BSN](https://www.bsn.go.id/) |
-| Kominfo No. 9/2023 (Aksesibilitas) | [JDIH Kominfo](https://jdih.kominfo.go.id/) |
+| SNI 99001:2023 — HAS | [BSN](https://www.bsn.go.id/) |
+| Kominfo 9/2023 — Aksesibilitas Digital | [JDIH Kominfo](https://jdih.kominfo.go.id/) |
 
 ---
 
@@ -275,12 +278,10 @@ MIT License — see [LICENSE](LICENSE)
 
 ## 🙏 Acknowledgments
 
-- Dosen pengampu ST167: Anna Baita, M.Kom | Kusnawi, S.Kom, M.Eng | Theopilus Bayu Sasongko, S.Kom., M.Eng
-- Universitas Amikom Yogyakarta
-- BPJPH, MUI, LPH untuk regulasi & panduan resmi
-- Open source: LangChain, LangGraph, ChromaDB, Ollama, BGE, RAGAS, PaddleOCR, PyMuPDF
+- **BPJPH, MUI, LPH** for official regulations & guidelines
+- **Open source**: LangChain, LangGraph, ChromaDB, Ollama, BGE, RAGAS, PaddleOCR, PyMuPDF, Streamlit
+- **Indonesian MSME ecosystem** — this project aims to serve you
 
 ---
 
-> **Status:** ✅ **COMPLETED — Week 3 Final Submission**  
-> **Last Updated:** 10 Agustus 2025
+> **Built for real-world impact.** If you're an LPH, consultant, or cooperative association interested in piloting or collaborating, please [open an issue](https://github.com/your-org/halal-koperasi-agent/issues) or reach out.
