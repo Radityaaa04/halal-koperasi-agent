@@ -3,7 +3,7 @@ version: '3.8'
 services:
   ollama:
     image: ollama/ollama:latest
-    container_name: halal-agent-ollama
+    container_name: halal-koperasi-ollama
     ports:
       - "11434:11434"
     volumes:
@@ -15,11 +15,8 @@ services:
             - driver: nvidia
               count: 1
               capabilities: [gpu]
-    environment:
-      - OLLAMA_KEEP_ALIVE=24h
-      - OLLAMA_NUM_PARALLEL=2
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      test: ["CMD", "ollama", "list"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -27,15 +24,14 @@ services:
 
   chromadb:
     image: chromadb/chroma:latest
-    container_name: halal-agent-chromadb
+    container_name: halal-koperasi-chromadb
     ports:
       - "8000:8000"
     volumes:
-      - chroma_data:/chroma/data
+      - chroma_data:/chroma
     environment:
       - CHROMA_SERVER_HOST=0.0.0.0
       - CHROMA_SERVER_HTTP_PORT=8000
-      - ANONYMIZED_TELEMETRY=False
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
       interval: 10s
@@ -47,28 +43,27 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: halal-agent-app
+    container_name: halal-koperasi-app
     ports:
-      - "8501:8501"  # Streamlit
-      - "8001:8000"  # API (if added)
+      - "8501:8501"
     volumes:
       - ./data:/app/data
-      - ./src:/app/src
-      - ./scripts:/app/scripts
-      - ./tests:/app/tests
+      - ./logs:/app/logs
     environment:
       - OLLAMA_HOST=http://ollama:11434
       - CHROMA_HOST=http://chromadb:8000
-      - PYTHONPATH=/app/src
-      - LOG_LEVEL=INFO
+      - PYTHONPATH=/app
     depends_on:
       ollama:
         condition: service_healthy
       chromadb:
         condition: service_healthy
-    working_dir: /app
-    command: ["sleep", "infinity"]  # Keep running for exec
     restart: unless-stopped
+    command: >
+      sh -c "
+        python scripts/ingest_regulations.py --source all &&
+        streamlit run app/streamlit_app.py --server.port=8501 --server.address=0.0.0.0
+      "
 
 volumes:
   ollama_data:
@@ -76,4 +71,4 @@ volumes:
 
 networks:
   default:
-    name: halal-agent-network
+    name: halal-koperasi-network
