@@ -36,9 +36,7 @@
 
 ```mermaid
 graph TB
-    subgraph Orchestrator
-        O[ApplicationState<br/>{docs, rag_ctx, audit, reports, htl}]
-    end
+    O[ApplicationState<br/>{docs, rag_ctx, audit, reports, htl}]
     
     DI[Document Intake Agent<br/>PyMuPDF + PaddleOCR]
     RR[Regulatory RAG Agent<br/>ChromaDB + BGE-M3 + Reranker]
