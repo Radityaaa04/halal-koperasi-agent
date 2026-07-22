@@ -36,12 +36,19 @@
 
 ```mermaid
 graph TB
-    O[ApplicationState<br/>{docs, rag_ctx, audit, reports, htl}]
+    subgraph Orchestrator
+        O[ApplicationState<br/>{docs, rag_ctx, audit, reports, htl}]
+    end
     
-    O --> DI[Document Intake Agent<br/>PyMuPDF + PaddleOCR]
-    O --> RR[Regulatory RAG Agent<br/>ChromaDB + BGE-M3 + Reranker]
-    O --> AS[Audit Simulation Agent<br/>Rule-based + LLM reasoning]
-    O --> CM[Communication Agent<br/>Jinja2 + WeasyPrint/ReportLab]
+    DI[Document Intake Agent<br/>PyMuPDF + PaddleOCR]
+    RR[Regulatory RAG Agent<br/>ChromaDB + BGE-M3 + Reranker]
+    AS[Audit Simulation Agent<br/>Rule-based + LLM reasoning]
+    CM[Communication Agent<br/>Jinja2 + WeasyPrint/ReportLab]
+    
+    O -->|Document Intake| DI
+    O -->|Regulatory RAG| RR
+    O -->|Audit Simulation| AS
+    O -->|Communication| CM
     
     DI -.->|Extracted fields| RR
     RR -.->|Regulatory context| AS
