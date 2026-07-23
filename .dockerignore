@@ -1,0 +1,63 @@
+# Docker ignore
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.tox/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Data (large files - managed by docker volumes)
+data/synthetic_docs/
+data/regulatory_chunks/
+output/
+logs/
+*.log
+
+# Models
+*.bin
+*.pt
+*.pth
+*.gguf
+model_cache/
+hf_cache/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+pip-wheel-metadata/
+
+# Secrets
+.env
+.env.local
+*.pem
+*.key
+*.crt
+
+# Documentation (optional - keep if needed for image)
+docs/
+*.md
+!README.md

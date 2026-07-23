@@ -8,18 +8,13 @@ services:
       - "11434:11434"
     volumes:
       - ollama_data:/root/.ollama
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+    # GPU only if available (remove deploy for cloud free tiers)
     healthcheck:
       test: ["CMD", "ollama", "list"]
       interval: 10s
       timeout: 5s
-      retries: 5
+      retries: 10
+      start_period: 30s
     restart: unless-stopped
 
   chromadb:
@@ -32,11 +27,13 @@ services:
     environment:
       - CHROMA_SERVER_HOST=0.0.0.0
       - CHROMA_SERVER_HTTP_PORT=8000
+      - ANONYMIZED_TELEMETRY=False
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
       interval: 10s
       timeout: 5s
-      retries: 5
+      retries: 10
+      start_period: 15s
     restart: unless-stopped
 
   app:
@@ -53,17 +50,30 @@ services:
       - OLLAMA_HOST=http://ollama:11434
       - CHROMA_HOST=http://chromadb:8000
       - PYTHONPATH=/app
+      - MOCK_MODE=${MOCK_MODE:-false}
+      - NVIDIA_NIM_API_KEY=${NVIDIA_NIM_API_KEY}
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+      - STREAMLIT_SERVER_HEADLESS=true
     depends_on:
       ollama:
         condition: service_healthy
       chromadb:
         condition: service_healthy
-    restart: unless-stopped
+    # Multi-stage startup: pull models -> ingest -> run
     command: >
       sh -c "
+        echo '=== Waiting for Ollama ===' &&
+        until curl -s http://ollama:11434/api/tags > /dev/null; do sleep 2; done &&
+        echo '=== Pulling models ===' &&
+        ollama pull llama3.1:8b-instruct-q4_K_M &&
+        ollama pull bge-m3 &&
+        echo '=== Ingesting regulations ===' &&
         python scripts/ingest_regulations.py --source all &&
-        streamlit run app/streamlit_app.py --server.port=8501 --server.address=0.0.0.0
+        echo '=== Starting Streamlit ===' &&
+        streamlit run app/streamlit_app.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true
       "
+    restart: unless-stopped
 
 volumes:
   ollama_data:
