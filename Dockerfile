@@ -1,5 +1,5 @@
 # Simplified Dockerfile - uses pip directly for faster builds
-FROM python:3.11-slim
+FROM python:3.11-slim-bookworm
 
 WORKDIR /app
 
@@ -7,8 +7,6 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
     tesseract-ocr \
     tesseract-ocr-ind \
     poppler-utils \
